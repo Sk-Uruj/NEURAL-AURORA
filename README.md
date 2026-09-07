@@ -95,7 +95,7 @@ Deploy to **Vercel** (recommended), **Netlify**, or **Cloudflare Pages**:
 
 - Vite is auto-detected by Vercel
 - Add all environment variables in the dashboard
-- SPA rewrites are configured in `vercel.json`
+- SPA rewrites are configured in `vercel.json`; `/api/*` routes are excluded so Vercel serverless functions remain accessible
 
 ---
 
