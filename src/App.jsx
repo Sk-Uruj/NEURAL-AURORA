@@ -31,6 +31,7 @@ import AdminDashboard from './components/admin/AdminDashboard'
 import { AdminRoute } from './components/admin/ProtectedRoute'
 import BottomToTop from './components/ui/bottom-to-top'
 import PwaStatus from './components/ui/PwaStatus'
+import { NeuralCursor } from './components/ui/neural-cursor'
 import { usePersonalInfo } from './lib/usePortfolioData'
 import { useMood } from './context/MoodContext'
 
@@ -189,18 +190,6 @@ function AppContent() {
   const location = useLocation()
   const isAuthRoute = location.pathname.startsWith('/login') || location.pathname.startsWith('/forgot-password') || location.pathname.startsWith('/admin') || location.pathname.startsWith('/support')
   const [loaderDone, setLoaderDone] = useState(isAuthRoute)
-  const glowRef = useRef(null)
-
-  useEffect(() => {
-    function onMouseMove(e) {
-      if (glowRef.current) {
-        glowRef.current.style.left = e.clientX + 'px'
-        glowRef.current.style.top = e.clientY + 'px'
-      }
-    }
-    window.addEventListener('mousemove', onMouseMove)
-    return () => window.removeEventListener('mousemove', onMouseMove)
-  }, [])
 
   useEffect(() => {
     import('@splinetool/react-spline')
@@ -213,7 +202,7 @@ function AppContent() {
       <BottomToTop />
       <PwaStatus />
       {loaderDone && <MoodMusicToggle />}
-      <div ref={glowRef} className="cursor-glow" />
+      <NeuralCursor />
       {!loaderDone && <StartingLoader onComplete={() => setLoaderDone(true)} />}
       <AnimatePresence>
         {loaderDone && (
