@@ -2333,6 +2333,7 @@ function NeuralPatternLock({ onSuccess }) {
 }
 
 export default function StartingLoader({ onComplete }) {
+  const shouldReduceMotion = useReducedMotion()
   const [phase, setPhase] = useState('booting')
   const [question, setQuestion] = useState(null)
   const [loadingQ, setLoadingQ] = useState(false)
