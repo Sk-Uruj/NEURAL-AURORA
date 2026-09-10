@@ -39,28 +39,6 @@ CREATE TRIGGER on_auth_user_created
   AFTER INSERT ON auth.users
   FOR EACH ROW EXECUTE FUNCTION handle_new_user();
 
--- Backfill profile row for signed-in user if missing
-CREATE OR REPLACE FUNCTION ensure_my_profile()
-RETURNS void AS $$
-DECLARE
-  v_user_id UUID;
-  v_email TEXT;
-BEGIN
-  v_user_id := auth.uid();
-  IF v_user_id IS NULL THEN
-    RETURN;
-  END IF;
-
-  SELECT email INTO v_email FROM auth.users WHERE id = v_user_id;
-
-  INSERT INTO public.profiles (id, email, role)
-  VALUES (v_user_id, v_email, 'viewer')
-  ON CONFLICT (id) DO NOTHING;
-END;
-$$ LANGUAGE plpgsql SECURITY DEFINER;
-
-GRANT EXECUTE ON FUNCTION ensure_my_profile TO authenticated;
-
 -- ============================================================
 -- PERSONAL INFO
 -- ============================================================
@@ -405,11 +383,6 @@ CREATE POLICY "Users can view own profile"
   ON profiles FOR SELECT
   USING (auth.uid() = id OR is_admin());
 
-DROP POLICY IF EXISTS "Users can insert own profile" ON profiles;
-CREATE POLICY "Users can insert own profile"
-  ON profiles FOR INSERT
-  WITH CHECK (auth.uid() = id);
-
 DROP POLICY IF EXISTS "Admins can update profiles" ON profiles;
 CREATE POLICY "Admins can update profiles"
   ON profiles FOR UPDATE
@@ -692,8 +665,8 @@ GRANT SELECT, UPDATE, DELETE ON TABLE reviews TO authenticated;
 -- Contact messages: authenticated users can manage
 GRANT SELECT, UPDATE, DELETE ON TABLE contact_messages TO authenticated;
 
--- Profiles: authenticated users can read, insert and update
-GRANT SELECT, INSERT, UPDATE ON TABLE profiles TO authenticated;
+-- Profiles: authenticated users can read and update
+GRANT SELECT, UPDATE ON TABLE profiles TO authenticated;
 
 -- ============================================================
 -- ADMIN DELETE USER FUNCTION
