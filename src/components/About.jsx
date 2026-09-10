@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { usePersonalInfo, useSocialLinks } from '../lib/usePortfolioData'
 
 const staggerItem = {
@@ -11,8 +12,10 @@ const staggerItem = {
 }
 
 export default function About() {
+  const { t } = useTranslation()
   const { data: personalInfo } = usePersonalInfo()
   const { data: socialLinks } = useSocialLinks()
+
   return (
     <section id="about" className="relative z-10 py-32 md:py-40">
       <div className="w-full max-w-[1400px] mx-auto px-6 md:px-12">
@@ -25,15 +28,15 @@ export default function About() {
         >
           <div className="space-y-6">
             <motion.span variants={staggerItem} className="eyebrow">
-              About
+              {t('about.eyebrow')}
             </motion.span>
             <motion.h2
               variants={staggerItem}
               className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tighter leading-none"
             >
-              Architect of
+              {t('about.titleArchitect')}
               <br />
-              <span className="text-gradient">Digital Experience</span>
+              <span className="text-gradient">{t('about.titleDigitalExperience')}</span>
             </motion.h2>
             <motion.div variants={staggerItem} className="w-12 h-px bg-black/10 dark:bg-white/10" />
             <motion.p
@@ -46,7 +49,7 @@ export default function About() {
               variants={staggerItem}
               className="text-sm text-black/40 dark:text-white/30 leading-relaxed max-w-[65ch]"
             >
-              Known on the internet as <span className="text-black/70 dark:text-white/60 font-medium">{personalInfo.handle}</span>, I build systems where code meets visual poetry. Every project is an opportunity to push the boundaries of what a browser can do.
+              {t('about.knownAsPrefix')} <span className="text-black/70 dark:text-white/60 font-medium">{personalInfo.handle}</span>{t('about.knownAsSuffix')}
             </motion.p>
           </div>
 
@@ -56,7 +59,7 @@ export default function About() {
           >
             <div className="glass-panel rounded-[2rem] p-8 md:p-10 space-y-6">
               <h3 className="text-xs uppercase tracking-[0.15em] text-black/40 dark:text-white/30 font-medium">
-                Digital Footprint
+                {t('about.digitalFootprint')}
               </h3>
               <div className="space-y-4">
                 {socialLinks.slice(0, 4).map((link, index) => (
@@ -85,7 +88,7 @@ export default function About() {
                 <div className="relative w-12 h-12 rounded-full overflow-hidden glass-panel-strong">
                   <img
                     src={personalInfo.avatar}
-                    alt="Profile avatar"
+                    alt={t('about.avatarAlt')}
                     width={48}
                     height={48}
                     loading="eager"
@@ -99,7 +102,7 @@ export default function About() {
                 </div>
               </div>
               <p className="text-xs text-black/40 dark:text-white/30 leading-relaxed">
-                Currently building NEURAL AURORA and exploring the intersection of 3D graphics and web technology.
+                {t('about.currentFocus')}
               </p>
             </div>
           </motion.div>

@@ -1,0 +1,121 @@
+{
+  "nav": {
+    "about": "Acerca de",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "services": "Servicios",
+    "resume": "Currículum",
+    "contact": "Contacto",
+    "more": "Más",
+    "support": "Soporte",
+    "login": "Iniciar Sesión",
+    "admin": "Panel de Admin",
+    "crm": "Panel CRM",
+    "getStarted": "Empezar",
+    "menu": "Menú"
+  },
+  "hero": {
+    "available": "Disponible para",
+    "collaboration": "Colaboración",
+    "viewProjects": "Ver Proyectos",
+    "resume": "Currículum",
+    "title": "Creando experiencias digitales",
+    "subtitle": "donde las redes neuronales se encuentran con la luz de la aurora"
+  },
+  "about": {
+    "eyebrow": "Acerca de",
+    "titleArchitect": "Arquitecto de",
+    "titleDigitalExperience": "Experiencia Digital",
+    "knownAsPrefix": "Conocido en internet como",
+    "knownAsSuffix": ", construyo sistemas donde el código se une con la poesía visual. Cada proyecto es una oportunidad para desafiar los límites de lo que puede hacer un navegador.",
+    "digitalFootprint": "Huella Digital",
+    "avatarAlt": "Avatar de perfil",
+    "currentFocus": "Actualmente construyendo NEURAL AURORA y explorando la intersección entre los gráficos 3D y la tecnología web."
+  },
+  "skills": {
+    "eyebrow": "Especialidad",
+    "titleTechnical": "Stack",
+    "titleStack": "Técnico",
+    "offlineNotice": "Modo sin conexión — mostrando stack técnico de respaldo",
+    "noData": "No hay datos de habilidades técnicas disponibles en este momento.",
+    "noSkillsInCategory": "No hay habilidades listadas en esta categoría",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "language": "Lenguajes",
+      "devops": "DevOps",
+      "design": "Diseño"
+    }
+  },
+  "projects": {
+    "eyebrow": "Portafolio",
+    "titleNeural": "Proyectos",
+    "titleProjects": "Neuronales",
+    "subtitle": "Cada proyecto es un nodo en una red neuronal en crecimiento. Haz clic para expandir y explorar las conexiones sinápticas.",
+    "offlineNotice": "Modo sin conexión — mostrando proyectos en caché de respaldo",
+    "noData": "No se encontraron proyectos en el repositorio neuronal.",
+    "source": "Código",
+    "link": "Enlace",
+    "demo": "Demo"
+  },
+  "resume": {
+    "eyebrow": "Currículum Vitae",
+    "titleDownload": "Descarga Mi",
+    "titleResume": "Currículum",
+    "subtitle": "Una visión completa de mi experiencia, proyectos y conocimientos técnicos. Actualizado regularmente para reflejar mi trabajo más reciente.",
+    "downloadPdf": "Descargar PDF",
+    "pdfFormat": "Formato PDF . 2.4 MB"
+  },
+  "contact": {
+    "eyebrow": "Conectar",
+    "titleLetsBuild": "Construyamos",
+    "titleTogether": "Juntos",
+    "subtitle": "¿Tienes un proyecto en mente o simplemente quieres saludar? La red neuronal siempre está abierta a nuevas conexiones.",
+    "findMeOn": "Encuéntrame en",
+    "nameLabel": "Nombre",
+    "namePlaceholder": "Tu nombre",
+    "emailLabel": "Correo",
+    "emailPlaceholder": "tu@correo.com",
+    "messageLabel": "Mensaje",
+    "messagePlaceholder": "Cuéntame sobre tu proyecto...",
+    "sendMessage": "Enviar Mensaje",
+    "sending": "Enviando...",
+    "sentSuccess": "¡Mensaje enviado! Me pondré en contacto contigo pronto.",
+    "tagline": "NEURAL AURORA . Portafolio Sináptico",
+    "builtWith": "Creado con React, Three.js y diseño taste-skill"
+  },
+  "reviews": {
+    "title": "Lo Que Dicen",
+    "offlineError": "Modo sin conexión — no se pueden obtener las opiniones",
+    "offlineRefreshError": "Modo sin conexión — no se pueden actualizar las opiniones en vivo",
+    "noReviews": "Aún no hay opiniones disponibles. ¡Vuelve pronto!",
+    "leaveReview": "Deja una Opinión",
+    "shareThoughts": "Comparte tus opiniones sobre mi trabajo",
+    "nameLabel": "Nombre",
+    "namePlaceholder": "Tu nombre",
+    "emailLabel": "Correo",
+    "emailPlaceholder": "opcional",
+    "ratingLabel": "Calificación",
+    "messageLabel": "Mensaje",
+    "messagePlaceholder": "Escribe tu opinión...",
+    "submitReview": "Enviar Opinión",
+    "submitting": "Enviando...",
+    "thankYou": "¡Gracias!",
+    "submittedMessage": "Tu opinión ha sido enviada y está pendiente de aprobación.",
+    "submitAnother": "Enviar otra opinión"
+  },
+  "footer": {
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "connect": "Conectar",
+    "synapticPortfolio": "Portafolio Sináptico",
+    "reactNext": "React / Next.js",
+    "threeWebGL": "Three.js / WebGL",
+    "uiUxDesign": "Diseño UI/UX",
+    "fullStackDev": "Desarrollo Full-Stack",
+    "neuralAurora": "NEURAL AURORA",
+    "synapticDashboard": "Panel Sináptico",
+    "auroraEngine": "Motor Aurora",
+    "viewAll": "Ver Todo"
+  }
+}

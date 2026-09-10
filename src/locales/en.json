@@ -1,0 +1,121 @@
+{
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "services": "Services",
+    "resume": "Resume",
+    "contact": "Contact",
+    "more": "More",
+    "support": "Support",
+    "login": "Login & Setup",
+    "admin": "Admin Dashboard",
+    "crm": "CRM Dashboard",
+    "getStarted": "Get Started",
+    "menu": "Menu"
+  },
+  "hero": {
+    "available": "Available for",
+    "collaboration": "Collaboration",
+    "viewProjects": "View Projects",
+    "resume": "Resume",
+    "title": "Crafting digital experiences",
+    "subtitle": "where neural networks meet aurora light"
+  },
+  "about": {
+    "eyebrow": "About",
+    "titleArchitect": "Architect of",
+    "titleDigitalExperience": "Digital Experience",
+    "knownAsPrefix": "Known on the internet as",
+    "knownAsSuffix": ", I build systems where code meets visual poetry. Every project is an opportunity to push the boundaries of what a browser can do.",
+    "digitalFootprint": "Digital Footprint",
+    "avatarAlt": "Profile avatar",
+    "currentFocus": "Currently building NEURAL AURORA and exploring the intersection of 3D graphics and web technology."
+  },
+  "skills": {
+    "eyebrow": "Expertise",
+    "titleTechnical": "Technical",
+    "titleStack": "Stack",
+    "offlineNotice": "Offline mode — displaying static technical stack fallback",
+    "noData": "No technical skills data available at this time.",
+    "noSkillsInCategory": "No skills listed in this category",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "language": "Languages",
+      "devops": "DevOps",
+      "design": "Design"
+    }
+  },
+  "projects": {
+    "eyebrow": "Portfolio",
+    "titleNeural": "Neural",
+    "titleProjects": "Projects",
+    "subtitle": "Each project is a node in a growing neural network. Click to expand and explore the synaptic connections.",
+    "offlineNotice": "Offline mode — displaying cached projects fallback",
+    "noData": "No projects found in the neural repository.",
+    "source": "Source",
+    "link": "Link",
+    "demo": "Demo"
+  },
+  "resume": {
+    "eyebrow": "Curriculum Vitae",
+    "titleDownload": "Download My",
+    "titleResume": "Resume",
+    "subtitle": "A comprehensive overview of my experience, projects, and technical expertise. Updated regularly to reflect my latest work.",
+    "downloadPdf": "Download PDF",
+    "pdfFormat": "PDF format . 2.4 MB"
+  },
+  "contact": {
+    "eyebrow": "Connect",
+    "titleLetsBuild": "Let's Build",
+    "titleTogether": "Together",
+    "subtitle": "Have a project in mind or just want to say hello? The neural network is always open to new connections.",
+    "findMeOn": "Find me on",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "your@email.com",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Tell me about your project...",
+    "sendMessage": "Send Message",
+    "sending": "Sending...",
+    "sentSuccess": "Message sent! I'll get back to you soon.",
+    "tagline": "NEURAL AURORA . Synaptic Portfolio",
+    "builtWith": "Built with React, Three.js, and taste-skill design"
+  },
+  "reviews": {
+    "title": "What People Say",
+    "offlineError": "Offline mode — unable to fetch reviews",
+    "offlineRefreshError": "Offline mode — unable to refresh live reviews",
+    "noReviews": "No reviews available yet. Check back soon!",
+    "leaveReview": "Leave a Review",
+    "shareThoughts": "Share your thoughts about my work",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "optional",
+    "ratingLabel": "Rating",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Write your review...",
+    "submitReview": "Submit Review",
+    "submitting": "Submitting...",
+    "thankYou": "Thank You!",
+    "submittedMessage": "Your review has been submitted and is pending approval.",
+    "submitAnother": "Submit another review"
+  },
+  "footer": {
+    "skills": "Skills",
+    "projects": "Projects",
+    "connect": "Connect",
+    "synapticPortfolio": "Synaptic Portfolio",
+    "reactNext": "React / Next.js",
+    "threeWebGL": "Three.js / WebGL",
+    "uiUxDesign": "UI/UX Design",
+    "fullStackDev": "Full-Stack Dev",
+    "neuralAurora": "NEURAL AURORA",
+    "synapticDashboard": "Synaptic Dashboard",
+    "auroraEngine": "Aurora Engine",
+    "viewAll": "View All"
+  }
+}

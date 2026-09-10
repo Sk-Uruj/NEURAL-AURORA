@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { useProjects } from '../lib/usePortfolioData'
 
 function ProjectImage({ src, alt, children, shouldReduceMotion }) {
@@ -54,8 +55,15 @@ function PlayIcon() {
 }
 
 function ProjectCard({ project, index, shouldReduceMotion }) {
+  const { t } = useTranslation()
   const [expanded, setExpanded] = useState(false)
   const technologies = project.technologies || []
+
+  const labelMap = {
+    github: t('projects.source'),
+    link: t('projects.link'),
+    demo: t('projects.demo'),
+  }
 
   return (
     <motion.div
@@ -125,6 +133,7 @@ function ProjectCard({ project, index, shouldReduceMotion }) {
                 {['github', 'link', 'demo'].map((type) => {
                   const url = project[type]
                   const Icon = type === 'github' ? GithubIcon : type === 'link' ? LinkIcon : PlayIcon
+                  const label = labelMap[type]
 
                   return url ? (
                     <a
@@ -137,7 +146,7 @@ function ProjectCard({ project, index, shouldReduceMotion }) {
                     >
                       <Icon />
                       <span className="relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-current after:transition-all after:duration-300 group-hover:after:w-full">
-                        {type === 'github' ? 'Source' : type === 'link' ? 'Link' : 'Demo'}
+                        {label}
                       </span>
                     </a>
                   ) : (
@@ -146,7 +155,7 @@ function ProjectCard({ project, index, shouldReduceMotion }) {
                       className="text-xs text-black/20 dark:text-white/20 flex items-center gap-1.5 cursor-not-allowed"
                     >
                       <Icon />
-                      {type === 'github' ? 'Source' : type === 'link' ? 'Link' : 'Demo'}
+                      {label}
                     </span>
                   )
                 })}
@@ -160,6 +169,7 @@ function ProjectCard({ project, index, shouldReduceMotion }) {
 }
 
 export default function Projects() {
+  const { t } = useTranslation()
   const shouldReduceMotion = useReducedMotion()
   const { data: projects = [], isLoading, error } = useProjects()
 
@@ -173,21 +183,22 @@ export default function Projects() {
           transition={shouldReduceMotion ? undefined : { duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="mb-16"
         >
-          <span className="eyebrow">Portfolio</span>
+          <span className="eyebrow">{t('projects.eyebrow')}</span>
 
           <h2 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tighter leading-none">
-            Neural <span className="text-gradient">Projects</span>
+            {t('projects.titleNeural')}{' '}
+            <span className="text-gradient">{t('projects.titleProjects')}</span>
           </h2>
 
           <p className="mt-4 text-base text-black/50 dark:text-white/40 max-w-[65ch] leading-relaxed">
-            Each project is a node in a growing neural network. Click to expand and explore the synaptic connections.
+            {t('projects.subtitle')}
           </p>
         </motion.div>
 
         {error && (
           <div className="mb-8 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-amber-500/20 bg-amber-500/10 text-amber-600 dark:text-amber-400 text-xs font-mono">
             <span>⚠️</span>
-            <span>Offline mode — displaying cached projects fallback</span>
+            <span>{t('projects.offlineNotice')}</span>
           </div>
         )}
 
@@ -207,7 +218,7 @@ export default function Projects() {
         ) : !isLoading && (!projects || projects.length === 0) ? (
           <div className="glass-panel rounded-[2rem] p-12 text-center max-w-lg mx-auto">
             <p className="text-sm text-black/50 dark:text-white/40 font-mono">
-              No projects found in the neural repository.
+              {t('projects.noData')}
             </p>
           </div>
         ) : (
