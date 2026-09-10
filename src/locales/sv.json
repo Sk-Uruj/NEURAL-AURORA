@@ -1,0 +1,349 @@
+{
+  "nav": {
+    "about": "Om mig",
+    "skills": "Färdigheter",
+    "projects": "Projekt",
+    "services": "Tjänster",
+    "resume": "CV",
+    "contact": "Kontakt",
+    "more": "Mer",
+    "support": "Stöd",
+    "login": "Inloggning och inställningar",
+    "admin": "Adminpanel",
+    "crm": "CRM-panel",
+    "getStarted": "Kom igång",
+    "menu": "Meny"
+  },
+  "common": {
+    "home": "Hem",
+    "menu": "Meny"
+  },
+  "hero": {
+    "available": "Öppen för",
+    "collaboration": "samarbete",
+    "viewProjects": "Se projekt",
+    "resume": "CV",
+    "title": "Skapar digitala upplevelser",
+    "subtitle": "där neurala nätverk möter norrsken"
+  },
+  "about": {
+    "eyebrow": "Om mig",
+    "titleArchitect": "Arkitekt för",
+    "titleDigitalExperience": "digitala upplevelser",
+    "knownAsPrefix": "Känd på internet som",
+    "knownAsSuffix": ", bygger jag system där kod möter visuell poesi. Varje projekt är en chans att tänja på webbläsarens gränser.",
+    "digitalFootprint": "Digitalt fotavtryck",
+    "avatarAlt": "Profilavatar",
+    "currentFocus": "Bygger för närvarande NEURAL AURORA och utforskar skärningspunkten mellan 3D-grafik och webbteknik."
+  },
+  "skills": {
+    "eyebrow": "Expertis",
+    "titleTechnical": "Teknisk",
+    "titleStack": "stack",
+    "offlineNotice": "Offlineläge — visar statisk teknikstack istället",
+    "noData": "Ingen data om tekniska färdigheter finns tillgänglig just nu.",
+    "noSkillsInCategory": "Inga färdigheter i denna kategori",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "language": "Språk",
+      "devops": "DevOps",
+      "design": "Design"
+    }
+  },
+  "projects": {
+    "eyebrow": "Portfolio",
+    "titleNeural": "Neurala",
+    "titleProjects": "projekt",
+    "subtitle": "Varje projekt är en nod i ett växande neuralt nätverk. Klicka för att expandera och utforska de synaptiska kopplingarna.",
+    "offlineNotice": "Offlineläge — visar cachade projekt istället",
+    "noData": "Inga projekt hittades i det neurala arkivet.",
+    "source": "Källkod",
+    "link": "Länk",
+    "demo": "Demo"
+  },
+  "resume": {
+    "eyebrow": "CV",
+    "titleDownload": "Ladda ner mitt",
+    "titleResume": "CV",
+    "subtitle": "En heltäckande sammanfattning av min erfarenhet, mina projekt och min tekniska expertis. Uppdateras regelbundet.",
+    "downloadPdf": "Ladda ner PDF",
+    "pdfFormat": "PDF-format . 2,4 MB"
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "titleLetsBuild": "Låt oss bygga",
+    "titleTogether": "tillsammans",
+    "subtitle": "Har du ett projekt i tankarna eller vill bara säga hej? Det neurala nätverket är alltid öppet för nya kopplingar.",
+    "findMeOn": "Hitta mig på",
+    "nameLabel": "Namn",
+    "namePlaceholder": "Ditt namn",
+    "emailLabel": "E-post",
+    "emailPlaceholder": "your@email.com",
+    "messageLabel": "Meddelande",
+    "messagePlaceholder": "Berätta om ditt projekt...",
+    "sendMessage": "Skicka meddelande",
+    "sending": "Skickar...",
+    "sentSuccess": "Meddelandet skickat! Jag hör av mig snart.",
+    "tagline": "NEURAL AURORA . Synaptisk portfolio",
+    "builtWith": "Byggd med React, Three.js och smakfulla designval"
+  },
+  "reviews": {
+    "title": "Vad folk säger",
+    "offlineError": "Offlineläge — kunde inte hämta recensioner",
+    "offlineRefreshError": "Offlineläge — kunde inte uppdatera live-recensioner",
+    "noReviews": "Inga recensioner än. Kom snart tillbaka!",
+    "leaveReview": "Lämna en recension",
+    "shareThoughts": "Dela dina tankar om mitt arbete",
+    "nameLabel": "Namn",
+    "namePlaceholder": "Ditt namn",
+    "emailLabel": "E-post",
+    "emailPlaceholder": "valfritt",
+    "ratingLabel": "Betyg",
+    "messageLabel": "Meddelande",
+    "messagePlaceholder": "Skriv din recension...",
+    "submitReview": "Skicka recension",
+    "submitting": "Skickar...",
+    "thankYou": "Tack!",
+    "submittedMessage": "Din recension har skickats och väntar på godkännande.",
+    "submitAnother": "Skicka en till recension"
+  },
+  "footer": {
+    "skills": "Färdigheter",
+    "projects": "Projekt",
+    "connect": "Kontakt",
+    "synapticPortfolio": "Synaptisk portfolio",
+    "reactNext": "React / Next.js",
+    "threeWebGL": "Three.js / WebGL",
+    "uiUxDesign": "UI/UX-design",
+    "fullStackDev": "Fullstackutveckling",
+    "neuralAurora": "NEURAL AURORA",
+    "synapticDashboard": "Synaptisk panel",
+    "auroraEngine": "Aurora-motor",
+    "viewAll": "Visa alla"
+  },
+  "loader": {
+    "verificationRequired": "Verifiering krävs",
+    "proveIdentity": "Bevisa din identitet för att få tillgång till systemet.",
+    "cards": {
+      "sayName": "Säg \"{{name}}\"",
+      "voiceRecognition": "Röstigenkänning",
+      "solvePuzzle": "Lös pusslet",
+      "oneQuestion": "En fråga",
+      "traverseOn": "Fortsätt",
+      "autoTraverse": "Auto-tur",
+      "traverseActiveDesc": "Automatiskt demoläge aktivt",
+      "traverseTourDesc": "Fullständig demo-tur på webbplatsen",
+      "watchDevAds": "Titta på dev-annonser",
+      "videoAdsToUnlock": "Videoannonser för att låsa upp",
+      "moodSwing": "Humörsvängning",
+      "setVibeMusic": "Sätt stämningen och musiken",
+      "neuralCmd": "Neural Aurora CMD",
+      "exploreTerminal": "Utforska via terminal",
+      "takeInterview": "Gör min intervju",
+      "voiceAiInterview": "Röstbaserad AI-intervju",
+      "patternLock": "Neuralt mönsterlås",
+      "memoryChallenge": "Minneutmaning",
+      "channelStream": "Kanalström",
+      "browseVideos": "Bläddra bland mina videor",
+      "skipVibes": "Hoppa över stämningen",
+      "directEntry": "Direktinträde",
+      "openDocs": "Öppna dokumentation"
+    },
+    "interview": {
+      "chatWith": "Chatta med {{name}}",
+      "askAnything": "Fråga mig vad som helst",
+      "live": "Live",
+      "gettingReady": "Förbereder...",
+      "thinking": "{{name}} tänker...",
+      "you": "Du",
+      "listening": "Jag lyssnar... sätt igång, fråga mig vad som helst",
+      "tapMic": "Tryck på mikrofonen och ställ sedan din fråga",
+      "typeQuestion": "Skriv din fråga...",
+      "ask": "Fråga",
+      "youAsked": "Du frågade",
+      "says": "{{name}} säger",
+      "askAnother": "Ställ en annan fråga",
+      "endInterview": "Avsluta intervjun",
+      "allDone": "Allt klart",
+      "enterPortfolio": "Gå in i portfolion"
+    },
+    "voice": {
+      "instruction": "Säg \"{{name}}\" för att verifiera din identitet",
+      "listening": "Jag lyssnar...",
+      "trySaying": "Försök säga \"{{name}}\"",
+      "verified": "Identitet verifierad"
+    },
+    "success": {
+      "verified": "Identitet verifierad",
+      "accessGranted": "Åtkomst beviljad",
+      "welcome": "Välkommen till NEURAL AURORA"
+    },
+    "cmd": {
+      "email": "E-post",
+      "availableOnRequest": "tillgänglig på begäran"
+    }
+  },
+  "blog": {
+    "eyebrow": "Blogg",
+    "titlePrefix": "Tankar och",
+    "titleSuffix": "idéer",
+    "subtitle": "Delar vad jag lär mig, bygger och funderar över.",
+    "searchPlaceholder": "Sök inlägg...",
+    "noPosts": "Inga inlägg hittades. Prova en annan sökning.",
+    "postNotFound": "Inlägget hittades inte",
+    "backToBlog": "Tillbaka till bloggen",
+    "blogPostEyebrow": "Blogginlägg",
+    "readMore": "Läs fler inlägg",
+    "allPosts": "Alla inlägg"
+  },
+  "services": {
+    "options": "{{count}} alternativ",
+    "viewDetails": "Visa detaljer",
+    "step": "Steg {{number}}",
+    "whatIncluded": "Vad som ingår",
+    "selectType": "Välj projekttyp",
+    "backToServices": "Tillbaka till tjänster",
+    "getInTouch": "Kom i kontakt",
+    "projectPlaceholder": "Berätta om ditt {{title}}-projekt...",
+    "mostPopular": "Mest populär",
+    "getStarted": "Kom igång",
+    "processing": "Bearbetar...",
+    "serviceNotFound": "Tjänsten hittades inte",
+    "price": "Pris",
+    "delivery": "Leverans",
+    "pay": "Betala",
+    "paymentConfirmed": "Betalning bekräftad",
+    "nav": {
+      "services": "Tjänster",
+      "process": "Process",
+      "pricing": "Priser",
+      "faq": "FAQ",
+      "contact": "Kontakt"
+    }
+  },
+  "support": {
+    "eyebrow": "Stöd",
+    "heroSubtitle": "Öppen källkod & gratis för alltid",
+    "heroDescription": "Detta projekt är 100% gratis och öppen källkod. Ditt bidrag håller det vid liv, finansierar nya funktioner och hjälper oss konkurrera med betalda alternativ — samtidigt som NEURAL AURORA förblir gratis för alla.",
+    "floatingButton": "Stöd",
+    "sponsorPlaceholder": "Berätta om ditt projekt eller sponsor-idéer...",
+    "nav": {
+      "contribute": "Bidra",
+      "whySupport": "Varför stödja",
+      "faq": "FAQ",
+      "contact": "Kontakt"
+    },
+    "presets": {
+      "coffee": "Bjud på en kaffe",
+      "feature": "Stöd en funktion",
+      "speed": "Snabbare utveckling",
+      "rocket": "Uppskjutsbooster",
+      "crown": "Premium-backer",
+      "legend": "Legendarisk nivå"
+    }
+  },
+  "more": {
+    "eyebrow": "Mer",
+    "titlePrefix": "Bortom",
+    "titleSuffix": "koden",
+    "subtitle": "Min resa genom utbildning, erfarenhet, idéer och insikter.",
+    "education": "Utbildning",
+    "experience": "Arbetslivserfarenhet",
+    "latestPosts": "Senaste blogginläggen",
+    "viewAll": "Visa alla",
+    "caseStudies": "Fallstudier",
+    "nav": {
+      "timeline": "Tidslinje",
+      "caseStudies": "Fallstudier",
+      "blog": "Blogg"
+    }
+  },
+  "caseStudy": {
+    "notFound": "Fallstudien hittades inte",
+    "backToStudies": "Tillbaka till fallstudier",
+    "eyebrow": "Fallstudie",
+    "outcome": "Resultat",
+    "fullAnalysis": "Fullständig analys",
+    "viewAll": "Visa alla fallstudier"
+  },
+  "contributors": {
+    "eyebrow": "Bidragsgivare",
+    "titlePrefix": "Personerna bakom",
+    "subtitle": "Varje bidragsgivare — utvecklare eller donator — hjälper till att hålla projektet gratis och som öppen källkod.",
+    "becomeContributor": "Bli en bidragsgivare",
+    "becomeContributorSubtitle": "Stöd projektet och bli listad här"
+  },
+  "mood": {
+    "title": "Humörsvängning",
+    "subtitle": "Sätt stämningen före inträde",
+    "footnote": "Välj humör → musiken sätter tonen för utforskningen",
+    "moods": {
+      "energetic": {
+        "label": "Energisk",
+        "description": "Pumpad och upphetsad"
+      },
+      "calm": {
+        "label": "Lugn",
+        "description": "Avslappnad och chill"
+      },
+      "happy": {
+        "label": "Glad",
+        "description": "Gladlynt och ljus"
+      },
+      "focused": {
+        "label": "Fokuserad",
+        "description": "Djupt flödestillstånd"
+      },
+      "mysterious": {
+        "label": "Mystisk",
+        "description": "Mörk och stämningsfull"
+      },
+      "euphoric": {
+        "label": "Euforisk",
+        "description": "Transcendenta vågor"
+      }
+    }
+  },
+  "ads": {
+    "ad": "Annons",
+    "video": "Video",
+    "short": "Kort",
+    "sponsored": "Sponsrad",
+    "videoUnavailable": "Videon är inte tillgänglig",
+    "unavailable": "Inte tillgänglig",
+    "adComplete": "Annons avslutad",
+    "enteringIn": "Går in om {{count}}s",
+    "skip": "Hoppa över",
+    "autoAd": "Automatisk annons",
+    "googleAd": "Google-annons",
+    "shortAd": "Kort annons",
+    "videoAd": "Videoannons"
+  },
+  "youtube": {
+    "watchingToVerify": "Tittar för att verifiera",
+    "videos": "Videor",
+    "shorts": "Shorts",
+    "playlists": "Spellistor",
+    "searchPlaceholder": "Sök {{tab}}...",
+    "noVideos": "Inga videor hittades",
+    "noShorts": "Inga shorts hittades",
+    "noPlaylists": "Inga offentliga spellistor",
+    "loadMore": "Ladda fler",
+    "tryDifferentSearch": "Prova en annan sökning eller kom tillbaka senare",
+    "shortsAppearHere": "Kort innehåll visas här",
+    "playlistsAppearHere": "Kanalens spellistor visas här",
+    "backToVerification": "Tillbaka till verifiering",
+    "backToVideos": "Tillbaka till videor",
+    "browseToVerify": "Bläddra för att verifiera",
+    "retry": "Försök igen",
+    "subscribers": "prenumeranter",
+    "videosCount": "{{count}} videor",
+    "noVideosInPlaylist": "Inga videor i denna spellista"
+  },
+  "theme": {
+    "switchToDark": "Växla till mörkt läge",
+    "switchToLight": "Växla till ljust läge",
+    "searchPlaceholder": "Sök..."
+  }
+}

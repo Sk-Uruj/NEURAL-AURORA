@@ -1,0 +1,349 @@
+{
+  "nav": {
+    "about": "소개",
+    "skills": "기술",
+    "projects": "프로젝트",
+    "services": "서비스",
+    "resume": "이력서",
+    "contact": "연락처",
+    "more": "더보기",
+    "support": "후원",
+    "login": "로그인 및 설정",
+    "admin": "관리자 대시보드",
+    "crm": "CRM 대시보드",
+    "getStarted": "시작하기",
+    "menu": "메뉴"
+  },
+  "common": {
+    "home": "홈",
+    "menu": "메뉴"
+  },
+  "hero": {
+    "available": "협업",
+    "collaboration": "가능",
+    "viewProjects": "프로젝트 보기",
+    "resume": "이력서",
+    "title": "디지털 경험을 설계합니다",
+    "subtitle": "신경망이 오로라 빛을 만나는 곳"
+  },
+  "about": {
+    "eyebrow": "소개",
+    "titleArchitect": "디지털 경험의",
+    "titleDigitalExperience": "설계자",
+    "knownAsPrefix": "인터넷에서는",
+    "knownAsSuffix": "로 알려져 있으며, 코드와 시각적 시가 만나는 시스템을 구축합니다. 모든 프로젝트는 브라우저가 할 수 있는 것의 경계를 넓히는 기회입니다.",
+    "digitalFootprint": "디지털 발자취",
+    "avatarAlt": "프로필 아바타",
+    "currentFocus": "현재 NEURAL AURORA를 구축하며 3D 그래픽과 웹 기술의 접점을 탐구하고 있습니다."
+  },
+  "skills": {
+    "eyebrow": "전문 분야",
+    "titleTechnical": "기술",
+    "titleStack": "스택",
+    "offlineNotice": "오프라인 모드 — 정적 기술 스택 표시 중",
+    "noData": "현재 기술 스킬 데이터가 없습니다.",
+    "noSkillsInCategory": "이 카테고리에 기술이 없습니다",
+    "categories": {
+      "frontend": "프론트엔드",
+      "backend": "백엔드",
+      "language": "언어",
+      "devops": "DevOps",
+      "design": "디자인"
+    }
+  },
+  "projects": {
+    "eyebrow": "포트폴리오",
+    "titleNeural": "뉴럴",
+    "titleProjects": "프로젝트",
+    "subtitle": "각 프로젝트는 성장하는 신경망의 노드입니다. 클릭하여 시냅스 연결을 탐색하세요.",
+    "offlineNotice": "오프라인 모드 — 캐시된 프로젝트 표시 중",
+    "noData": "뉴럴 저장소에서 프로젝트를 찾을 수 없습니다.",
+    "source": "소스",
+    "link": "링크",
+    "demo": "데모"
+  },
+  "resume": {
+    "eyebrow": "이력서",
+    "titleDownload": "이력서",
+    "titleResume": "다운로드",
+    "subtitle": "경험, 프로젝트, 기술 전문성에 대한 포괄적인 개요입니다. 최신 작업을 반영하도록 정기적으로 업데이트됩니다.",
+    "downloadPdf": "PDF 다운로드",
+    "pdfFormat": "PDF 형식 . 2.4 MB"
+  },
+  "contact": {
+    "eyebrow": "연락",
+    "titleLetsBuild": "함께",
+    "titleTogether": "만들어 봐요",
+    "subtitle": "구상 중인 프로젝트가 있거나 그냥 인사하고 싶으신가요? 신경망은 언제나 새로운 연결에 열려 있습니다.",
+    "findMeOn": "여기에서 만나기",
+    "nameLabel": "이름",
+    "namePlaceholder": "이름",
+    "emailLabel": "이메일",
+    "emailPlaceholder": "your@email.com",
+    "messageLabel": "메시지",
+    "messagePlaceholder": "프로젝트에 대해 알려주세요...",
+    "sendMessage": "메시지 보내기",
+    "sending": "보내는 중...",
+    "sentSuccess": "메시지가 전송되었습니다! 곧 연락드리겠습니다.",
+    "tagline": "NEURAL AURORA . 시냅스 포트폴리오",
+    "builtWith": "React, Three.js, 세련된 디자인으로 제작"
+  },
+  "reviews": {
+    "title": "사람들의 이야기",
+    "offlineError": "오프라인 모드 — 리뷰를 불러올 수 없습니다",
+    "offlineRefreshError": "오프라인 모드 — 라이브 리뷰를 새로고침할 수 없습니다",
+    "noReviews": "아직 리뷰가 없습니다. 곧 다시 방문해 주세요!",
+    "leaveReview": "리뷰 남기기",
+    "shareThoughts": "제 작업에 대한 생각을 공유하세요",
+    "nameLabel": "이름",
+    "namePlaceholder": "이름",
+    "emailLabel": "이메일",
+    "emailPlaceholder": "선택 사항",
+    "ratingLabel": "평점",
+    "messageLabel": "메시지",
+    "messagePlaceholder": "리뷰를 작성하세요...",
+    "submitReview": "리뷰 제출",
+    "submitting": "제출 중...",
+    "thankYou": "감사합니다!",
+    "submittedMessage": "리뷰가 제출되었으며 승인을 기다리고 있습니다.",
+    "submitAnother": "다른 리뷰 제출"
+  },
+  "footer": {
+    "skills": "기술",
+    "projects": "프로젝트",
+    "connect": "연락",
+    "synapticPortfolio": "시냅스 포트폴리오",
+    "reactNext": "React / Next.js",
+    "threeWebGL": "Three.js / WebGL",
+    "uiUxDesign": "UI/UX 디자인",
+    "fullStackDev": "풀스택 개발",
+    "neuralAurora": "NEURAL AURORA",
+    "synapticDashboard": "시냅스 대시보드",
+    "auroraEngine": "오로라 엔진",
+    "viewAll": "모두 보기"
+  },
+  "loader": {
+    "verificationRequired": "본인 확인 필요",
+    "proveIdentity": "시스템에 접근하려면 본인 확인이 필요합니다.",
+    "cards": {
+      "sayName": "\"{{name}}\"이라고 말하세요",
+      "voiceRecognition": "음성 인식",
+      "solvePuzzle": "퍼즐 풀기",
+      "oneQuestion": "질문 하나",
+      "traverseOn": "계속하기",
+      "autoTraverse": "자동 투어",
+      "traverseActiveDesc": "자동 데모 모드 활성화",
+      "traverseTourDesc": "전체 사이트 데모 투어",
+      "watchDevAds": "개발 광고 시청",
+      "videoAdsToUnlock": "잠금 해제용 비디오 광고",
+      "moodSwing": "무드 스윙",
+      "setVibeMusic": "분위기와 음악 설정",
+      "neuralCmd": "Neural Aurora CMD",
+      "exploreTerminal": "터미널로 탐색",
+      "takeInterview": "내 인터뷰 보기",
+      "voiceAiInterview": "음성 AI 인터뷰",
+      "patternLock": "뉴럴 패턴 잠금",
+      "memoryChallenge": "기억력 챌린지",
+      "channelStream": "채널 스트림",
+      "browseVideos": "내 영상 보기",
+      "skipVibes": "분위기 건너뛰기",
+      "directEntry": "직접 입장",
+      "openDocs": "문서 열기"
+    },
+    "interview": {
+      "chatWith": "{{name}}와 대화",
+      "askAnything": "무엇이든 물어보세요",
+      "live": "라이브",
+      "gettingReady": "준비 중...",
+      "thinking": "{{name}}님이 생각하는 중...",
+      "you": "나",
+      "listening": "듣고 있어요... 무엇이든 물어보세요",
+      "tapMic": "마이크를 탭한 후 질문하세요",
+      "typeQuestion": "질문을 입력하세요...",
+      "ask": "질문하기",
+      "youAsked": "내 질문",
+      "says": "{{name}} 답변",
+      "askAnother": "다른 질문하기",
+      "endInterview": "인터뷰 종료",
+      "allDone": "모두 완료",
+      "enterPortfolio": "포트폴리오 입장"
+    },
+    "voice": {
+      "instruction": "본인 확인을 위해 \"{{name}}\"이라고 말하세요",
+      "listening": "듣는 중...",
+      "trySaying": "\"{{name}}\"이라고 말해 보세요",
+      "verified": "본인 확인 완료"
+    },
+    "success": {
+      "verified": "본인 확인 완료",
+      "accessGranted": "접근 허용",
+      "welcome": "NEURAL AURORA에 오신 것을 환영합니다"
+    },
+    "cmd": {
+      "email": "이메일",
+      "availableOnRequest": "요청 시 제공"
+    }
+  },
+  "blog": {
+    "eyebrow": "블로그",
+    "titlePrefix": "생각과",
+    "titleSuffix": "아이디어",
+    "subtitle": "배우고, 만들고, 생각하는 것을 공유합니다.",
+    "searchPlaceholder": "게시물 검색...",
+    "noPosts": "게시물을 찾을 수 없습니다. 다른 검색을 시도하세요.",
+    "postNotFound": "게시물을 찾을 수 없습니다",
+    "backToBlog": "블로그로 돌아가기",
+    "blogPostEyebrow": "블로그 게시물",
+    "readMore": "더 읽기",
+    "allPosts": "모든 게시물"
+  },
+  "services": {
+    "options": "{{count}}개 옵션",
+    "viewDetails": "자세히 보기",
+    "step": "단계 {{number}}",
+    "whatIncluded": "포함 사항",
+    "selectType": "프로젝트 유형 선택",
+    "backToServices": "서비스로 돌아가기",
+    "getInTouch": "문의하기",
+    "projectPlaceholder": "{{title}} 프로젝트에 대해 알려주세요...",
+    "mostPopular": "가장 인기",
+    "getStarted": "시작하기",
+    "processing": "처리 중...",
+    "serviceNotFound": "서비스를 찾을 수 없습니다",
+    "price": "가격",
+    "delivery": "납기",
+    "pay": "결제",
+    "paymentConfirmed": "결제 확인됨",
+    "nav": {
+      "services": "서비스",
+      "process": "프로세스",
+      "pricing": "가격",
+      "faq": "FAQ",
+      "contact": "연락"
+    }
+  },
+  "support": {
+    "eyebrow": "후원",
+    "heroSubtitle": "오픈소스 & 영원히 무료",
+    "heroDescription": "이 프로젝트는 100% 무료이며 오픈소스입니다. 여러분의 기부는 이 프로젝트를 살아있게 하고 새 기능에 자금을 제공하며 유료 대안과 경쟁하는 데 도움을 줍니다 — NEURAL AURORA는 모두를 위해 무료로 유지됩니다.",
+    "floatingButton": "후원",
+    "sponsorPlaceholder": "프로젝트나 후원 아이디어에 대해 알려주세요...",
+    "nav": {
+      "contribute": "기여하기",
+      "whySupport": "왜 후원하나요",
+      "faq": "FAQ",
+      "contact": "연락"
+    },
+    "presets": {
+      "coffee": "커피 한 잔",
+      "feature": "기능 후원",
+      "speed": "개발 가속화",
+      "rocket": "런치 부스터",
+      "crown": "프리미엄 후원자",
+      "legend": "레전드"
+    }
+  },
+  "more": {
+    "eyebrow": "더보기",
+    "titlePrefix": "코드를",
+    "titleSuffix": "넘어서",
+    "subtitle": "교육, 경험, 아이디어, 통찰을 거친 나의 여정.",
+    "education": "학력",
+    "experience": "경력",
+    "latestPosts": "최신 블로그 게시물",
+    "viewAll": "모두 보기",
+    "caseStudies": "케이스 스터디",
+    "nav": {
+      "timeline": "타임라인",
+      "caseStudies": "케이스 스터디",
+      "blog": "블로그"
+    }
+  },
+  "caseStudy": {
+    "notFound": "케이스 스터디를 찾을 수 없습니다",
+    "backToStudies": "케이스 스터디로 돌아가기",
+    "eyebrow": "케이스 스터디",
+    "outcome": "결과",
+    "fullAnalysis": "전체 분석",
+    "viewAll": "모든 케이스 스터디 보기"
+  },
+  "contributors": {
+    "eyebrow": "기여자",
+    "titlePrefix": "프로젝트의",
+    "subtitle": "모든 기여자 — 개발자든 후원자든 — 이 프로젝트를 무료·오픈소스로 유지하는 데 도움을 줍니다.",
+    "becomeContributor": "기여자가 되기",
+    "becomeContributorSubtitle": "프로젝트를 지원하고 여기에 등록되세요"
+  },
+  "mood": {
+    "title": "무드 스윙",
+    "subtitle": "입장 전에 분위기 설정",
+    "footnote": "무드를 선택 → 음악이 탐험의 분위기를 정합니다",
+    "moods": {
+      "energetic": {
+        "label": "활기찬",
+        "description": "펌핑되고 신나는"
+      },
+      "calm": {
+        "label": "평온한",
+        "description": "차분하고 편안한 분위기"
+      },
+      "happy": {
+        "label": "행복한",
+        "description": "즐겁고 밝은"
+      },
+      "focused": {
+        "label": "집중",
+        "description": "깊은 몰입 상태"
+      },
+      "mysterious": {
+        "label": "신비로운",
+        "description": "어둡고 분위기 있는"
+      },
+      "euphoric": {
+        "label": "황홀한",
+        "description": "초월적 파동"
+      }
+    }
+  },
+  "ads": {
+    "ad": "광고",
+    "video": "비디오",
+    "short": "쇼츠",
+    "sponsored": "스폰서",
+    "videoUnavailable": "비디오를 사용할 수 없음",
+    "unavailable": "사용할 수 없음",
+    "adComplete": "광고 완료",
+    "enteringIn": "{{count}}초 후 입장",
+    "skip": "건너뛰기",
+    "autoAd": "자동 광고",
+    "googleAd": "Google 광고",
+    "shortAd": "쇼츠 광고",
+    "videoAd": "비디오 광고"
+  },
+  "youtube": {
+    "watchingToVerify": "확인을 위해 시청 중",
+    "videos": "비디오",
+    "shorts": "쇼츠",
+    "playlists": "플레이리스트",
+    "searchPlaceholder": "{{tab}} 검색...",
+    "noVideos": "비디오를 찾을 수 없습니다",
+    "noShorts": "쇼츠를 찾을 수 없습니다",
+    "noPlaylists": "공개 플레이리스트가 없습니다",
+    "loadMore": "더 불러오기",
+    "tryDifferentSearch": "다른 검색을 시도하거나 나중에 다시 오세요",
+    "shortsAppearHere": "쇼트 콘텐츠가 여기에 표시됩니다",
+    "playlistsAppearHere": "채널 플레이리스트가 여기에 표시됩니다",
+    "backToVerification": "확인으로 돌아가기",
+    "backToVideos": "비디오로 돌아가기",
+    "browseToVerify": "확인을 위해 둘러보기",
+    "retry": "다시 시도",
+    "subscribers": "구독자",
+    "videosCount": "{{count}}개 비디오",
+    "noVideosInPlaylist": "이 플레이리스트에 비디오가 없습니다"
+  },
+  "theme": {
+    "switchToDark": "다크 모드로 전환",
+    "switchToLight": "라이트 모드로 전환",
+    "searchPlaceholder": "검색..."
+  }
+}

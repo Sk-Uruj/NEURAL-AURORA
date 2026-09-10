@@ -1,0 +1,349 @@
+{
+  "nav": {
+    "about": "אודות",
+    "skills": "כישורים",
+    "projects": "פרויקטים",
+    "services": "שירותים",
+    "resume": "קורות חיים",
+    "contact": "יצירת קשר",
+    "more": "עוד",
+    "support": "תמיכה",
+    "login": "התחברות והגדרה",
+    "admin": "לוח ניהול",
+    "crm": "לוח CRM",
+    "getStarted": "התחל",
+    "menu": "תפריט"
+  },
+  "common": {
+    "home": "ראשי",
+    "menu": "תפריט"
+  },
+  "hero": {
+    "available": "זמין ל",
+    "collaboration": "שיתוף פעולה",
+    "viewProjects": "לצפות בפרויקטים",
+    "resume": "קורות חיים",
+    "title": "יוצר חוויות דיגיטליות",
+    "subtitle": "במקום שבו רשתות נוירונים פוגשות אור אורורה"
+  },
+  "about": {
+    "eyebrow": "אודות",
+    "titleArchitect": "אדריכל",
+    "titleDigitalExperience": "החוויה הדיגיטלית",
+    "knownAsPrefix": "מוכר באינטרנט בשם",
+    "knownAsSuffix": ", אני בונה מערכות שבהן קוד פוגש שירה ויזואלית. כל פרויקט הוא הזדמנות לדחוף את גבולות הדפדפן.",
+    "digitalFootprint": "טביעת רגל דיגיטלית",
+    "avatarAlt": "תמונת פרופיל",
+    "currentFocus": "כיום אני בונה את NEURAL AURORA וחוקר את המפגש בין גרפיקת תלת-ממד לטכנולוגיית אינטרנט."
+  },
+  "skills": {
+    "eyebrow": "מומחיות",
+    "titleTechnical": "ערימת",
+    "titleStack": "טכנולוגיות",
+    "offlineNotice": "מצב לא מקוון — מוצגת ערימת טכנולוגיות סטטית",
+    "noData": "אין נתוני כישורים טכניים זמינים כרגע.",
+    "noSkillsInCategory": "אין כישורים בקטגוריה זו",
+    "categories": {
+      "frontend": "פרונטאנד",
+      "backend": "בקאנד",
+      "language": "שפות",
+      "devops": "DevOps",
+      "design": "עיצוב"
+    }
+  },
+  "projects": {
+    "eyebrow": "תיק עבודות",
+    "titleNeural": "פרויקטי",
+    "titleProjects": "ניאורל",
+    "subtitle": "כל פרויקט הוא צומת ברשת נוירונים הולכת וגדלה. לחץ כדי להרחיב ולחקור את הקשרים הסינפטיים.",
+    "offlineNotice": "מצב לא מקוון — מוצגים פרויקטים מהמטמון",
+    "noData": "לא נמצאו פרויקטים במאגר הניורונאלי.",
+    "source": "קוד מקור",
+    "link": "קישור",
+    "demo": "הדגמה"
+  },
+  "resume": {
+    "eyebrow": "קורות חיים",
+    "titleDownload": "הורד",
+    "titleResume": "את קורות החיים שלי",
+    "subtitle": "סיכום מקיף של הניסיון, הפרויקטים והמומחיות הטכנית שלי. מתעדכן באופן קבוע.",
+    "downloadPdf": "הורד PDF",
+    "pdfFormat": "כקובץ PDF. 2.4 MB"
+  },
+  "contact": {
+    "eyebrow": "יצירת קשר",
+    "titleLetsBuild": "בואו נבנה",
+    "titleTogether": "ביחד",
+    "subtitle": "יש לך פרויקט בראש או סתם רוצה להגיד שלום? הרשת הניורונאלית תמיד פתוחה לקשרים חדשים.",
+    "findMeOn": "מצאו אותי ב",
+    "nameLabel": "שם",
+    "namePlaceholder": "השם שלך",
+    "emailLabel": "אימייל",
+    "emailPlaceholder": "your@email.com",
+    "messageLabel": "הודעה",
+    "messagePlaceholder": "ספר לי על הפרויקט שלך...",
+    "sendMessage": "שלח הודעה",
+    "sending": "שולח...",
+    "sentSuccess": "ההודעה נשלחה! אחזור אליך בקרוב.",
+    "tagline": "NEURAL AURORA . תיק עבודות סינפטי",
+    "builtWith": "נבנה עם React, Three.js ובחירות עיצוביות מוקפדות"
+  },
+  "reviews": {
+    "title": "מה אנשים אומרים",
+    "offlineError": "מצב לא מקוון — לא ניתן לטעון ביקורות",
+    "offlineRefreshError": "מצב לא מקוון — לא ניתן לרענן ביקורות",
+    "noReviews": "אין עדיין ביקורות. חזרו בקרוב!",
+    "leaveReview": "השאר ביקורת",
+    "shareThoughts": "שתף את דעתך על העבודה שלי",
+    "nameLabel": "שם",
+    "namePlaceholder": "השם שלך",
+    "emailLabel": "אימייל",
+    "emailPlaceholder": "אופציונלי",
+    "ratingLabel": "דירוג",
+    "messageLabel": "הודעה",
+    "messagePlaceholder": "כתוב את הביקורת שלך...",
+    "submitReview": "שלח ביקורת",
+    "submitting": "שולח...",
+    "thankYou": "תודה רבה!",
+    "submittedMessage": "הביקורת שלך נשלחה וממתינה לאישור.",
+    "submitAnother": "שלח ביקורת נוספת"
+  },
+  "footer": {
+    "skills": "כישורים",
+    "projects": "פרויקטים",
+    "connect": "קשר",
+    "synapticPortfolio": "תיק עבודות סינפטי",
+    "reactNext": "React / Next.js",
+    "threeWebGL": "Three.js / WebGL",
+    "uiUxDesign": "עיצוב UI/UX",
+    "fullStackDev": "פיתוח פול-סטאק",
+    "neuralAurora": "NEURAL AURORA",
+    "synapticDashboard": "לוח סינפטי",
+    "auroraEngine": "מנוע אורורה",
+    "viewAll": "הצג הכל"
+  },
+  "loader": {
+    "verificationRequired": "נדרש אימות",
+    "proveIdentity": "הוכח את זהותך כדי לגשת למערכת.",
+    "cards": {
+      "sayName": "אמור \"{{name}}\"",
+      "voiceRecognition": "זיהוי קולי",
+      "solvePuzzle": "פתור חידה",
+      "oneQuestion": "שאלה אחת",
+      "traverseOn": "המשך",
+      "autoTraverse": "סיור אוטומטי",
+      "traverseActiveDesc": "מצב הדגמה אוטומטי פעיל",
+      "traverseTourDesc": "סיור הדגמה מלא באתר",
+      "watchDevAds": "צפה בפרסומות dev",
+      "videoAdsToUnlock": "פרסומות וידאו כדי לפתוח",
+      "moodSwing": "מוזיקה לפי מצב רוח",
+      "setVibeMusic": "קבע אווירה ומוזיקה",
+      "neuralCmd": "Neural Aurora CMD",
+      "exploreTerminal": "חקור דרך טרמינל",
+      "takeInterview": "בצע את הראיון שלי",
+      "voiceAiInterview": "ראיון AI קולי",
+      "patternLock": "מנעול תבניות ניאורל",
+      "memoryChallenge": "אתגר זיכרון",
+      "channelStream": "שידור ערוץ",
+      "browseVideos": "עיין בסרטונים שלי",
+      "skipVibes": "דלג על אווירה",
+      "directEntry": "כניסה ישירה",
+      "openDocs": "פתח תיעוד"
+    },
+    "interview": {
+      "chatWith": "שוחח עם {{name}}",
+      "askAnything": "שאל אותי כל דבר",
+      "live": "לייב",
+      "gettingReady": "מתכונן...",
+      "thinking": "{{name}} חושב...",
+      "you": "אתה",
+      "listening": "מקשיב... בבקשה, שאל אותי כל דבר",
+      "tapMic": "גע במיקרופון ואז שאל שאלה",
+      "typeQuestion": "הקלד את השאלה שלך...",
+      "ask": "שאל",
+      "youAsked": "שאלת",
+      "says": "{{name}} אומר",
+      "askAnother": "שאל שאלה נוספת",
+      "endInterview": "סיים ראיון",
+      "allDone": "הכול מוכן",
+      "enterPortfolio": "היכנס לתיק העבודות"
+    },
+    "voice": {
+      "instruction": "אמור \"{{name}}\" כדי לאמת את זהותך",
+      "listening": "מקשיב...",
+      "trySaying": "נסה לומר \"{{name}}\"",
+      "verified": "זהות אומתה"
+    },
+    "success": {
+      "verified": "זהות אומתה",
+      "accessGranted": "הגישה הוקצתה",
+      "welcome": "ברוכים הבאים ל-NEURAL AURORA"
+    },
+    "cmd": {
+      "email": "אימייל",
+      "availableOnRequest": "זמין לפי בקשה"
+    }
+  },
+  "blog": {
+    "eyebrow": "בלוג",
+    "titlePrefix": "מחשבות ו",
+    "titleSuffix": "רעיונות",
+    "subtitle": "משתף את מה שאני לומד, בונה וחושב.",
+    "searchPlaceholder": "חפש פוסטים...",
+    "noPosts": "לא נמצאו פוסטים. נסה חיפוש אחר.",
+    "postNotFound": "הפוסט לא נמצא",
+    "backToBlog": "חזור לבלוג",
+    "blogPostEyebrow": "פוסט בבלוג",
+    "readMore": "קרא עוד פוסטים",
+    "allPosts": "כל הפוסטים"
+  },
+  "services": {
+    "options": "{{count}} אפשרויות",
+    "viewDetails": "הצג פרטים",
+    "step": "שלב {{number}}",
+    "whatIncluded": "מה כלול",
+    "selectType": "בחר סוג פרויקט",
+    "backToServices": "חזור לשירותים",
+    "getInTouch": "צור קשר",
+    "projectPlaceholder": "ספר לי על הפרויקט {{title}} שלך...",
+    "mostPopular": "הפופולרי ביותר",
+    "getStarted": "התחל",
+    "processing": "מעבד...",
+    "serviceNotFound": "השירות לא נמצא",
+    "price": "מחיר",
+    "delivery": "מסירה",
+    "pay": "שלם",
+    "paymentConfirmed": "התשלום אושר",
+    "nav": {
+      "services": "שירותים",
+      "process": "תהליך",
+      "pricing": "תמחור",
+      "faq": "שאלות נפוצות",
+      "contact": "קשר"
+    }
+  },
+  "support": {
+    "eyebrow": "תמיכה",
+    "heroSubtitle": "קוד פתוח וחינמי לנצח",
+    "heroDescription": "פרויקט זה הוא 100% חינמי ובקוד פתוח. התרומה שלך שומרת עליו בחיים, מממנת תכונות חדשות ועוזרת לנו להתחרות בחלופות בתשלום — תוך שמירה על כך ש-NEURAL AURORA יישאר חינמי לכולם.",
+    "floatingButton": "תמוך",
+    "sponsorPlaceholder": "ספר לי על הפרויקט או רעיונות החסות שלך...",
+    "nav": {
+      "contribute": "תרום",
+      "whySupport": "למה לתמוך",
+      "faq": "שאלות נפוצות",
+      "contact": "קשר"
+    },
+    "presets": {
+      "coffee": "קנה קפה",
+      "feature": "תמוך בתכונה",
+      "speed": "האץ פיתוח",
+      "rocket": "בוסט לשיגור",
+      "crown": "תומך פרימיום",
+      "legend": "רמת אגדה"
+    }
+  },
+  "more": {
+    "eyebrow": "עוד",
+    "titlePrefix": "מעבר ל",
+    "titleSuffix": "קוד",
+    "subtitle": "המסע שלי דרך חינוך, ניסיון, רעיונות ותובנות.",
+    "education": "השכלה",
+    "experience": "ניסיון תעסוקתי",
+    "latestPosts": "הפוסטים האחרונים בבלוג",
+    "viewAll": "הצג הכל",
+    "caseStudies": "מקרי בוחן",
+    "nav": {
+      "timeline": "ציר זמן",
+      "caseStudies": "מקרי בוחן",
+      "blog": "בלוג"
+    }
+  },
+  "caseStudy": {
+    "notFound": "מקרה הבוחן לא נמצא",
+    "backToStudies": "חזור למקרי בוחן",
+    "eyebrow": "מקרה בוחן",
+    "outcome": "תוצאה",
+    "fullAnalysis": "ניתוח מלא",
+    "viewAll": "הצג את כל מקרי הבוחן"
+  },
+  "contributors": {
+    "eyebrow": "תורמים",
+    "titlePrefix": "האנשים מאחורי",
+    "subtitle": "כל תורם — מפתח או תורם כספי — עוזר לשמור על הפרויקט הזה חינמי ובקוד פתוח.",
+    "becomeContributor": "היה תורם",
+    "becomeContributorSubtitle": "תמוך בפרויקט והשתלב כאן"
+  },
+  "mood": {
+    "title": "מוזיקה לפי מצב רוח",
+    "subtitle": "קבע אווירה לפני הכניסה",
+    "footnote": "בחר מצב רוח → המוזיקה קובעת את אווירת החקירה",
+    "moods": {
+      "energetic": {
+        "label": "אנרגטי",
+        "description": "מתוח והתרגשות"
+      },
+      "calm": {
+        "label": "רגוע",
+        "description": "אווירה נינוחה ומרגיעה"
+      },
+      "happy": {
+        "label": "שמח",
+        "description": "עליז וזוהר"
+      },
+      "focused": {
+        "label": "ממוקד",
+        "description": "מצב זרימה עמוק"
+      },
+      "mysterious": {
+        "label": "מסתורי",
+        "description": "אפל ואווירתי"
+      },
+      "euphoric": {
+        "label": "אופורי",
+        "description": "גלים טרנסצנדנטיים"
+      }
+    }
+  },
+  "ads": {
+    "ad": "פרסומת",
+    "video": "וידאו",
+    "short": "קצר",
+    "sponsored": "בחסות",
+    "videoUnavailable": "הווידאו אינו זמין",
+    "unavailable": "לא זמין",
+    "adComplete": "הפרסומת הושלמה",
+    "enteringIn": "כניסה בעוד {{count}}ש",
+    "skip": "דלג",
+    "autoAd": "פרסומת אוטומטית",
+    "googleAd": "פרסומת גוגל",
+    "shortAd": "פרסומת קצרה",
+    "videoAd": "פרסומת וידאו"
+  },
+  "youtube": {
+    "watchingToVerify": "צופה כדי לאמת",
+    "videos": "סרטונים",
+    "shorts": "שורטס",
+    "playlists": "רשימות השמעה",
+    "searchPlaceholder": "חפש ב{{tab}}...",
+    "noVideos": "לא נמצאו סרטונים",
+    "noShorts": "לא נמצאו שורטס",
+    "noPlaylists": "אין רשימות השמעה ציבוריות",
+    "loadMore": "טען עוד",
+    "tryDifferentSearch": "נסה חיפוש אחר או חזור מאוחר יותר",
+    "shortsAppearHere": "תוכן קצר יופיע כאן",
+    "playlistsAppearHere": "רשימות ההשמעה של הערוץ יופיעו כאן",
+    "backToVerification": "חזור לאימות",
+    "backToVideos": "חזור לסרטונים",
+    "browseToVerify": "עיין כדי לאמת",
+    "retry": "נסה שוב",
+    "subscribers": "מנויים",
+    "videosCount": "{{count}} סרטונים",
+    "noVideosInPlaylist": "אין סרטונים ברשימת ההשמעה הזו"
+  },
+  "theme": {
+    "switchToDark": "עבור למצב כהה",
+    "switchToLight": "עבור למצב בהיר",
+    "searchPlaceholder": "חפש..."
+  }
+}

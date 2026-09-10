@@ -1,0 +1,349 @@
+{
+  "nav": {
+    "about": "เกี่ยวกับฉัน",
+    "skills": "ทักษะ",
+    "projects": "โปรเจกต์",
+    "services": "บริการ",
+    "resume": "เรซูเม่",
+    "contact": "ติดต่อ",
+    "more": "เพิ่มเติม",
+    "support": "สนับสนุน",
+    "login": "เข้าสู่ระบบและตั้งค่า",
+    "admin": "แผงผู้ดูแล",
+    "crm": "แผง CRM",
+    "getStarted": "เริ่มต้น",
+    "menu": "เมนู"
+  },
+  "common": {
+    "home": "หน้าแรก",
+    "menu": "เมนู"
+  },
+  "hero": {
+    "available": "เปิดรับ",
+    "collaboration": "การร่วมงาน",
+    "viewProjects": "ดูโปรเจกต์",
+    "resume": "เรซูเม่",
+    "title": "สร้างสรรค์ประสบการณ์ดิจิทัล",
+    "subtitle": "ที่ซึ่งเครือข่ายประสาทพบกับแสงออโรร่า"
+  },
+  "about": {
+    "eyebrow": "เกี่ยวกับฉัน",
+    "titleArchitect": "สถาปนิกของ",
+    "titleDigitalExperience": "ประสบการณ์ดิจิทัล",
+    "knownAsPrefix": "รู้จักกันบนอินเทอร์เน็ตในชื่อ",
+    "knownAsSuffix": "ฉันสร้างระบบที่โค้ดพบกับบทกวีภาพ โปรเจกต์ทุกอันคือโอกาสในการผลักดันขีดจำกัดของเบราว์เซอร์",
+    "digitalFootprint": "ร่องรอยดิจิทัล",
+    "avatarAlt": "รูปโปรไฟล์",
+    "currentFocus": "ปัจจุบันกำลังสร้าง NEURAL AURORA และสำรวจจุดบรรจบของกราฟิก 3D กับเทคโนโลยีเว็บ"
+  },
+  "skills": {
+    "eyebrow": "ความเชี่ยวชาญ",
+    "titleTechnical": "สแตก",
+    "titleStack": "เทคโนโลยี",
+    "offlineNotice": "โหมดออฟไลน์ — แสดงชุดเทคโนโลยีคงที่สำรอง",
+    "noData": "ยังไม่มีข้อมูลทักษะทางเทคนิคในขณะนี้",
+    "noSkillsInCategory": "ไม่มีทักษะในหมวดนี้",
+    "categories": {
+      "frontend": "ฟรอนต์เอนด์",
+      "backend": "แบ็กเอนด์",
+      "language": "ภาษา",
+      "devops": "DevOps",
+      "design": "การออกแบบ"
+    }
+  },
+  "projects": {
+    "eyebrow": "พอร์ตโฟลิโอ",
+    "titleNeural": "โปรเจกต์",
+    "titleProjects": "นิวรอล",
+    "subtitle": "ทุกโปรเจกต์คือโหนดในเครือข่ายประสาทที่เติบโต คลิกเพื่อขยายและสำรวจการเชื่อมต่อซินแนปส์",
+    "offlineNotice": "โหมดออฟไลน์ — แสดงโปรเจกต์จากแคช",
+    "noData": "ไม่พบโปรเจกต์ในคลังนิวรอล",
+    "source": "ซอร์ส",
+    "link": "ลิงก์",
+    "demo": "เดโม่"
+  },
+  "resume": {
+    "eyebrow": "เรซูเม่",
+    "titleDownload": "ดาวน์โหลด",
+    "titleResume": "เรซูเม่ของฉัน",
+    "subtitle": "สรุปประสบการณ์ โปรเจกต์ และความเชี่ยวชาญทางเทคนิคอย่างครบถ้วน อัปเดตเป็นประจำ",
+    "downloadPdf": "ดาวน์โหลด PDF",
+    "pdfFormat": "รูปแบบ PDF . 2.4 MB"
+  },
+  "contact": {
+    "eyebrow": "ติดต่อ",
+    "titleLetsBuild": "มาสร้าง",
+    "titleTogether": "ร่วมกัน",
+    "subtitle": "มีโปรเจกต์ในใจหรือแค่อยากทักทาย? เครือข่ายประสาทเปิดรับการเชื่อมต่อใหม่เสมอ",
+    "findMeOn": "ติดตามฉันบน",
+    "nameLabel": "ชื่อ",
+    "namePlaceholder": "ชื่อของคุณ",
+    "emailLabel": "อีเมล",
+    "emailPlaceholder": "your@email.com",
+    "messageLabel": "ข้อความ",
+    "messagePlaceholder": "เล่าเกี่ยวกับโปรเจกต์ของคุณ...",
+    "sendMessage": "ส่งข้อความ",
+    "sending": "กำลังส่ง...",
+    "sentSuccess": "ส่งข้อความแล้ว! ฉันจะติดต่อกลับภายในเร็ว ๆ นี้",
+    "tagline": "NEURAL AURORA . พอร์ตโฟลิโอซินแนปส์",
+    "builtWith": "สร้างด้วย React, Three.js และการออกแบบที่ประณีต"
+  },
+  "reviews": {
+    "title": "เสียงจากผู้คน",
+    "offlineError": "โหมดออฟไลน์ — ไม่สามารถโหลดรีวิวได้",
+    "offlineRefreshError": "โหมดออฟไลน์ — ไม่สามารถรีเฟรชรีวิวสดได้",
+    "noReviews": "ยังไม่มีรีวิว กลับมาเร็ว ๆ นะ!",
+    "leaveReview": "เขียนรีวิว",
+    "shareThoughts": "แบ่งปันความคิดเห็นเกี่ยวกับผลงานของฉัน",
+    "nameLabel": "ชื่อ",
+    "namePlaceholder": "ชื่อของคุณ",
+    "emailLabel": "อีเมล",
+    "emailPlaceholder": "ไม่บังคับ",
+    "ratingLabel": "เรตติ้ง",
+    "messageLabel": "ข้อความ",
+    "messagePlaceholder": "เขียนรีวิวของคุณ...",
+    "submitReview": "ส่งรีวิว",
+    "submitting": "กำลังส่ง...",
+    "thankYou": "ขอบคุณ!",
+    "submittedMessage": "รีวิวของคุณถูกส่งแล้วและกำลังรอการอนุมัติ",
+    "submitAnother": "ส่งรีวิวอีกครั้ง"
+  },
+  "footer": {
+    "skills": "ทักษะ",
+    "projects": "โปรเจกต์",
+    "connect": "ติดต่อ",
+    "synapticPortfolio": "พอร์ตโฟลิโอซินแนปส์",
+    "reactNext": "React / Next.js",
+    "threeWebGL": "Three.js / WebGL",
+    "uiUxDesign": "การออกแบบ UI/UX",
+    "fullStackDev": "การพัฒนาแบบฟูลสแตก",
+    "neuralAurora": "NEURAL AURORA",
+    "synapticDashboard": "แดชบอร์ดซินแนปส์",
+    "auroraEngine": "เอ็นจิ้นออโรร่า",
+    "viewAll": "ดูทั้งหมด"
+  },
+  "loader": {
+    "verificationRequired": "ต้องยืนยันตัวตน",
+    "proveIdentity": "พิสูจน์ตัวตนของคุณเพื่อเข้าถึงระบบ",
+    "cards": {
+      "sayName": "พูดว่า \"{{name}}\"",
+      "voiceRecognition": "รู้จำเสียง",
+      "solvePuzzle": "ไขปริศนา",
+      "oneQuestion": "หนึ่งคำถาม",
+      "traverseOn": "ดำเนินการต่อ",
+      "autoTraverse": "ทัวร์อัตโนมัติ",
+      "traverseActiveDesc": "โหมดเดโมอัตโนมัติทำงานอยู่",
+      "traverseTourDesc": "ทัวร์เดโมทั้งเว็บไซต์",
+      "watchDevAds": "ดูโฆษณา dev",
+      "videoAdsToUnlock": "โฆษณาวิดีโอเพื่อปลดล็อก",
+      "moodSwing": "มูดสวิง",
+      "setVibeMusic": "ตั้งบรรยากาศและเพลง",
+      "neuralCmd": "Neural Aurora CMD",
+      "exploreTerminal": "สำรวจผ่านเทอร์มินัล",
+      "takeInterview": "สัมภาษณ์ฉัน",
+      "voiceAiInterview": "สัมภาษณ์ AI ด้วยเสียง",
+      "patternLock": "ล็อกแพทเทิร์นนิวรอล",
+      "memoryChallenge": "ท้าทายความจำ",
+      "channelStream": "สตรีมแชนแนล",
+      "browseVideos": "ดูวิดีโอของฉัน",
+      "skipVibes": "ข้ามบรรยากาศ",
+      "directEntry": "เข้าตรง",
+      "openDocs": "เปิดเอกสารประกอบ"
+    },
+    "interview": {
+      "chatWith": "แชทกับ {{name}}",
+      "askAnything": "ถามฉันได้ทุกเรื่อง",
+      "live": "สด",
+      "gettingReady": "กำลังเตรียมตัว...",
+      "thinking": "{{name}} กำลังคิด...",
+      "you": "คุณ",
+      "listening": "กำลังฟัง... เชิญเลย ถามได้ทุกเรื่อง",
+      "tapMic": "แตะไมโครโฟนแล้วถามคำถาม",
+      "typeQuestion": "พิมพ์คำถามของคุณ...",
+      "ask": "ถาม",
+      "youAsked": "คุณถาม",
+      "says": "{{name}} พูดว่า",
+      "askAnother": "ถามคำถามอื่น",
+      "endInterview": "จบการสัมภาษณ์",
+      "allDone": "เรียบร้อย",
+      "enterPortfolio": "เข้าสู่พอร์ตโฟลิโอ"
+    },
+    "voice": {
+      "instruction": "พูดว่า \"{{name}}\" เพื่อยืนยันตัวตน",
+      "listening": "กำลังฟัง...",
+      "trySaying": "ลองพูดว่า \"{{name}}\"",
+      "verified": "ยืนยันตัวตนแล้ว"
+    },
+    "success": {
+      "verified": "ยืนยันตัวตนแล้ว",
+      "accessGranted": "อนุญาตให้เข้าถึงแล้ว",
+      "welcome": "ยินดีต้อนรับสู่ NEURAL AURORA"
+    },
+    "cmd": {
+      "email": "อีเมล",
+      "availableOnRequest": "มีให้ตามคำขอ"
+    }
+  },
+  "blog": {
+    "eyebrow": "บล็อก",
+    "titlePrefix": "แนวคิดและ",
+    "titleSuffix": "ไอเดีย",
+    "subtitle": "แชร์สิ่งที่ฉันเรียนรู้ สร้าง และคิด",
+    "searchPlaceholder": "ค้นหาโพสต์...",
+    "noPosts": "ไม่พบโพสต์ ลองค้นหาอื่น",
+    "postNotFound": "ไม่พบโพสต์",
+    "backToBlog": "กลับไปบล็อก",
+    "blogPostEyebrow": "โพสต์บล็อก",
+    "readMore": "อ่านโพสต์เพิ่มเติม",
+    "allPosts": "โพสต์ทั้งหมด"
+  },
+  "services": {
+    "options": "{{count}} ตัวเลือก",
+    "viewDetails": "ดูรายละเอียด",
+    "step": "ขั้นตอนที่ {{number}}",
+    "whatIncluded": "สิ่งที่รวมอยู่",
+    "selectType": "เลือกประเภทโปรเจกต์",
+    "backToServices": "กลับไปบริการ",
+    "getInTouch": "ติดต่อเรา",
+    "projectPlaceholder": "เล่าโปรเจกต์ {{title}} ของคุณ...",
+    "mostPopular": "ยอดนิยมที่สุด",
+    "getStarted": "เริ่มต้น",
+    "processing": "กำลังประมวลผล...",
+    "serviceNotFound": "ไม่พบบริการ",
+    "price": "ราคา",
+    "delivery": "การส่งมอบ",
+    "pay": "ชำระเงิน",
+    "paymentConfirmed": "ยืนยันการชำระเงินแล้ว",
+    "nav": {
+      "services": "บริการ",
+      "process": "กระบวนการ",
+      "pricing": "ราคา",
+      "faq": "คำถามที่พบบ่อย",
+      "contact": "ติดต่อ"
+    }
+  },
+  "support": {
+    "eyebrow": "สนับสนุน",
+    "heroSubtitle": "โอเพนซอร์สและฟรีตลอดไป",
+    "heroDescription": "โปรเจกต์นี้ฟรีและโอเพนซอร์ส 100% การสนับสนุนของคุณช่วยให้มันมีชีวิต ระดมทุนฟีเจอร์ใหม่ และช่วยให้เราแข่งขันกับบริการเสียเงิน — ในขณะที่รักษา NEURAL AURORA ให้ฟรีสำหรับทุกคน",
+    "floatingButton": "สนับสนุน",
+    "sponsorPlaceholder": "เล่าโปรเจกต์หรือไอเดียสปอนเซอร์ของคุณ...",
+    "nav": {
+      "contribute": "ร่วมสนับสนุน",
+      "whySupport": "ทำไมต้องสนับสนุน",
+      "faq": "คำถามที่พบบ่อย",
+      "contact": "ติดต่อ"
+    },
+    "presets": {
+      "coffee": "เลี้ยงกาแฟ",
+      "feature": "สนับสนุนฟีเจอร์",
+      "speed": "เร่งการพัฒนา",
+      "rocket": "จรวดปล่อยตัว",
+      "crown": "ผู้สนับสนุนระดับพรีเมียม",
+      "legend": "ระดับตำนาน"
+    }
+  },
+  "more": {
+    "eyebrow": "เพิ่มเติม",
+    "titlePrefix": "เกินกว่า",
+    "titleSuffix": "โค้ด",
+    "subtitle": "การเดินทางของฉันผ่านการศึกษา ประสบการณ์ ไอเดีย และมุมมอง",
+    "education": "การศึกษา",
+    "experience": "ประสบการณ์ทำงาน",
+    "latestPosts": "โพสต์บล็อกล่าสุด",
+    "viewAll": "ดูทั้งหมด",
+    "caseStudies": "กรณีศึกษา",
+    "nav": {
+      "timeline": "ไทม์ไลน์",
+      "caseStudies": "กรณีศึกษา",
+      "blog": "บล็อก"
+    }
+  },
+  "caseStudy": {
+    "notFound": "ไม่พบกรณีศึกษา",
+    "backToStudies": "กลับไปกรณีศึกษา",
+    "eyebrow": "กรณีศึกษา",
+    "outcome": "ผลลัพธ์",
+    "fullAnalysis": "วิเคราะห์ฉบับเต็ม",
+    "viewAll": "ดูกรณีศึกษาทั้งหมด"
+  },
+  "contributors": {
+    "eyebrow": "ผู้ร่วมพัฒนา",
+    "titlePrefix": "ผู้อยู่เบื้องหลัง",
+    "subtitle": "ผู้ร่วมพัฒนาทุกคน — นักพัฒนาหรือผู้บริจาค — ช่วยทำให้โปรเจกต์นี้ฟรีและโอเพนซอร์ส",
+    "becomeContributor": "มาเป็นผู้ร่วมพัฒนา",
+    "becomeContributorSubtitle": "สนับสนุนโปรเจกต์และปรากฏชื่อที่นี่"
+  },
+  "mood": {
+    "title": "มูดสวิง",
+    "subtitle": "ตั้งบรรยากาศก่อนเข้า",
+    "footnote": "เลือกอารมณ์ → เพลงกำหนดบรรยากาศการสำรวจ",
+    "moods": {
+      "energetic": {
+        "label": "พลังสูง",
+        "description": "ตื่นเต้นและครึกครื้น"
+      },
+      "calm": {
+        "label": "สงบ",
+        "description": "ชิลและผ่อนคลาย"
+      },
+      "happy": {
+        "label": "มีความสุข",
+        "description": "สดใสร่าเริง"
+      },
+      "focused": {
+        "label": "จดจ่อ",
+        "description": "ภาวะโฟลว์ลึก"
+      },
+      "mysterious": {
+        "label": "ลึกลับ",
+        "description": "มืดมนและมีบรรยากาศ"
+      },
+      "euphoric": {
+        "label": "เคลิบเคลิ้ม",
+        "description": "คลื่นเหนือระดับ"
+      }
+    }
+  },
+  "ads": {
+    "ad": "โฆษณา",
+    "video": "วิดีโอ",
+    "short": "สั้น",
+    "sponsored": "ได้รับการสนับสนุน",
+    "videoUnavailable": "วิดีโอไม่พร้อมใช้งาน",
+    "unavailable": "ไม่พร้อมใช้งาน",
+    "adComplete": "โฆษณาจบแล้ว",
+    "enteringIn": "เข้าภายใน {{count}}วิ",
+    "skip": "ข้าม",
+    "autoAd": "โฆษณาอัตโนมัติ",
+    "googleAd": "โฆษณา Google",
+    "shortAd": "โฆษณาสั้น",
+    "videoAd": "โฆษณาวิดีโอ"
+  },
+  "youtube": {
+    "watchingToVerify": "กำลังดูเพื่อยืนยัน",
+    "videos": "วิดีโอ",
+    "shorts": "ช็อตส์",
+    "playlists": "เพลย์ลิสต์",
+    "searchPlaceholder": "ค้นหา{{tab}}...",
+    "noVideos": "ไม่พบวิดีโอ",
+    "noShorts": "ไม่พบ Shorts",
+    "noPlaylists": "ไม่มีเพลย์ลิสต์สาธารณะ",
+    "loadMore": "โหลดเพิ่มเติม",
+    "tryDifferentSearch": "ลองค้นหาอื่นหรือกลับมาใหม่ภายหลัง",
+    "shortsAppearHere": "คอนเทนต์สั้นจะปรากฏที่นี่",
+    "playlistsAppearHere": "เพลย์ลิสต์ของช่องจะปรากฏที่นี่",
+    "backToVerification": "กลับไปยืนยัน",
+    "backToVideos": "กลับไปวิดีโอ",
+    "browseToVerify": "เรียกดูเพื่อยืนยัน",
+    "retry": "ลองอีกครั้ง",
+    "subscribers": "ผู้ติดตาม",
+    "videosCount": "{{count}} วิดีโอ",
+    "noVideosInPlaylist": "ไม่มีวิดีโอในเพลย์ลิสต์นี้"
+  },
+  "theme": {
+    "switchToDark": "สลับเป็นโหมดมืด",
+    "switchToLight": "สลับเป็นโหมดสว่าง",
+    "searchPlaceholder": "ค้นหา..."
+  }
+}

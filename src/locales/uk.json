@@ -1,0 +1,349 @@
+{
+  "nav": {
+    "about": "Про мене",
+    "skills": "Навички",
+    "projects": "Проєкти",
+    "services": "Послуги",
+    "resume": "Резюме",
+    "contact": "Контакт",
+    "more": "Більше",
+    "support": "Підтримка",
+    "login": "Вхід і налаштування",
+    "admin": "Панель адміністратора",
+    "crm": "Панель CRM",
+    "getStarted": "Почати",
+    "menu": "Меню"
+  },
+  "common": {
+    "home": "Головна",
+    "menu": "Меню"
+  },
+  "hero": {
+    "available": "Відкритий до",
+    "collaboration": "співпраці",
+    "viewProjects": "Переглянути проєкти",
+    "resume": "Резюме",
+    "title": "Створюю цифрові враження",
+    "subtitle": "де нейронні мережі зустрічаються зі світлом аврори"
+  },
+  "about": {
+    "eyebrow": "Про мене",
+    "titleArchitect": "Архітектор",
+    "titleDigitalExperience": "цифрового досвіду",
+    "knownAsPrefix": "Відомий в інтернеті як",
+    "knownAsSuffix": ", я будую системи, де код зустрічається з візуальною поезією. Кожен проєкт — це шанс розсунути межі можливостей браузера.",
+    "digitalFootprint": "Цифровий слід",
+    "avatarAlt": "Аватар профілю",
+    "currentFocus": "Зараз будую NEURAL AURORA та досліджую перетин 3D-графіки та веб-технологій."
+  },
+  "skills": {
+    "eyebrow": "Експертиза",
+    "titleTechnical": "Технологічний",
+    "titleStack": "стек",
+    "offlineNotice": "Режим офлайн — показано статичний стек технологій",
+    "noData": "Зараз немає доступних даних про технічні навички.",
+    "noSkillsInCategory": "Немає навичок у цій категорії",
+    "categories": {
+      "frontend": "Фронтенд",
+      "backend": "Бекенд",
+      "language": "Мови",
+      "devops": "DevOps",
+      "design": "Дизайн"
+    }
+  },
+  "projects": {
+    "eyebrow": "Портфоліо",
+    "titleNeural": "Нейронні",
+    "titleProjects": "проєкти",
+    "subtitle": "Кожен проєкт — це вузол у зростаючій нейронній мережі. Натисніть, щоб розгорнути та дослідити синаптичні зв'язки.",
+    "offlineNotice": "Режим офлайн — показано проєкти з кешу",
+    "noData": "Не знайдено проєктів у нейронному репозиторії.",
+    "source": "Код",
+    "link": "Посилання",
+    "demo": "Демо"
+  },
+  "resume": {
+    "eyebrow": "Резюме",
+    "titleDownload": "Завантажити моє",
+    "titleResume": "резюме",
+    "subtitle": "Комплексний огляд мого досвіду, проєктів та технічної експертизи. Регулярно оновлюється.",
+    "downloadPdf": "Завантажити PDF",
+    "pdfFormat": "Формат PDF . 2,4 МБ"
+  },
+  "contact": {
+    "eyebrow": "Контакт",
+    "titleLetsBuild": "Побудуймо",
+    "titleTogether": "разом",
+    "subtitle": "Маєте проєкт на думці чи просто хочете привітатися? Нейронна мережа завжди відкрита для нових зв'язків.",
+    "findMeOn": "Знайдіть мене на",
+    "nameLabel": "Ім'я",
+    "namePlaceholder": "Ваше ім'я",
+    "emailLabel": "Ел. пошта",
+    "emailPlaceholder": "your@email.com",
+    "messageLabel": "Повідомлення",
+    "messagePlaceholder": "Розкажіть про свій проєкт...",
+    "sendMessage": "Надіслати повідомлення",
+    "sending": "Надсилання...",
+    "sentSuccess": "Повідомлення надіслано! Я невдовзі зв'яжуся з вами.",
+    "tagline": "NEURAL AURORA . Синаптичне портфоліо",
+    "builtWith": "Створено з React, Three.js та вишуканим дизайном"
+  },
+  "reviews": {
+    "title": "Що кажуть люди",
+    "offlineError": "Режим офлайн — не вдалося завантажити відгуки",
+    "offlineRefreshError": "Режим офлайн — не вдалося оновити відгуки",
+    "noReviews": "Відгуків ще немає. Завітайте пізніше!",
+    "leaveReview": "Залишити відгук",
+    "shareThoughts": "Поділіться думками про мою роботу",
+    "nameLabel": "Ім'я",
+    "namePlaceholder": "Ваше ім'я",
+    "emailLabel": "Ел. пошта",
+    "emailPlaceholder": "необов'язково",
+    "ratingLabel": "Оцінка",
+    "messageLabel": "Повідомлення",
+    "messagePlaceholder": "Напишіть свій відгук...",
+    "submitReview": "Надіслати відгук",
+    "submitting": "Надсилання...",
+    "thankYou": "Дякую!",
+    "submittedMessage": "Ваш відгук надіслано та очікує на схвалення.",
+    "submitAnother": "Надіслати ще один відгук"
+  },
+  "footer": {
+    "skills": "Навички",
+    "projects": "Проєкти",
+    "connect": "Контакт",
+    "synapticPortfolio": "Синаптичне портфоліо",
+    "reactNext": "React / Next.js",
+    "threeWebGL": "Three.js / WebGL",
+    "uiUxDesign": "Дизайн UI/UX",
+    "fullStackDev": "Fулсток-розробка",
+    "neuralAurora": "NEURAL AURORA",
+    "synapticDashboard": "Синаптична панель",
+    "auroraEngine": "Рушій Aurora",
+    "viewAll": "Переглянути все"
+  },
+  "loader": {
+    "verificationRequired": "Потрібна верифікація",
+    "proveIdentity": "Доведіть свою особу, щоб отримати доступ до системи.",
+    "cards": {
+      "sayName": "Вимовте \"{{name}}\"",
+      "voiceRecognition": "Розпізнавання голосу",
+      "solvePuzzle": "Розв'язати загадку",
+      "oneQuestion": "Одне запитання",
+      "traverseOn": "Продовжити",
+      "autoTraverse": "Автотур",
+      "traverseActiveDesc": "Автоматичний демо-режим активний",
+      "traverseTourDesc": "Повний демо-тур сайтом",
+      "watchDevAds": "Переглянути рекламу dev",
+      "videoAdsToUnlock": "Відеореклама для розблокування",
+      "moodSwing": "Настрій",
+      "setVibeMusic": "Налаштувати атмосферу та музику",
+      "neuralCmd": "Neural Aurora CMD",
+      "exploreTerminal": "Дослідити через термінал",
+      "takeInterview": "Пройти моє інтерв'ю",
+      "voiceAiInterview": "Голосове інтерв'ю зі штучним інтелектом",
+      "patternLock": "Нейронний кодовий замок",
+      "memoryChallenge": "Випробування пам'яті",
+      "channelStream": "Стрім каналу",
+      "browseVideos": "Переглянути мої відео",
+      "skipVibes": "Пропустити атмосферу",
+      "directEntry": "Прямий вхід",
+      "openDocs": "Відкрити документацію"
+    },
+    "interview": {
+      "chatWith": "Спілкування з {{name}}",
+      "askAnything": "Запитайте мене про що завгодно",
+      "live": "Наживо",
+      "gettingReady": "Підготовка...",
+      "thinking": "{{name}} думає...",
+      "you": "Ви",
+      "listening": "Слухаю... прошу, питайте про що завгодно",
+      "tapMic": "Торкніться мікрофона, а потім поставте запитання",
+      "typeQuestion": "Введіть ваше запитання...",
+      "ask": "Запитати",
+      "youAsked": "Ви запитали",
+      "says": "{{name}} каже",
+      "askAnother": "Поставити інше запитання",
+      "endInterview": "Завершити інтерв'ю",
+      "allDone": "Усе готово",
+      "enterPortfolio": "Увійти в портфоліо"
+    },
+    "voice": {
+      "instruction": "Вимовте \"{{name}}\", щоб підтвердити свою особу",
+      "listening": "Слухаю...",
+      "trySaying": "Спробуйте вимовити \"{{name}}\"",
+      "verified": "Особу підтверджено"
+    },
+    "success": {
+      "verified": "Особу підтверджено",
+      "accessGranted": "Доступ надано",
+      "welcome": "Ласкаво просимо до NEURAL AURORA"
+    },
+    "cmd": {
+      "email": "Ел. пошта",
+      "availableOnRequest": "доступно на запит"
+    }
+  },
+  "blog": {
+    "eyebrow": "Блог",
+    "titlePrefix": "Думки та",
+    "titleSuffix": "ідеї",
+    "subtitle": "Ділюся тим, чого навчаюся, що будую та про що думаю.",
+    "searchPlaceholder": "Пошук записів...",
+    "noPosts": "Записів не знайдено. Спробуйте інший пошук.",
+    "postNotFound": "Запис не знайдено",
+    "backToBlog": "Повернутися до блогу",
+    "blogPostEyebrow": "Запис у блозі",
+    "readMore": "Читати більше записів",
+    "allPosts": "Усі записи"
+  },
+  "services": {
+    "options": "{{count}} варіанти",
+    "viewDetails": "Переглянути деталі",
+    "step": "Крок {{number}}",
+    "whatIncluded": "Що включено",
+    "selectType": "Виберіть тип проєкту",
+    "backToServices": "Повернутися до послуг",
+    "getInTouch": "Зв'язатися",
+    "projectPlaceholder": "Розкажіть про ваш проєкт {{title}}...",
+    "mostPopular": "Найпопулярніше",
+    "getStarted": "Почати",
+    "processing": "Оброблення...",
+    "serviceNotFound": "Послугу не знайдено",
+    "price": "Ціна",
+    "delivery": "Доставка",
+    "pay": "Оплатити",
+    "paymentConfirmed": "Платіж підтверджено",
+    "nav": {
+      "services": "Послуги",
+      "process": "Процес",
+      "pricing": "Ціни",
+      "faq": "Часті запитання",
+      "contact": "Контакт"
+    }
+  },
+  "support": {
+    "eyebrow": "Підтримка",
+    "heroSubtitle": "Відкритий код і назавжди безкоштовно",
+    "heroDescription": "Цей проєкт на 100% безкоштовний та з відкритим кодом. Ваш внесок підтримує його живим, фінансує нові функції та допомагає нам конкурувати з платними альтернативами — зберігаючи NEURAL AURORA безкоштовним для всіх.",
+    "floatingButton": "Підтримати",
+    "sponsorPlaceholder": "Розкажіть про ваш проєкт або ідеї спонсорства...",
+    "nav": {
+      "contribute": "Зробити внесок",
+      "whySupport": "Чому підтримувати",
+      "faq": "Часті запитання",
+      "contact": "Контакт"
+    },
+    "presets": {
+      "coffee": "Пригостити кавою",
+      "feature": "Підтримати функцію",
+      "speed": "Пришвидшити розробку",
+      "rocket": "Прискорювач запуску",
+      "crown": "Преміум-прихильник",
+      "legend": "Легендарний рівень"
+    }
+  },
+  "more": {
+    "eyebrow": "Більше",
+    "titlePrefix": "За межами",
+    "titleSuffix": "коду",
+    "subtitle": "Моя подорож через освіту, досвід, ідеї та інсайти.",
+    "education": "Освіта",
+    "experience": "Досвід роботи",
+    "latestPosts": "Останні записи в блозі",
+    "viewAll": "Переглянути все",
+    "caseStudies": "Кейси",
+    "nav": {
+      "timeline": "Хронологія",
+      "caseStudies": "Кейси",
+      "blog": "Блог"
+    }
+  },
+  "caseStudy": {
+    "notFound": "Кейс не знайдено",
+    "backToStudies": "Повернутися до кейсів",
+    "eyebrow": "Кейс",
+    "outcome": "Результат",
+    "fullAnalysis": "Повний аналіз",
+    "viewAll": "Переглянути всі кейси"
+  },
+  "contributors": {
+    "eyebrow": "Дописувачі",
+    "titlePrefix": "Люди за",
+    "subtitle": "Кожен дописувач — розробник чи донор — допомагає зберігати цей проєкт безкоштовним і з відкритим кодом.",
+    "becomeContributor": "Стати дописувачем",
+    "becomeContributorSubtitle": "Підтримайте проєкт і потрапте в цей список"
+  },
+  "mood": {
+    "title": "Настрій",
+    "subtitle": "Налаштуйте атмосферу перед входом",
+    "footnote": "Оберіть настрій → музика визначить атмосферу дослідження",
+    "moods": {
+      "energetic": {
+        "label": "Енергійний",
+        "description": "Піднесений і бадьорий"
+      },
+      "calm": {
+        "label": "Спокійний",
+        "description": "Розкута й розслаблена атмосфера"
+      },
+      "happy": {
+        "label": "Щасливий",
+        "description": "Радісний і яскравий"
+      },
+      "focused": {
+        "label": "Зосереджений",
+        "description": "Глибокий стан потоку"
+      },
+      "mysterious": {
+        "label": "Загадковий",
+        "description": "Темний та атмосферний"
+      },
+      "euphoric": {
+        "label": "Ейфорія",
+        "description": "Трансцендентні хвилі"
+      }
+    }
+  },
+  "ads": {
+    "ad": "Реклама",
+    "video": "Відео",
+    "short": "Коротке",
+    "sponsored": "Спонсоровано",
+    "videoUnavailable": "Відео недоступне",
+    "unavailable": "Недоступно",
+    "adComplete": "Рекламу завершено",
+    "enteringIn": "Вхід через {{count}}с",
+    "skip": "Пропустити",
+    "autoAd": "Автореклама",
+    "googleAd": "Реклама Google",
+    "shortAd": "Коротка реклама",
+    "videoAd": "Відеореклама"
+  },
+  "youtube": {
+    "watchingToVerify": "Перегляд для верифікації",
+    "videos": "Відео",
+    "shorts": "Shorts",
+    "playlists": "Плейлисти",
+    "searchPlaceholder": "Пошук у {{tab}}...",
+    "noVideos": "Відео не знайдено",
+    "noShorts": "Shorts не знайдено",
+    "noPlaylists": "Немає публічних плейлистів",
+    "loadMore": "Завантажити ще",
+    "tryDifferentSearch": "Спробуйте інший пошук або поверніться пізніше",
+    "shortsAppearHere": "Короткий контент з'явиться тут",
+    "playlistsAppearHere": "Плейлисти каналу з'являться тут",
+    "backToVerification": "Повернутися до верифікації",
+    "backToVideos": "Повернутися до відео",
+    "browseToVerify": "Перегляньте, щоб верифікувати",
+    "retry": "Повторити",
+    "subscribers": "підписники",
+    "videosCount": "{{count}} відео",
+    "noVideosInPlaylist": "Немає відео в цьому плейлисті"
+  },
+  "theme": {
+    "switchToDark": "Перемкнути на темний режим",
+    "switchToLight": "Перемкнути на світлий режим",
+    "searchPlaceholder": "Пошук..."
+  }
+}

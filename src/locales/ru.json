@@ -1,0 +1,349 @@
+{
+  "nav": {
+    "about": "Обо мне",
+    "skills": "Навыки",
+    "projects": "Проекты",
+    "services": "Услуги",
+    "resume": "Резюме",
+    "contact": "Контакты",
+    "more": "Ещё",
+    "support": "Поддержка",
+    "login": "Вход и настройка",
+    "admin": "Панель админа",
+    "crm": "Панель CRM",
+    "getStarted": "Начать",
+    "menu": "Меню"
+  },
+  "common": {
+    "home": "Главная",
+    "menu": "Меню"
+  },
+  "hero": {
+    "available": "Открыт для",
+    "collaboration": "сотрудничества",
+    "viewProjects": "Смотреть проекты",
+    "resume": "Резюме",
+    "title": "Создаю цифровые впечатления",
+    "subtitle": "где нейросети встречаются со светом полярного сияния"
+  },
+  "about": {
+    "eyebrow": "Обо мне",
+    "titleArchitect": "Архитектор",
+    "titleDigitalExperience": "цифрового опыта",
+    "knownAsPrefix": "Известен в интернете как",
+    "knownAsSuffix": " — я создаю системы, где код встречается с визуальной поэзией. Каждый проект — это возможность раздвинуть границы возможностей браузера.",
+    "digitalFootprint": "Цифровой след",
+    "avatarAlt": "Аватар профиля",
+    "currentFocus": "В настоящее время создаю NEURAL AURORA и исследую пересечение 3D-графики и веб-технологий."
+  },
+  "skills": {
+    "eyebrow": "Экспертиза",
+    "titleTechnical": "Технологический",
+    "titleStack": "стек",
+    "offlineNotice": "Офлайн-режим — показан статический стек",
+    "noData": "Данные о технических навыках пока недоступны.",
+    "noSkillsInCategory": "В этой категории нет навыков",
+    "categories": {
+      "frontend": "Фронтенд",
+      "backend": "Бэкенд",
+      "language": "Языки",
+      "devops": "DevOps",
+      "design": "Дизайн"
+    }
+  },
+  "projects": {
+    "eyebrow": "Портфолио",
+    "titleNeural": "Нейро",
+    "titleProjects": "проекты",
+    "subtitle": "Каждый проект — узел растущей нейросети. Нажмите, чтобы раскрыть и исследовать синаптические связи.",
+    "offlineNotice": "Офлайн-режим — показаны кэшированные проекты",
+    "noData": "В нейро-репозитории проектов не найдено.",
+    "source": "Исходник",
+    "link": "Ссылка",
+    "demo": "Демо"
+  },
+  "resume": {
+    "eyebrow": "Резюме",
+    "titleDownload": "Скачать",
+    "titleResume": "резюме",
+    "subtitle": "Обзор моего опыта, проектов и технической экспертизы. Регулярно обновляется.",
+    "downloadPdf": "Скачать PDF",
+    "pdfFormat": "Формат PDF . 2,4 МБ"
+  },
+  "contact": {
+    "eyebrow": "Контакты",
+    "titleLetsBuild": "Давайте",
+    "titleTogether": "создадим вместе",
+    "subtitle": "Есть проект или просто хотите поздороваться? Нейросеть всегда открыта для новых связей.",
+    "findMeOn": "Найдите меня",
+    "nameLabel": "Имя",
+    "namePlaceholder": "Ваше имя",
+    "emailLabel": "Эл. почта",
+    "emailPlaceholder": "your@email.com",
+    "messageLabel": "Сообщение",
+    "messagePlaceholder": "Расскажите о своём проекте...",
+    "sendMessage": "Отправить",
+    "sending": "Отправка...",
+    "sentSuccess": "Сообщение отправлено! Скоро свяжусь с вами.",
+    "tagline": "NEURAL AURORA . Синаптическое портфолио",
+    "builtWith": "Создано на React, Three.js и со вкусом"
+  },
+  "reviews": {
+    "title": "Что говорят люди",
+    "offlineError": "Офлайн-режим — не удалось загрузить отзывы",
+    "offlineRefreshError": "Офлайн-режим — не удалось обновить отзывы",
+    "noReviews": "Отзывов пока нет. Загляните позже!",
+    "leaveReview": "Оставить отзыв",
+    "shareThoughts": "Поделитесь мнением о моей работе",
+    "nameLabel": "Имя",
+    "namePlaceholder": "Ваше имя",
+    "emailLabel": "Эл. почта",
+    "emailPlaceholder": "необязательно",
+    "ratingLabel": "Оценка",
+    "messageLabel": "Сообщение",
+    "messagePlaceholder": "Напишите отзыв...",
+    "submitReview": "Отправить отзыв",
+    "submitting": "Отправка...",
+    "thankYou": "Спасибо!",
+    "submittedMessage": "Ваш отзыв отправлен и ожидает одобрения.",
+    "submitAnother": "Оставить ещё один отзыв"
+  },
+  "footer": {
+    "skills": "Навыки",
+    "projects": "Проекты",
+    "connect": "Контакты",
+    "synapticPortfolio": "Синаптическое портфолио",
+    "reactNext": "React / Next.js",
+    "threeWebGL": "Three.js / WebGL",
+    "uiUxDesign": "UI/UX-дизайн",
+    "fullStackDev": "Full-stack разработка",
+    "neuralAurora": "NEURAL AURORA",
+    "synapticDashboard": "Синаптическая панель",
+    "auroraEngine": "Движок Aurora",
+    "viewAll": "Смотреть все"
+  },
+  "loader": {
+    "verificationRequired": "Требуется проверка",
+    "proveIdentity": "Подтвердите свою личность для доступа к системе.",
+    "cards": {
+      "sayName": "Скажите «{{name}}»",
+      "voiceRecognition": "Распознавание голоса",
+      "solvePuzzle": "Решить головоломку",
+      "oneQuestion": "Один вопрос",
+      "traverseOn": "Продолжить",
+      "autoTraverse": "Авто-тур",
+      "traverseActiveDesc": "Автодемо-режим активен",
+      "traverseTourDesc": "Полный тур по сайту",
+      "watchDevAds": "Смотреть рекламу",
+      "videoAdsToUnlock": "Видеореклама для разблокировки",
+      "moodSwing": "Настроение",
+      "setVibeMusic": "Выбрать атмосферу и музыку",
+      "neuralCmd": "Neural Aurora CMD",
+      "exploreTerminal": "Исследовать через терминал",
+      "takeInterview": "Пройдите моё интервью",
+      "voiceAiInterview": "Голосовое ИИ-интервью",
+      "patternLock": "Нейро-паттерн-замок",
+      "memoryChallenge": "Задание на память",
+      "channelStream": "Стрим канала",
+      "browseVideos": "Смотреть мои видео",
+      "skipVibes": "Пропустить атмосферу",
+      "directEntry": "Прямой вход",
+      "openDocs": "Открыть документацию"
+    },
+    "interview": {
+      "chatWith": "Чат с {{name}}",
+      "askAnything": "Спросите меня о чём угодно",
+      "live": "Вживую",
+      "gettingReady": "Готовлюсь...",
+      "thinking": "{{name}} думает...",
+      "you": "Вы",
+      "listening": "Слушаю... задавайте любой вопрос",
+      "tapMic": "Нажмите на микрофон и задайте вопрос",
+      "typeQuestion": "Введите вопрос...",
+      "ask": "Спросить",
+      "youAsked": "Вы спросили",
+      "says": "{{name}} говорит",
+      "askAnother": "Задать ещё вопрос",
+      "endInterview": "Завершить интервью",
+      "allDone": "Готово",
+      "enterPortfolio": "Войти в портфолио"
+    },
+    "voice": {
+      "instruction": "Скажите «{{name}}», чтобы подтвердить свою личность",
+      "listening": "Слушаю...",
+      "trySaying": "Попробуйте сказать «{{name}}»",
+      "verified": "Личность подтверждена"
+    },
+    "success": {
+      "verified": "Личность подтверждена",
+      "accessGranted": "Доступ предоставлен",
+      "welcome": "Добро пожаловать в NEURAL AURORA"
+    },
+    "cmd": {
+      "email": "Эл. почта",
+      "availableOnRequest": "по запросу"
+    }
+  },
+  "blog": {
+    "eyebrow": "Блог",
+    "titlePrefix": "Мысли и",
+    "titleSuffix": "идеи",
+    "subtitle": "Делюсь тем, что учу, создаю и о чём думаю.",
+    "searchPlaceholder": "Поиск постов...",
+    "noPosts": "Посты не найдены. Попробуйте другой поиск.",
+    "postNotFound": "Пост не найден",
+    "backToBlog": "Назад в блог",
+    "blogPostEyebrow": "Запись в блоге",
+    "readMore": "Читать ещё",
+    "allPosts": "Все посты"
+  },
+  "services": {
+    "options": "{{count}} вариантов",
+    "viewDetails": "Подробнее",
+    "step": "Шаг {{number}}",
+    "whatIncluded": "Что входит",
+    "selectType": "Выберите тип проекта",
+    "backToServices": "Назад к услугам",
+    "getInTouch": "Связаться",
+    "projectPlaceholder": "Расскажите о проекте {{title}}...",
+    "mostPopular": "Самый популярный",
+    "getStarted": "Начать",
+    "processing": "Обработка...",
+    "serviceNotFound": "Услуга не найдена",
+    "price": "Цена",
+    "delivery": "Срок",
+    "pay": "Оплатить",
+    "paymentConfirmed": "Оплата подтверждена",
+    "nav": {
+      "services": "Услуги",
+      "process": "Процесс",
+      "pricing": "Цены",
+      "faq": "FAQ",
+      "contact": "Контакты"
+    }
+  },
+  "support": {
+    "eyebrow": "Поддержка",
+    "heroSubtitle": "Open source и бесплатно навсегда",
+    "heroDescription": "Этот проект на 100% бесплатен и имеет открытый исходный код. Ваш вклад поддерживает его жизнь, финансирует новые функции и помогает конкурировать с платными аналогами — при этом NEURAL AURORA остаётся бесплатным для всех.",
+    "floatingButton": "Поддержать",
+    "sponsorPlaceholder": "Расскажите о своём проекте или идеях спонсорства...",
+    "nav": {
+      "contribute": "Внести вклад",
+      "whySupport": "Зачем поддерживать",
+      "faq": "FAQ",
+      "contact": "Контакты"
+    },
+    "presets": {
+      "coffee": "Купить кофе",
+      "feature": "Поддержать функцию",
+      "speed": "Ускорить разработку",
+      "rocket": "Разгон запуска",
+      "crown": "Премиум-бэкер",
+      "legend": "Легенда"
+    }
+  },
+  "more": {
+    "eyebrow": "Ещё",
+    "titlePrefix": "За пределами",
+    "titleSuffix": "кода",
+    "subtitle": "Мой путь через образование, опыт, идеи и инсайты.",
+    "education": "Образование",
+    "experience": "Опыт работы",
+    "latestPosts": "Последние записи",
+    "viewAll": "Смотреть все",
+    "caseStudies": "Кейсы",
+    "nav": {
+      "timeline": "Хронология",
+      "caseStudies": "Кейсы",
+      "blog": "Блог"
+    }
+  },
+  "caseStudy": {
+    "notFound": "Кейс не найден",
+    "backToStudies": "Назад к кейсам",
+    "eyebrow": "Кейс",
+    "outcome": "Результат",
+    "fullAnalysis": "Полный анализ",
+    "viewAll": "Все кейсы"
+  },
+  "contributors": {
+    "eyebrow": "Участники",
+    "titlePrefix": "Люди за проектом",
+    "subtitle": "Каждый участник — разработчик или спонсор — помогает поддерживать проект бесплатным и открытым.",
+    "becomeContributor": "Стать участником",
+    "becomeContributorSubtitle": "Поддержите проект и попадёте в список"
+  },
+  "mood": {
+    "title": "Настроение",
+    "subtitle": "Выберите атмосферу перед входом",
+    "footnote": "Выберите настроение → музыка задаёт атмосферу исследования",
+    "moods": {
+      "energetic": {
+        "label": "Энергичный",
+        "description": "На взводе и с азартом"
+      },
+      "calm": {
+        "label": "Спокойный",
+        "description": "Расслабленные вибрации"
+      },
+      "happy": {
+        "label": "Счастливый",
+        "description": "Радостный и яркий"
+      },
+      "focused": {
+        "label": "Сосредоточенный",
+        "description": "Глубокий поток"
+      },
+      "mysterious": {
+        "label": "Загадочный",
+        "description": "Тёмный и атмосферный"
+      },
+      "euphoric": {
+        "label": "Эйфоричный",
+        "description": "Волны транса"
+      }
+    }
+  },
+  "ads": {
+    "ad": "Реклама",
+    "video": "Видео",
+    "short": "Короткое",
+    "sponsored": "Спонсируемое",
+    "videoUnavailable": "Видео недоступно",
+    "unavailable": "Недоступно",
+    "adComplete": "Реклама завершена",
+    "enteringIn": "Вход через {{count}}с",
+    "skip": "Пропустить",
+    "autoAd": "Автореклама",
+    "googleAd": "Реклама Google",
+    "shortAd": "Короткая реклама",
+    "videoAd": "Видеореклама"
+  },
+  "youtube": {
+    "watchingToVerify": "Смотрю для проверки",
+    "videos": "Видео",
+    "shorts": "Shorts",
+    "playlists": "Плейлисты",
+    "searchPlaceholder": "Поиск: {{tab}}...",
+    "noVideos": "Видео не найдены",
+    "noShorts": "Shorts не найдены",
+    "noPlaylists": "Нет публичных плейлистов",
+    "loadMore": "Загрузить ещё",
+    "tryDifferentSearch": "Попробуйте другой поиск или зайдите позже",
+    "shortsAppearHere": "Короткий контент появится здесь",
+    "playlistsAppearHere": "Плейлисты канала появятся здесь",
+    "backToVerification": "Назад к проверке",
+    "backToVideos": "Назад к видео",
+    "browseToVerify": "Смотрите, чтобы проверить",
+    "retry": "Повторить",
+    "subscribers": "подписчиков",
+    "videosCount": "{{count}} видео",
+    "noVideosInPlaylist": "В этом плейлисте нет видео"
+  },
+  "theme": {
+    "switchToDark": "Переключить на тёмную тему",
+    "switchToLight": "Переключить на светлую тему",
+    "searchPlaceholder": "Поиск..."
+  }
+}
