@@ -1,12 +1,13 @@
 import { motion, useReducedMotion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { useSkills } from '../lib/usePortfolioData'
 
 const categories = [
-  { key: 'frontend', label: 'Frontend', color: '#00f0ff' },
-  { key: 'backend', label: 'Backend', color: '#b829dd' },
-  { key: 'language', label: 'Languages', color: '#f0c040' },
-  { key: 'devops', label: 'DevOps', color: '#ff006e' },
-  { key: 'design', label: 'Design', color: '#00ff87' },
+  { key: 'frontend', labelKey: 'skills.categories.frontend', color: '#00f0ff' },
+  { key: 'backend', labelKey: 'skills.categories.backend', color: '#b829dd' },
+  { key: 'language', labelKey: 'skills.categories.language', color: '#f0c040' },
+  { key: 'devops', labelKey: 'skills.categories.devops', color: '#ff006e' },
+  { key: 'design', labelKey: 'skills.categories.design', color: '#00ff87' },
 ]
 
 function SkillBar({ name, level, color, index, shouldReduceMotion }) {
@@ -37,6 +38,7 @@ function SkillBar({ name, level, color, index, shouldReduceMotion }) {
 }
 
 export default function Skills() {
+  const { t } = useTranslation()
   const shouldReduceMotion = useReducedMotion()
   const { data: skills = [], isLoading, error } = useSkills()
 
@@ -50,16 +52,17 @@ export default function Skills() {
           transition={shouldReduceMotion ? undefined : { duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="mb-16"
         >
-          <span className="eyebrow">Expertise</span>
+          <span className="eyebrow">{t('skills.eyebrow')}</span>
           <h2 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tighter leading-none">
-            Technical <span className="text-gradient">Stack</span>
+            {t('skills.titleTechnical')}{' '}
+            <span className="text-gradient">{t('skills.titleStack')}</span>
           </h2>
         </motion.div>
 
         {error && (
           <div className="mb-8 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-amber-500/20 bg-amber-500/10 text-amber-600 dark:text-amber-400 text-xs font-mono">
             <span>⚠️</span>
-            <span>Offline mode — displaying static technical stack fallback</span>
+            <span>{t('skills.offlineNotice')}</span>
           </div>
         )}
 
@@ -85,7 +88,7 @@ export default function Skills() {
         ) : !isLoading && (!skills || skills.length === 0) ? (
           <div className="glass-panel rounded-[2rem] p-12 text-center max-w-lg mx-auto">
             <p className="text-sm text-black/50 dark:text-white/40 font-mono">
-              No technical skills data available at this time.
+              {t('skills.noData')}
             </p>
           </div>
         ) : (
@@ -107,7 +110,7 @@ export default function Skills() {
                       style={{ background: cat.color }}
                     />
                     <span className="text-xs uppercase tracking-[0.15em] text-black/50 dark:text-white/40 font-medium">
-                      {cat.label}
+                      {t(cat.labelKey)}
                     </span>
                   </div>
                   <div className="space-y-5">
@@ -123,7 +126,7 @@ export default function Skills() {
                       ))
                     ) : (
                       <p className="text-xs text-black/30 dark:text-white/30 italic font-mono">
-                        No skills listed in this category
+                        {t('skills.noSkillsInCategory')}
                       </p>
                     )}
                   </div>

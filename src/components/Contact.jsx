@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { useSocialLinks } from '../lib/usePortfolioData'
 import { submitContactMessage } from '../lib/supabase'
 
 export default function Contact() {
+  const { t } = useTranslation()
   const { data: socialLinks } = useSocialLinks()
   const [form, setForm] = useState({ name: '', email: '', message: '' })
   const [status, setStatus] = useState('idle')
@@ -44,13 +46,13 @@ export default function Contact() {
                 visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 80, damping: 20 } },
               }}
             >
-              <span className="eyebrow">Connect</span>
+              <span className="eyebrow">{t('contact.eyebrow')}</span>
               <h2 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tighter leading-none">
-                Let's Build{' '}
-                <span className="text-gradient">Together</span>
+                {t('contact.titleLetsBuild')}{' '}
+                <span className="text-gradient">{t('contact.titleTogether')}</span>
               </h2>
               <p className="mt-4 text-base text-black/50 dark:text-white/40 max-w-[65ch] leading-relaxed">
-                Have a project in mind or just want to say hello? The neural network is always open to new connections.
+                {t('contact.subtitle')}
               </p>
             </motion.div>
 
@@ -62,7 +64,7 @@ export default function Contact() {
               className="glass-panel rounded-[2rem] p-8 md:p-10 space-y-4"
             >
               <h3 className="text-xs uppercase tracking-[0.15em] text-black/40 dark:text-white/30 font-medium">
-                Find me on
+                {t('contact.findMeOn')}
               </h3>
               <div className="grid grid-cols-2 gap-3">
                 {socialLinks.map((link) => (
@@ -91,14 +93,14 @@ export default function Contact() {
             <form onSubmit={handleSubmit} className="glass-panel rounded-[2rem] p-8 md:p-10 space-y-6">
               <div className="space-y-2">
                 <label htmlFor="name" className="block text-xs text-black/50 dark:text-white/40 uppercase tracking-[0.1em]">
-                  Name
+                  {t('contact.nameLabel')}
                 </label>
                 <input
                   type="text"
                   id="name"
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  placeholder="Your name"
+                  placeholder={t('contact.namePlaceholder')}
                   required
                   className="w-full px-4 py-3 rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/5 text-sm text-black/70 dark:text-white/80 placeholder:text-black/30 dark:placeholder:text-white/20 outline-none focus:border-black/20 dark:focus:border-white/10 transition-all duration-[400ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
                 />
@@ -106,14 +108,14 @@ export default function Contact() {
 
               <div className="space-y-2">
                 <label htmlFor="email" className="block text-xs text-black/50 dark:text-white/40 uppercase tracking-[0.1em]">
-                  Email
+                  {t('contact.emailLabel')}
                 </label>
                 <input
                   type="email"
                   id="email"
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  placeholder="your@email.com"
+                  placeholder={t('contact.emailPlaceholder')}
                   required
                   className="w-full px-4 py-3 rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/5 text-sm text-black/70 dark:text-white/80 placeholder:text-black/30 dark:placeholder:text-white/20 outline-none focus:border-black/20 dark:focus:border-white/10 transition-all duration-[400ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
                 />
@@ -121,14 +123,14 @@ export default function Contact() {
 
               <div className="space-y-2">
                 <label htmlFor="message" className="block text-xs text-black/50 dark:text-white/40 uppercase tracking-[0.1em]">
-                  Message
+                  {t('contact.messageLabel')}
                 </label>
                 <textarea
                   id="message"
                   rows={4}
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
-                  placeholder="Tell me about your project..."
+                  placeholder={t('contact.messagePlaceholder')}
                   required
                   className="w-full px-4 py-3 rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/5 text-sm text-black/70 dark:text-white/80 placeholder:text-black/30 dark:placeholder:text-white/20 outline-none focus:border-black/20 dark:focus:border-white/10 transition-all duration-300 resize-none"
                 />
@@ -140,7 +142,7 @@ export default function Contact() {
                   animate={{ opacity: 1, scale: 1 }}
                   className="w-full py-3.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-sm text-emerald-500 text-center"
                 >
-                  Message sent! I'll get back to you soon.
+                  {t('contact.sentSuccess')}
                 </motion.div>
               ) : (
                 <motion.button
@@ -153,9 +155,9 @@ export default function Contact() {
                   {status === 'sending' ? (
                     <span className="flex items-center justify-center gap-2">
                       <span className="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
-                      Sending...
+                      {t('contact.sending')}
                     </span>
-                  ) : 'Send Message'}
+                  ) : t('contact.sendMessage')}
                 </motion.button>
               )}
 
@@ -174,10 +176,10 @@ export default function Contact() {
           <div className="glow-line" />
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 mt-8">
             <p className="text-xs text-black/30 dark:text-white/20">
-              NEURAL AURORA . Synaptic Portfolio
+              {t('contact.tagline')}
             </p>
             <p className="text-xs text-black/30 dark:text-white/20">
-              Built with React, Three.js, and taste-skill design
+              {t('contact.builtWith')}
             </p>
           </div>
         </div>

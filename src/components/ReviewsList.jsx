@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { useReviews } from '../lib/usePortfolioData'
 
 export default function ReviewsList() {
+  const { t } = useTranslation()
   const { data: reviews = [], isLoading, error } = useReviews()
 
   if (isLoading && (!reviews || reviews.length === 0)) {
@@ -32,17 +34,17 @@ export default function ReviewsList() {
       <section className="py-24">
         <div className="mx-auto max-w-4xl px-4 text-center">
           <h2 className="mb-8 font-display text-3xl font-bold text-black/80 dark:text-white">
-            What People Say
+            {t('reviews.title')}
           </h2>
           {error && (
             <div className="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-amber-500/20 bg-amber-500/10 text-amber-600 dark:text-amber-400 text-xs font-mono">
               <span>⚠️</span>
-              <span>Offline mode — unable to fetch reviews</span>
+              <span>{t('reviews.offlineError')}</span>
             </div>
           )}
           <div className="glass-panel rounded-xl border border-black/10 dark:border-white/5 p-8 max-w-md mx-auto">
             <p className="text-sm text-black/50 dark:text-white/40 font-mono">
-              No reviews available yet. Check back soon!
+              {t('reviews.noReviews')}
             </p>
           </div>
         </div>
@@ -54,14 +56,14 @@ export default function ReviewsList() {
     <section className="py-24">
       <div className="mx-auto max-w-4xl px-4">
         <h2 className="mb-4 text-center font-display text-3xl font-bold text-black/80 dark:text-white">
-          What People Say
+          {t('reviews.title')}
         </h2>
 
         {error && (
           <div className="mb-8 text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-amber-500/20 bg-amber-500/10 text-amber-600 dark:text-amber-400 text-xs font-mono">
               <span>⚠️</span>
-              <span>Offline mode — unable to refresh live reviews</span>
+              <span>{t('reviews.offlineRefreshError')}</span>
             </div>
           </div>
         )}

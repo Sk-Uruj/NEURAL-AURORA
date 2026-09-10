@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { submitReview } from '../lib/supabase'
 
 export default function ReviewForm() {
+  const { t } = useTranslation()
   const [form, setForm] = useState({ name: '', email: '', rating: 5, message: '' })
   const [submitting, setSubmitting] = useState(false)
   const [done, setDone] = useState(false)
@@ -36,16 +38,16 @@ export default function ReviewForm() {
               >
                 <div className="mb-4 text-4xl">✓</div>
                 <h3 className="mb-2 font-display text-xl font-bold text-black/80 dark:text-white">
-                  Thank You!
+                  {t('reviews.thankYou')}
                 </h3>
                 <p className="mb-6 text-sm text-black/50 dark:text-white/50">
-                  Your review has been submitted and is pending approval.
+                  {t('reviews.submittedMessage')}
                 </p>
                 <button
                   onClick={() => setDone(false)}
                   className="text-sm text-black/40 dark:text-white/50 underline underline-offset-2 hover:text-black/70 dark:hover:text-white/70"
                 >
-                  Submit another review
+                  {t('reviews.submitAnother')}
                 </button>
               </motion.div>
             ) : (
@@ -55,36 +57,36 @@ export default function ReviewForm() {
                 animate={{ opacity: 1, scale: 1 }}
               >
                 <h2 className="mb-2 font-display text-2xl font-bold text-black/80 dark:text-white">
-                  Leave a Review
+                  {t('reviews.leaveReview')}
                 </h2>
                 <p className="mb-8 text-sm text-black/50 dark:text-white/50">
-                  Share your thoughts about my work
+                  {t('reviews.shareThoughts')}
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid gap-5 sm:grid-cols-2">
                     <div>
                       <label className="mb-1.5 block text-sm font-medium text-black/60 dark:text-white/70">
-                        Name <span className="text-red-400">*</span>
+                        {t('reviews.nameLabel')} <span className="text-red-400">*</span>
                       </label>
                       <input
                         type="text"
                         required
                         value={form.name}
                         onChange={(e) => setForm({ ...form, name: e.target.value })}
-                        placeholder="Your name"
+                        placeholder={t('reviews.namePlaceholder')}
                         className="w-full rounded-lg border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 px-4 py-2.5 text-sm text-black/80 dark:text-white placeholder-black/40 dark:placeholder-white/30 outline-none transition-colors focus:border-neural-500 focus:ring-1 focus:ring-neural-500"
                       />
                     </div>
                     <div>
                       <label className="mb-1.5 block text-sm font-medium text-black/60 dark:text-white/70">
-                        Email
+                        {t('reviews.emailLabel')}
                       </label>
                       <input
                         type="email"
                         value={form.email}
                         onChange={(e) => setForm({ ...form, email: e.target.value })}
-                        placeholder="optional"
+                        placeholder={t('reviews.emailPlaceholder')}
                         className="w-full rounded-lg border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 px-4 py-2.5 text-sm text-black/80 dark:text-white placeholder-black/40 dark:placeholder-white/30 outline-none transition-colors focus:border-neural-500 focus:ring-1 focus:ring-neural-500"
                       />
                     </div>
@@ -92,7 +94,7 @@ export default function ReviewForm() {
 
                   <div>
                     <label className="mb-1.5 block text-sm font-medium text-black/60 dark:text-white/70">
-                      Rating
+                      {t('reviews.ratingLabel')}
                     </label>
                     <div className="flex gap-1">
                       {[1, 2, 3, 4, 5].map((star) => (
@@ -114,14 +116,14 @@ export default function ReviewForm() {
 
                   <div>
                     <label className="mb-1.5 block text-sm font-medium text-black/60 dark:text-white/70">
-                      Message <span className="text-red-400">*</span>
+                      {t('reviews.messageLabel')} <span className="text-red-400">*</span>
                     </label>
                     <textarea
                       required
                       value={form.message}
                       onChange={(e) => setForm({ ...form, message: e.target.value })}
                       rows={4}
-                      placeholder="Write your review..."
+                      placeholder={t('reviews.messagePlaceholder')}
                       className="w-full rounded-lg border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 px-4 py-2.5 text-sm text-black/80 dark:text-white placeholder-black/40 dark:placeholder-white/30 outline-none transition-colors focus:border-neural-500 focus:ring-1 focus:ring-neural-500"
                     />
                   </div>
@@ -135,7 +137,7 @@ export default function ReviewForm() {
                     disabled={submitting}
                     className="w-full rounded-lg bg-neural-500 px-6 py-3 font-medium text-white transition-all hover:bg-neural-400 disabled:cursor-not-allowed disabled:opacity-50"
                   >
-                    {submitting ? 'Submitting...' : 'Submit Review'}
+                    {submitting ? t('reviews.submitting') : t('reviews.submitReview')}
                   </button>
                 </form>
               </motion.div>
