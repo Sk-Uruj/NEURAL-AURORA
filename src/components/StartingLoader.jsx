@@ -2351,12 +2351,31 @@ export default function StartingLoader({ onComplete }) {
   const doneRef = useRef(onComplete)
   const [docsUrl, setDocsUrl] = useState('')
   doneRef.current = onComplete
+  const engagedRef = useRef(false)
+  const idleSkipTimerRef = useRef(null)
 
   useEffect(() => {
+    const onInteract = () => {
+      engagedRef.current = true
+      clearTimeout(idleSkipTimerRef.current)
+    }
     if (sessionStorage.getItem('neural-aurora-verified')) {
       doneRef.current()
+    } else {
+      window.addEventListener('pointerdown', onInteract)
+      window.addEventListener('touchstart', onInteract)
+      window.addEventListener('keydown', onInteract)
+      idleSkipTimerRef.current = setTimeout(() => {
+        if (!engagedRef.current) doneRef.current()
+      }, 10000)
     }
     setDocsUrl(getDocsUrl())
+    return () => {
+      clearTimeout(idleSkipTimerRef.current)
+      window.removeEventListener('pointerdown', onInteract)
+      window.removeEventListener('touchstart', onInteract)
+      window.removeEventListener('keydown', onInteract)
+    }
   }, [])
 
   async function loadQuestion() {
@@ -2368,6 +2387,7 @@ export default function StartingLoader({ onComplete }) {
   }
 
   async function handleBootDone() {
+    clearTimeout(idleSkipTimerRef.current)
     await loadQuestion()
     try {
       const settings = await getAdminSettings()
