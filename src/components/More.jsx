@@ -132,6 +132,7 @@ function BlogCard({ post, index }) {
 }
 
 function CaseStudyCard({ study, index }) {
+  const { t } = useTranslation()
   return (
     <motion.div
       custom={index}
