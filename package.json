@@ -19,11 +19,13 @@
     "clsx": "^2.1.1",
     "dompurify": "^3.4.14",
     "framer-motion": "^11.15.0",
+    "i18next": "^26.4.2",
     "lucide-react": "^1.16.0",
     "pg": "^8.21.0",
     "razorpay": "^2.9.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-i18next": "^17.0.13",
     "react-router-dom": "^7.15.1",
     "three": "^0.170.0"
   },

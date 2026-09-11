@@ -1,11 +1,14 @@
 import { useState, useEffect, useRef } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 
 const GOOGLE_AD_CLIENT = 'ca-pub-2699270619596438'
 const EASE = [0.16, 1, 0.3, 1]
 const SPRING_STIFF = { type: 'spring', stiffness: 70, damping: 16, mass: 0.6 }
 
 function ShimmerOverlay() {
+  const shouldReduceMotion = useReducedMotion()
+
   return (
     <motion.div
       className="absolute inset-0 pointer-events-none overflow-hidden"
@@ -16,14 +19,16 @@ function ShimmerOverlay() {
         style={{
           background: 'linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.04) 45%, rgba(0,240,255,0.03) 50%, transparent 65%)',
         }}
-        animate={{ x: ['-100%', '200%'] }}
-        transition={{ duration: 4, repeat: Infinity, ease: EASE, delay: 1 }}
+        animate={shouldReduceMotion ? undefined : { x: ['-100%', '200%'] }}
+        transition={shouldReduceMotion ? { duration: 0 } : { duration: 4, repeat: Infinity, ease: EASE, delay: 1 }}
       />
     </motion.div>
   )
 }
 
 function GradientOrbit() {
+  const shouldReduceMotion = useReducedMotion()
+
   return (
     <div className="absolute inset-0 pointer-events-none">
       <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -37,8 +42,8 @@ function GradientOrbit() {
         <motion.rect
           x="0.5" y="0.5" width="99" height="99" rx="12"
           fill="none" stroke="url(#orbit)" strokeWidth="0.5"
-          animate={{ opacity: [0.4, 0.8, 0.4] }}
-          transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+          animate={shouldReduceMotion ? undefined : { opacity: [0.4, 0.8, 0.4] }}
+          transition={shouldReduceMotion ? { duration: 0 } : { duration: 3, repeat: Infinity, ease: 'easeInOut' }}
         />
       </svg>
       {[0, 120, 240].map((deg) => (
@@ -51,8 +56,8 @@ function GradientOrbit() {
             left: '50%', top: '50%',
             marginLeft: -2, marginTop: -2,
           }}
-          animate={{ x: [0, 0, 0], y: [0, 0, 0] }}
-          transition={{ duration: 8, repeat: Infinity, ease: 'linear', delay: -(deg / 360) * 8 }}
+          animate={shouldReduceMotion ? undefined : { x: [0, 0, 0], y: [0, 0, 0] }}
+          transition={shouldReduceMotion ? { duration: 0 } : { duration: 8, repeat: Infinity, ease: 'linear', delay: -(deg / 360) * 8 }}
         >
           <motion.div
             className="absolute w-12 h-12 rounded-full"
@@ -60,8 +65,8 @@ function GradientOrbit() {
               marginLeft: -22, marginTop: -22,
               background: 'radial-gradient(circle, rgba(0,240,255,0.08) 0%, transparent 70%)',
             }}
-            animate={{ scale: [1, 1.5, 1] }}
-            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+            animate={shouldReduceMotion ? undefined : { scale: [1, 1.5, 1] }}
+            transition={shouldReduceMotion ? { duration: 0 } : { duration: 2, repeat: Infinity, ease: 'easeInOut' }}
           />
         </motion.div>
       ))}
@@ -70,6 +75,8 @@ function GradientOrbit() {
 }
 
 function FloatingOrbs() {
+  const shouldReduceMotion = useReducedMotion()
+
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden">
       {[
@@ -85,8 +92,8 @@ function FloatingOrbs() {
             background: `radial-gradient(circle at center, ${orb.color} 0%, transparent 70%)`,
             left: orb.x, top: orb.y,
           }}
-          animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.6, 0.3] }}
-          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: orb.delay }}
+          animate={shouldReduceMotion ? undefined : { scale: [1, 1.3, 1], opacity: [0.3, 0.6, 0.3] }}
+          transition={shouldReduceMotion ? { duration: 0 } : { duration: 4, repeat: Infinity, ease: 'easeInOut', delay: orb.delay }}
         />
       ))}
     </div>
@@ -94,6 +101,8 @@ function FloatingOrbs() {
 }
 
 function GoogleAdUnit() {
+  const { t } = useTranslation()
+  const shouldReduceMotion = useReducedMotion()
   const containerRef = useRef(null)
   const adMounted = useRef(false)
   const [loaded, setLoaded] = useState(false)
@@ -145,9 +154,9 @@ function GoogleAdUnit() {
       <FloatingOrbs />
       <ShimmerOverlay />
       <motion.div
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.8, ease: EASE }}
+        initial={shouldReduceMotion ? { opacity: 1 } : { scale: 0.9, opacity: 0 }}
+        animate={shouldReduceMotion ? { opacity: 1 } : { scale: 1, opacity: 1 }}
+        transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.8, ease: EASE }}
         className="relative z-10 w-full"
       >
         <ins
@@ -165,7 +174,11 @@ function GoogleAdUnit() {
             className="absolute inset-0 flex items-center justify-center"
           >
             <div className="text-center">
-              <motion.div className="relative mx-auto mb-4 w-16 h-16" animate={{ rotate: 360 }} transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}>
+              <motion.div
+                className="relative mx-auto mb-4 w-16 h-16"
+                animate={shouldReduceMotion ? undefined : { rotate: 360 }}
+                transition={shouldReduceMotion ? { duration: 0 } : { duration: 3, repeat: Infinity, ease: 'linear' }}
+              >
                 <div className="absolute inset-0 rounded-full border-2 border-transparent" style={{ borderTopColor: '#00f0ff', borderRightColor: '#b829dd' }} />
                 <div className="absolute inset-2 rounded-full border border-white/5 flex items-center justify-center">
                   <svg viewBox="0 0 24 24" fill="none" stroke="#fbbf24" strokeWidth="1.5" className="w-6 h-6">
@@ -174,7 +187,8 @@ function GoogleAdUnit() {
                 </div>
               </motion.div>
               <motion.p className="text-[11px] font-mono tracking-[0.2em]" style={{ color: 'rgba(255,255,255,0.2)' }}
-                animate={{ opacity: [0.2, 0.4, 0.2] }} transition={{ duration: 2, repeat: Infinity }}
+                animate={shouldReduceMotion ? undefined : { opacity: [0.2, 0.4, 0.2] }}
+                transition={shouldReduceMotion ? { duration: 0 } : { duration: 2, repeat: Infinity }}
               >Loading Ad</motion.p>
             </div>
           </motion.div>
@@ -183,18 +197,20 @@ function GoogleAdUnit() {
       <motion.div
         className="absolute top-3 left-3 z-20 px-2 py-0.5 rounded-full text-[9px] font-mono uppercase tracking-[0.15em] flex items-center gap-1.5"
         style={{ background: 'rgba(251,191,36,0.12)', border: '1px solid rgba(251,191,36,0.2)', color: 'rgba(251,191,36,0.6)' }}
-        initial={{ opacity: 0, y: -5 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5, duration: 0.5, ease: EASE }}
+        initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: -5 }}
+        animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
+        transition={shouldReduceMotion ? { duration: 0 } : { delay: 0.5, duration: 0.5, ease: EASE }}
       >
         <span className="inline-block w-1 h-1 rounded-full bg-amber-400/60" />
-        Ad
+        {t('ads.ad')}
       </motion.div>
     </div>
   )
 }
 
 function YouTubeVideoPlayer({ videoUrl, title, aspectRatio }) {
+  const { t } = useTranslation()
+  const shouldReduceMotion = useReducedMotion()
   const videoId = videoUrl?.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|v\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/)?.[1]
   const ar = aspectRatio || '16/9'
   const [w, h] = ar.split('/').map(Number)
@@ -223,7 +239,7 @@ function YouTubeVideoPlayer({ videoUrl, title, aspectRatio }) {
                   <polygon points="5 3 19 12 5 21 5 3" />
                 </svg>
               </div>
-              <p className="text-xs font-mono" style={{ color: 'rgba(255,255,255,0.15)' }}>Video unavailable</p>
+              <p className="text-xs font-mono" style={{ color: 'rgba(255,255,255,0.15)' }}>{t('ads.videoUnavailable')}</p>
             </div>
           </div>
         </div>
@@ -231,18 +247,20 @@ function YouTubeVideoPlayer({ videoUrl, title, aspectRatio }) {
       <motion.div
         className="absolute top-3 left-3 z-20 px-2 py-0.5 rounded-full text-[9px] font-mono uppercase tracking-[0.15em] flex items-center gap-1.5"
         style={{ background: 'rgba(0,240,255,0.1)', border: '1px solid rgba(0,240,255,0.2)', color: 'rgba(0,240,255,0.6)' }}
-        initial={{ opacity: 0, y: -5 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5, duration: 0.5, ease: EASE }}
+        initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: -5 }}
+        animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
+        transition={shouldReduceMotion ? { duration: 0 } : { delay: 0.5, duration: 0.5, ease: EASE }}
       >
         <span className="inline-block w-1 h-1 rounded-full bg-neural-blue/60" />
-        Video
+        {t('ads.video')}
       </motion.div>
     </div>
   )
 }
 
 function YouTubeShortPlayer({ videoUrl, title }) {
+  const { t } = useTranslation()
+  const shouldReduceMotion = useReducedMotion()
   const videoId = videoUrl?.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|v\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/)?.[1]
   return (
     <div className="relative w-full bg-black/70 flex items-start justify-center" style={{ minHeight: '440px' }}>
@@ -252,9 +270,9 @@ function YouTubeShortPlayer({ videoUrl, title }) {
       <motion.div
         className="relative w-full max-w-[400px] mx-auto"
         style={{ paddingTop: 'calc(9/16 * 100%)', maxHeight: '80vh' }}
-        initial={{ scale: 0.92, opacity: 0, y: 20 }}
-        animate={{ scale: 1, opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: EASE, delay: 0.15 }}
+        initial={shouldReduceMotion ? { opacity: 1 } : { scale: 0.92, opacity: 0, y: 20 }}
+        animate={shouldReduceMotion ? { opacity: 1 } : { scale: 1, opacity: 1, y: 0 }}
+        transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.7, ease: EASE, delay: 0.15 }}
       >
         <div
           className="absolute inset-0 overflow-hidden"
@@ -280,7 +298,7 @@ function YouTubeShortPlayer({ videoUrl, title }) {
                     <polygon points="5 3 19 12 5 21 5 3" />
                   </svg>
                 </div>
-                <p className="text-xs font-mono" style={{ color: 'rgba(255,255,255,0.15)' }}>Unavailable</p>
+                <p className="text-xs font-mono" style={{ color: 'rgba(255,255,255,0.15)' }}>{t('ads.unavailable')}</p>
               </div>
             </div>
           )}
@@ -288,21 +306,21 @@ function YouTubeShortPlayer({ videoUrl, title }) {
 
         <motion.div
           className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 z-10"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2, duration: 0.6, ease: EASE }}
+          initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 10 }}
+          animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
+          transition={shouldReduceMotion ? { duration: 0 } : { delay: 1.2, duration: 0.6, ease: EASE }}
         >
           <motion.div
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-full"
             style={{ background: 'rgba(0,0,0,0.5)', backdropFilter: 'blur(8px)', border: '1px solid rgba(255,255,255,0.06)' }}
-            animate={{ y: [0, -3, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+            animate={shouldReduceMotion ? undefined : { y: [0, -3, 0] }}
+            transition={shouldReduceMotion ? { duration: 0 } : { duration: 2, repeat: Infinity, ease: 'easeInOut' }}
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" strokeWidth="1.5" className="w-3 h-3">
               <path d="M12 5v14M5 12h14" />
             </svg>
             <span className="text-[8px] font-mono uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.3)' }}>
-              Short
+              {t('ads.short')}
             </span>
           </motion.div>
         </motion.div>
@@ -315,8 +333,8 @@ function YouTubeShortPlayer({ videoUrl, title }) {
             <motion.div
               className="w-full rounded-full"
               style={{ background: 'linear-gradient(180deg, #00f0ff, #b829dd)' }}
-              animate={{ height: ['20%', '80%', '20%'] }}
-              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+              animate={shouldReduceMotion ? undefined : { height: ['20%', '80%', '20%'] }}
+              transition={shouldReduceMotion ? { duration: 0 } : { duration: 3, repeat: Infinity, ease: 'easeInOut' }}
             />
           </motion.div>
         </div>
@@ -325,37 +343,40 @@ function YouTubeShortPlayer({ videoUrl, title }) {
       <motion.div
         className="absolute top-3 left-3 z-20 px-2 py-0.5 rounded-full text-[9px] font-mono uppercase tracking-[0.15em] flex items-center gap-1.5"
         style={{ background: 'rgba(184,41,221,0.1)', border: '1px solid rgba(184,41,221,0.2)', color: 'rgba(184,41,221,0.6)' }}
-        initial={{ opacity: 0, y: -5 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5, duration: 0.5, ease: EASE }}
+        initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: -5 }}
+        animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
+        transition={shouldReduceMotion ? { duration: 0 } : { delay: 0.5, duration: 0.5, ease: EASE }}
       >
         <span className="inline-block w-1 h-1 rounded-full bg-purple-400/60" />
-        Short
+        {t('ads.short')}
       </motion.div>
     </div>
   )
 }
 
 function CompletionOverlay({ countdown }) {
+  const { t } = useTranslation()
+  const shouldReduceMotion = useReducedMotion()
+
   return (
     <motion.div
-      initial={{ opacity: 0 }}
+      initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="absolute inset-0 z-20 flex items-center justify-center"
       style={{ background: 'rgba(5,5,12,0.75)', backdropFilter: 'blur(8px)' }}
     >
       <motion.div
-        initial={{ scale: 0.7, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={SPRING_STIFF}
+        initial={shouldReduceMotion ? { opacity: 1 } : { scale: 0.7, opacity: 0 }}
+        animate={shouldReduceMotion ? { opacity: 1 } : { scale: 1, opacity: 1 }}
+        transition={shouldReduceMotion ? { duration: 0 } : SPRING_STIFF}
         className="text-center"
       >
         <motion.div
           className="relative mx-auto mb-4 w-16 h-16"
-          initial={{ rotate: -30 }}
-          animate={{ rotate: 0 }}
-          transition={{ type: 'spring', stiffness: 100, damping: 12 }}
+          initial={shouldReduceMotion ? undefined : { rotate: -30 }}
+          animate={shouldReduceMotion ? undefined : { rotate: 0 }}
+          transition={shouldReduceMotion ? { duration: 0 } : { type: 'spring', stiffness: 100, damping: 12 }}
         >
           <div className="w-16 h-16 rounded-full bg-emerald-500/10 border-2 border-emerald-400/40 flex items-center justify-center">
             <svg viewBox="0 0 24 24" fill="none" stroke="#34d399" strokeWidth="2" className="w-8 h-8">
@@ -365,15 +386,23 @@ function CompletionOverlay({ countdown }) {
           </div>
           <motion.div
             className="absolute -inset-2 rounded-full border border-emerald-400/10"
-            animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0, 0.3] }}
-            transition={{ duration: 2, repeat: Infinity }}
+            animate={shouldReduceMotion ? undefined : { scale: [1, 1.15, 1], opacity: [0.3, 0, 0.3] }}
+            transition={shouldReduceMotion ? { duration: 0 } : { duration: 2, repeat: Infinity }}
           />
         </motion.div>
-        <motion.p className="text-sm font-medium text-white/80" initial={{ y: 8, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.15 }}>
-          Ad Complete
+        <motion.p className="text-sm font-medium text-white/80"
+          initial={shouldReduceMotion ? { opacity: 1 } : { y: 8, opacity: 0 }}
+          animate={shouldReduceMotion ? { opacity: 1 } : { y: 0, opacity: 1 }}
+          transition={shouldReduceMotion ? { duration: 0 } : { delay: 0.15 }}
+        >
+          {t('ads.adComplete')}
         </motion.p>
-        <motion.p className="text-[10px] font-mono mt-1.5" style={{ color: 'rgba(255,255,255,0.25)' }} initial={{ y: 8, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.25 }}>
-          Entering in {countdown}s
+        <motion.p className="text-[10px] font-mono mt-1.5" style={{ color: 'rgba(255,255,255,0.25)' }}
+          initial={shouldReduceMotion ? { opacity: 1 } : { y: 8, opacity: 0 }}
+          animate={shouldReduceMotion ? { opacity: 1 } : { y: 0, opacity: 1 }}
+          transition={shouldReduceMotion ? { duration: 0 } : { delay: 0.25 }}
+        >
+          {t('ads.enteringIn', { count: countdown })}
         </motion.p>
       </motion.div>
     </motion.div>
@@ -381,6 +410,8 @@ function CompletionOverlay({ countdown }) {
 }
 
 export default function AdVideoPlayer({ video, onComplete, onSkip }) {
+  const { t } = useTranslation()
+  const shouldReduceMotion = useReducedMotion()
   const [progress, setProgress] = useState(0)
   const [elapsed, setElapsed] = useState(0)
   const [ended, setEnded] = useState(false)
@@ -422,10 +453,10 @@ export default function AdVideoPlayer({ video, onComplete, onSkip }) {
 
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.95 }}
-      transition={{ duration: 0.5, ease: EASE }}
+      initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, scale: 0.95 }}
+      animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, scale: 1 }}
+      exit={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, scale: 0.95 }}
+      transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, ease: EASE }}
       className={`relative z-10 mx-auto px-4 w-full ${isShort ? 'max-w-lg' : 'max-w-3xl'}`}
     >
       <motion.div
@@ -435,37 +466,37 @@ export default function AdVideoPlayer({ video, onComplete, onSkip }) {
           border: '1px solid rgba(255,255,255,0.06)',
           boxShadow: '0 0 60px rgba(0,240,255,0.04), 0 0 120px rgba(184,41,221,0.02)',
         }}
-        initial={{ y: 20 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
+        initial={shouldReduceMotion ? undefined : { y: 20 }}
+        animate={shouldReduceMotion ? undefined : { y: 0 }}
+        transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.7, ease: EASE, delay: 0.1 }}
       >
         <div className="relative px-5 py-3 border-b flex items-center justify-between"
           style={{ borderColor: 'rgba(255,255,255,0.05)' }}
         >
           <motion.div
             className="flex items-center gap-2"
-            initial={{ opacity: 0, x: -8 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.3, duration: 0.5, ease: EASE }}
+            initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, x: -8 }}
+            animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, x: 0 }}
+            transition={shouldReduceMotion ? { duration: 0 } : { delay: 0.3, duration: 0.5, ease: EASE }}
           >
             <motion.span
               className="w-1.5 h-1.5 rounded-full"
               style={{ background: '#00f0ff', boxShadow: '0 0 6px rgba(0,240,255,0.5)' }}
-              animate={{ opacity: [0.4, 1, 0.4] }}
-              transition={{ duration: 2, repeat: Infinity }}
+              animate={shouldReduceMotion ? undefined : { opacity: [0.4, 1, 0.4] }}
+              transition={shouldReduceMotion ? { duration: 0 } : { duration: 2, repeat: Infinity }}
             />
             <span className="text-[9px] font-mono uppercase tracking-[0.25em]" style={{ color: 'rgba(255,255,255,0.2)' }}>
-              Sponsored
+              {t('ads.sponsored')}
             </span>
           </motion.div>
           <motion.span
             className="text-[8px] font-mono"
             style={{ color: 'rgba(255,255,255,0.1)' }}
-            initial={{ opacity: 0 }}
+            initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
+            transition={shouldReduceMotion ? { duration: 0 } : { delay: 0.5 }}
           >
-            {isGoogle ? 'Auto Ad' : isShort ? 'Short' : 'Video'}
+            {isGoogle ? t('ads.autoAd') : isShort ? t('ads.short') : t('ads.video')}
           </motion.span>
         </div>
 
@@ -483,36 +514,41 @@ export default function AdVideoPlayer({ video, onComplete, onSkip }) {
 
         <motion.div
           className="px-5 py-4 space-y-3"
-          initial={{ opacity: 0 }}
+          initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.4 }}
+          transition={shouldReduceMotion ? { duration: 0 } : { delay: 0.2, duration: 0.4 }}
         >
           <div className="flex items-center justify-between">
             <div className="flex-1 min-w-0 mr-3">
               <motion.p
                 className="text-sm font-medium truncate"
                 style={{ color: 'rgba(255,255,255,0.75)' }}
-                initial={{ opacity: 0, x: -5 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.3, duration: 0.4 }}
+                initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, x: -5 }}
+                animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, x: 0 }}
+                transition={shouldReduceMotion ? { duration: 0 } : { delay: 0.3, duration: 0.4 }}
               >
-                {video?.title || (isGoogle ? 'Google Ad' : isShort ? 'Short Ad' : 'Video Ad')}
+                {video?.title || (isGoogle ? t('ads.googleAd') : isShort ? t('ads.shortAd') : t('ads.videoAd'))}
               </motion.p>
             </div>
             <AnimatePresence>
               {showSkip && !ended && (
                 <motion.button
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
+                  initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, scale: 0.9 }}
+                  animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, scale: 1 }}
+                  exit={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, scale: 0.9 }}
                   onClick={onSkip}
                   className="relative px-4 py-1.5 rounded-lg text-[10px] font-mono uppercase tracking-wider overflow-hidden group"
                   style={{ border: '1px solid rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.35)' }}
-                  whileHover={{ borderColor: 'rgba(255,255,255,0.2)', color: 'rgba(255,255,255,0.7)' }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={shouldReduceMotion ? undefined : { borderColor: 'rgba(255,255,255,0.2)', color: 'rgba(255,255,255,0.7)' }}
+                  whileTap={shouldReduceMotion ? undefined : { scale: 0.95 }}
                 >
-                  <motion.span className="absolute inset-0" style={{ background: 'rgba(255,255,255,0.03)' }} initial={{ opacity: 0 }} whileHover={{ opacity: 1 }} />
-                  Skip
+                  <motion.span
+                    className="absolute inset-0"
+                    style={{ background: 'rgba(255,255,255,0.03)' }}
+                    initial={{ opacity: 0 }}
+                    whileHover={shouldReduceMotion ? undefined : { opacity: 1 }}
+                  />
+                  {t('ads.skip')}
                 </motion.button>
               )}
             </AnimatePresence>
@@ -527,8 +563,8 @@ export default function AdVideoPlayer({ video, onComplete, onSkip }) {
                   width: `${progress}%`,
                   boxShadow: '0 0 10px rgba(0,240,255,0.2)',
                 }}
-                layout
-                transition={{ duration: 0.3, ease: EASE }}
+                layout={!shouldReduceMotion}
+                transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.3, ease: EASE }}
               />
             </div>
             <div className="flex justify-between mt-2">
@@ -536,9 +572,9 @@ export default function AdVideoPlayer({ video, onComplete, onSkip }) {
                 className="text-[9px] font-mono"
                 style={{ color: 'rgba(255,255,255,0.12)' }}
                 key={elapsed}
-                initial={{ opacity: 0.4 }}
+                initial={shouldReduceMotion ? false : { opacity: 0.4 }}
                 animate={{ opacity: 0.12 }}
-                transition={{ duration: 0.3 }}
+                transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.3 }}
               >
                 {elapsed}s
               </motion.span>

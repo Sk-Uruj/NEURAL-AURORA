@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { useProjects } from '../lib/usePortfolioData'
 import { sanitizeHtml } from '../lib/utils'
 
@@ -15,10 +16,14 @@ function ProjectImage({ src, alt, children, shouldReduceMotion }) {
         layout
         src={src}
         alt={alt}
+        width={800}
+        height={600}
+        loading="lazy"
+        decoding="async"
         initial={shouldReduceMotion ? false : { opacity: 0, scale: 1.05 }}
-        animate={shouldReduceMotion ? {opacity: loaded ? 1 : 0, scale: 1 } : { opacity: loaded ? 1 : 0, scale: loaded ? 1 : 1.05 }}
+        animate={shouldReduceMotion ? { opacity: loaded ? 1 : 0, scale: 1 } : { opacity: loaded ? 1 : 0, scale: loaded ? 1 : 1.05 }}
         onLoad={() => setLoaded(true)}
-        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        className="w-full h-full object-cover"
       />
       {children}
     </div>
@@ -51,7 +56,15 @@ function PlayIcon() {
 }
 
 function ProjectCard({ project, index, shouldReduceMotion }) {
+  const { t } = useTranslation()
   const [expanded, setExpanded] = useState(false)
+  const technologies = project.technologies || []
+
+  const labelMap = {
+    github: t('projects.source'),
+    link: t('projects.link'),
+    demo: t('projects.demo'),
+  }
 
   return (
     <motion.div
@@ -68,7 +81,7 @@ function ProjectCard({ project, index, shouldReduceMotion }) {
       <ProjectImage src={project.image} alt={project.title} shouldReduceMotion={shouldReduceMotion}>
         <div className="absolute inset-0 bg-gradient-to-t from-[#050508] via-transparent to-transparent" />
         <div className="absolute top-4 left-4 flex gap-2">
-          {project.technologies.slice(0, 2).map((tech) => (
+          {technologies.slice(0, 2).map((tech) => (
             <span
               key={tech}
               className="text-[10px] px-2 py-1 rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/5 text-black/50 dark:text-white/40"
@@ -76,9 +89,9 @@ function ProjectCard({ project, index, shouldReduceMotion }) {
               {tech}
             </span>
           ))}
-          {project.technologies.length > 2 && (
+          {technologies.length > 2 && (
             <span className="text-[10px] px-2 py-1 rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/5 text-black/40 dark:text-white/30">
-              +{project.technologies.length - 2}
+              +{technologies.length - 2}
             </span>
           )}
         </div>
@@ -88,6 +101,7 @@ function ProjectCard({ project, index, shouldReduceMotion }) {
         <motion.h3 layout className="text-lg font-display font-bold text-black/80 dark:text-white/90 tracking-tight">
           {project.title}
         </motion.h3>
+
         <motion.div
           layout
           className={`text-sm text-black/50 dark:text-white/40 leading-relaxed ${
@@ -106,7 +120,7 @@ function ProjectCard({ project, index, shouldReduceMotion }) {
               className="space-y-4 pt-2"
             >
               <div className="flex flex-wrap gap-2">
-                {project.technologies.map((tech) => (
+                {technologies.map((tech) => (
                   <span
                     key={tech}
                     className="text-xs px-3 py-1 rounded-full bg-black/5 dark:bg-white/5 text-black/50 dark:text-white/50"
@@ -115,22 +129,34 @@ function ProjectCard({ project, index, shouldReduceMotion }) {
                   </span>
                 ))}
               </div>
+
               <div className="flex gap-4 mt-1">
                 {['github', 'link', 'demo'].map((type) => {
                   const url = project[type]
                   const Icon = type === 'github' ? GithubIcon : type === 'link' ? LinkIcon : PlayIcon
+                  const label = labelMap[type]
+
                   return url ? (
-                    <a key={type} href={url} target="_self" rel="noopener noreferrer"
+                    <a
+                      key={type}
+                      href={url}
+                      target="_self"
+                      rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
                       className="group text-xs text-black/50 dark:text-white/40 hover:text-black/80 dark:hover:text-white/80 transition-colors flex items-center gap-1.5"
                     >
                       <Icon />
-                      <span className="relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-current after:transition-all after:duration-300 group-hover:after:w-full">{type === 'github' ? 'Source' : type === 'link' ? 'Link' : 'Demo'}</span>
+                      <span className="relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-current after:transition-all after:duration-300 group-hover:after:w-full">
+                        {label}
+                      </span>
                     </a>
                   ) : (
-                    <span key={type} className="text-xs text-black/20 dark:text-white/20 flex items-center gap-1.5 cursor-not-allowed">
+                    <span
+                      key={type}
+                      className="text-xs text-black/20 dark:text-white/20 flex items-center gap-1.5 cursor-not-allowed"
+                    >
                       <Icon />
-                      {type === 'github' ? 'Source' : type === 'link' ? 'Link' : 'Demo'}
+                      {label}
                     </span>
                   )
                 })}
@@ -144,8 +170,10 @@ function ProjectCard({ project, index, shouldReduceMotion }) {
 }
 
 export default function Projects() {
+  const { t } = useTranslation()
   const shouldReduceMotion = useReducedMotion()
-  const projects = useProjects()
+  const { data: projects = [], isLoading, error } = useProjects()
+
   return (
     <section id="projects" className="relative z-10 py-32 md:py-40">
       <div className="w-full max-w-[1400px] mx-auto px-6 md:px-12">
@@ -156,20 +184,51 @@ export default function Projects() {
           transition={shouldReduceMotion ? undefined : { duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="mb-16"
         >
-          <span className="eyebrow">Portfolio</span>
+          <span className="eyebrow">{t('projects.eyebrow')}</span>
+
           <h2 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tighter leading-none">
-            Neural <span className="text-gradient">Projects</span>
+            {t('projects.titleNeural')}{' '}
+            <span className="text-gradient">{t('projects.titleProjects')}</span>
           </h2>
+
           <p className="mt-4 text-base text-black/50 dark:text-white/40 max-w-[65ch] leading-relaxed">
-            Each project is a node in a growing neural network. Click to expand and explore the synaptic connections.
+            {t('projects.subtitle')}
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 auto-rows-auto">
-          {projects.map((project, i) => (
-            <ProjectCard key={project.id} project={project} index={i} shouldReduceMotion={shouldReduceMotion} />
-          ))}
-        </div>
+        {error && (
+          <div className="mb-8 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-amber-500/20 bg-amber-500/10 text-amber-600 dark:text-amber-400 text-xs font-mono">
+            <span>⚠️</span>
+            <span>{t('projects.offlineNotice')}</span>
+          </div>
+        )}
+
+        {isLoading && (!projects || projects.length === 0) ? (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            {[1, 2, 3].map((i) => (
+              <div key={i} className="glass-panel rounded-[2rem] overflow-hidden animate-pulse">
+                <div className="aspect-[4/3] bg-black/10 dark:bg-white/10" />
+                <div className="p-6 md:p-8 space-y-4">
+                  <div className="h-5 w-3/4 bg-black/10 dark:bg-white/10 rounded" />
+                  <div className="h-4 w-full bg-black/5 dark:bg-white/5 rounded" />
+                  <div className="h-4 w-2/3 bg-black/5 dark:bg-white/5 rounded" />
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : !isLoading && (!projects || projects.length === 0) ? (
+          <div className="glass-panel rounded-[2rem] p-12 text-center max-w-lg mx-auto">
+            <p className="text-sm text-black/50 dark:text-white/40 font-mono">
+              {t('projects.noData')}
+            </p>
+          </div>
+        ) : (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 auto-rows-auto">
+            {projects.map((project, i) => (
+              <ProjectCard key={project.id || i} project={project} index={i} shouldReduceMotion={shouldReduceMotion} />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   )

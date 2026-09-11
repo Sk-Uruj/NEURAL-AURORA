@@ -1,0 +1,349 @@
+{
+  "nav": {
+    "about": "عنّي",
+    "skills": "المهارات",
+    "projects": "المشاريع",
+    "services": "الخدمات",
+    "resume": "السيرة الذاتية",
+    "contact": "تواصل",
+    "more": "المزيد",
+    "support": "الدعم",
+    "login": "تسجيل الدخول والإعداد",
+    "admin": "لوحة الإدارة",
+    "crm": "لوحة CRM",
+    "getStarted": "ابدأ الآن",
+    "menu": "القائمة"
+  },
+  "common": {
+    "home": "الرئيسية",
+    "menu": "القائمة"
+  },
+  "hero": {
+    "available": "متاح للـ",
+    "collaboration": "تعاون",
+    "viewProjects": "عرض المشاريع",
+    "resume": "السيرة الذاتية",
+    "title": "صياغة تجارب رقمية",
+    "subtitle": "حيث تلتقي الشبكات العصبية بضوء الشفق القطبي"
+  },
+  "about": {
+    "eyebrow": "عنّي",
+    "titleArchitect": "مهندس",
+    "titleDigitalExperience": "التجربة الرقمية",
+    "knownAsPrefix": "معروف على الإنترنت باسم",
+    "knownAsSuffix": "، أبني أنظمة يلتقي فيها الكود بالشعر البصري. كل مشروع فرصة لتجاوز حدود ما يمكن للمتصفح فعله.",
+    "digitalFootprint": "البصمة الرقمية",
+    "avatarAlt": "صورة شخصية",
+    "currentFocus": "أعمل حالياً على بناء NEURAL AURORA واستكشاف تقاطع الرسومات ثلاثية الأبعاد وتقنية الويب."
+  },
+  "skills": {
+    "eyebrow": "الخبرة",
+    "titleTechnical": "التقنيات",
+    "titleStack": "المكدس",
+    "offlineNotice": "وضع عدم الاتصال — عرض مكدس تقني ثابت كبديل",
+    "noData": "لا توجد بيانات مهارات تقنية متاحة حالياً.",
+    "noSkillsInCategory": "لا توجد مهارات مدرجة في هذه الفئة",
+    "categories": {
+      "frontend": "الواجهة الأمامية",
+      "backend": "الواجهة الخلفية",
+      "language": "اللغات",
+      "devops": "DevOps",
+      "design": "التصميم"
+    }
+  },
+  "projects": {
+    "eyebrow": "المعرض",
+    "titleNeural": "مشاريع",
+    "titleProjects": "عصبية",
+    "subtitle": "كل مشروع عقدة في شبكة عصبية متنامية. انقر للتوسّع واستكشاف الوصلات التشابكية.",
+    "offlineNotice": "وضع عدم الاتصال — عرض المشاريع المخزنة كبديل",
+    "noData": "لم يتم العثور على مشاريع في المستودع العصبي.",
+    "source": "المصدر",
+    "link": "الرابط",
+    "demo": "التجربة"
+  },
+  "resume": {
+    "eyebrow": "السيرة الذاتية",
+    "titleDownload": "حمّل",
+    "titleResume": "سيرتي الذاتية",
+    "subtitle": "نظرة شاملة على خبرتي ومشاريعي وخبرتي التقنية. يتم تحديثها بانتظام لعكس أحدث أعمالي.",
+    "downloadPdf": "تحميل PDF",
+    "pdfFormat": "صيغة PDF . 2.4 MB"
+  },
+  "contact": {
+    "eyebrow": "تواصل",
+    "titleLetsBuild": "لنبنِ",
+    "titleTogether": "معاً",
+    "subtitle": "لديك مشروع في ذهنك أو تريد فقط إلقاء التحية؟ الشبكة العصبية مفتوحة دائماً لوصلات جديدة.",
+    "findMeOn": "تجدني على",
+    "nameLabel": "الاسم",
+    "namePlaceholder": "اسمك",
+    "emailLabel": "البريد الإلكتروني",
+    "emailPlaceholder": "your@email.com",
+    "messageLabel": "الرسالة",
+    "messagePlaceholder": "أخبرني عن مشروعك...",
+    "sendMessage": "إرسال الرسالة",
+    "sending": "جارٍ الإرسال...",
+    "sentSuccess": "تم إرسال الرسالة! سأعود إليك قريباً.",
+    "tagline": "NEURAL AURORA . محفظة تشابكية",
+    "builtWith": "بُني بـ React وThree.js وتصميم ذو ذوق"
+  },
+  "reviews": {
+    "title": "آراء الناس",
+    "offlineError": "وضع عدم الاتصال — تعذّر جلب المراجعات",
+    "offlineRefreshError": "وضع عدم الاتصال — تعذّر تحديث المراجعات الحية",
+    "noReviews": "لا تتوفر مراجعات بعد. عد قريباً!",
+    "leaveReview": "اترك مراجعة",
+    "shareThoughts": "شارك أفكارك حول أعمالي",
+    "nameLabel": "الاسم",
+    "namePlaceholder": "اسمك",
+    "emailLabel": "البريد الإلكتروني",
+    "emailPlaceholder": "اختياري",
+    "ratingLabel": "التقييم",
+    "messageLabel": "الرسالة",
+    "messagePlaceholder": "اكتب مراجعتك...",
+    "submitReview": "إرسال المراجعة",
+    "submitting": "جارٍ الإرسال...",
+    "thankYou": "شكراً لك!",
+    "submittedMessage": "تم إرسال مراجعتك وهي بانتظار الموافقة.",
+    "submitAnother": "إرسال مراجعة أخرى"
+  },
+  "footer": {
+    "skills": "المهارات",
+    "projects": "المشاريع",
+    "connect": "تواصل",
+    "synapticPortfolio": "محفظة تشابكية",
+    "reactNext": "React / Next.js",
+    "threeWebGL": "Three.js / WebGL",
+    "uiUxDesign": "تصميم UI/UX",
+    "fullStackDev": "تطوير شامل",
+    "neuralAurora": "NEURAL AURORA",
+    "synapticDashboard": "لوحة تحكم تشابكية",
+    "auroraEngine": "محرك الشفق القطبي",
+    "viewAll": "عرض الكل"
+  },
+  "loader": {
+    "verificationRequired": "التحقق مطلوب",
+    "proveIdentity": "أثبت هويتك للوصول إلى النظام.",
+    "cards": {
+      "sayName": "قل «{{name}}»",
+      "voiceRecognition": "التعرف على الصوت",
+      "solvePuzzle": "حل اللغز",
+      "oneQuestion": "سؤال واحد",
+      "traverseOn": "المتابعة",
+      "autoTraverse": "تصفح تلقائي",
+      "traverseActiveDesc": "وضع العرض التلقائي نشط",
+      "traverseTourDesc": "جولة كاملة في الموقع",
+      "watchDevAds": "شاهد إعلانات المطور",
+      "videoAdsToUnlock": "إعلانات فيديو لفتح المحتوى",
+      "moodSwing": "تقلب المزاج",
+      "setVibeMusic": "حدد الأجواء والموسيقى",
+      "neuralCmd": "أوامر Neural Aurora",
+      "exploreTerminal": "استكشف عبر الطرفية",
+      "takeInterview": "قم بمقابلتي",
+      "voiceAiInterview": "مقابلة صوتية بالذكاء الاصطناعي",
+      "patternLock": "قفل النمط العصبي",
+      "memoryChallenge": "تحدي الذاكرة",
+      "channelStream": "بث القناة",
+      "browseVideos": "تصفح فيديوهاتي",
+      "skipVibes": "تخطي الأجواء",
+      "directEntry": "دخول مباشر",
+      "openDocs": "فتح الوثائق"
+    },
+    "interview": {
+      "chatWith": "تحدث مع {{name}}",
+      "askAnything": "اسألني أي شيء",
+      "live": "مباشر",
+      "gettingReady": "جارٍ الاستعداد...",
+      "thinking": "{{name}} يفكر...",
+      "you": "أنت",
+      "listening": "أستمع... تفضل، اسألني أي شيء",
+      "tapMic": "اضغط على الميكروفون ثم اطرح سؤالك",
+      "typeQuestion": "اكتب سؤالك...",
+      "ask": "اسأل",
+      "youAsked": "سألت",
+      "says": "يقول {{name}}",
+      "askAnother": "اطرح سؤالاً آخر",
+      "endInterview": "إنهاء المقابلة",
+      "allDone": "اكتمل كل شيء",
+      "enterPortfolio": "ادخل إلى المعرض"
+    },
+    "voice": {
+      "instruction": "قل «{{name}}» للتحقق من هويتك",
+      "listening": "أستمع...",
+      "trySaying": "جرّب قول «{{name}}»",
+      "verified": "تم التحقق من الهوية"
+    },
+    "success": {
+      "verified": "تم التحقق من الهوية",
+      "accessGranted": "تم منح الوصول",
+      "welcome": "مرحباً بك في NEURAL AURORA"
+    },
+    "cmd": {
+      "email": "البريد الإلكتروني",
+      "availableOnRequest": "متاح عند الطلب"
+    }
+  },
+  "blog": {
+    "eyebrow": "المدونة",
+    "titlePrefix": "أفكار و",
+    "titleSuffix": "تأملات",
+    "subtitle": "أشارك ما أتعلمه وأبنيه وأفكر فيه.",
+    "searchPlaceholder": "ابحث في المنشورات...",
+    "noPosts": "لم يتم العثور على منشورات. جرّب بحثاً مختلفاً.",
+    "postNotFound": "المنشور غير موجود",
+    "backToBlog": "العودة إلى المدونة",
+    "blogPostEyebrow": "منشور مدونة",
+    "readMore": "اقرأ المزيد من المنشورات",
+    "allPosts": "كل المنشورات"
+  },
+  "services": {
+    "options": "{{count}} خيار",
+    "viewDetails": "عرض التفاصيل",
+    "step": "الخطوة {{number}}",
+    "whatIncluded": "ما هو مشمول",
+    "selectType": "اختر نوع المشروع",
+    "backToServices": "العودة إلى الخدمات",
+    "getInTouch": "تواصل معنا",
+    "projectPlaceholder": "أخبرني عن مشروعك {{title}}...",
+    "mostPopular": "الأكثر رواجاً",
+    "getStarted": "ابدأ الآن",
+    "processing": "جارٍ المعالجة...",
+    "serviceNotFound": "الخدمة غير موجودة",
+    "price": "السعر",
+    "delivery": "التسليم",
+    "pay": "ادفع",
+    "paymentConfirmed": "تم تأكيد الدفع",
+    "nav": {
+      "services": "الخدمات",
+      "process": "العملية",
+      "pricing": "الأسعار",
+      "faq": "الأسئلة الشائعة",
+      "contact": "تواصل"
+    }
+  },
+  "support": {
+    "eyebrow": "الدعم",
+    "heroSubtitle": "مفتوح المصدر ومجاني للأبد",
+    "heroDescription": "هذا المشروع مجاني 100% ومفتوح المصدر. مساهمتك تبقيه حياً وتمول الميزات الجديدة وتساعدنا على منافسة البدائل المدفوعة — مع إبقاء NEURAL AURORA مجانياً للجميع.",
+    "floatingButton": "ادعم",
+    "sponsorPlaceholder": "أخبرني عن مشروعك أو أفكار رعايتك...",
+    "nav": {
+      "contribute": "ساهم",
+      "whySupport": "لماذا الدعم",
+      "faq": "الأسئلة الشائعة",
+      "contact": "تواصل"
+    },
+    "presets": {
+      "coffee": "اشترِ قهوة",
+      "feature": "ادعم ميزة",
+      "speed": "سرّع التطوير",
+      "rocket": "مُعزّز إطلاق",
+      "crown": "راعٍ مميز",
+      "legend": "مستوى الأسطورة"
+    }
+  },
+  "more": {
+    "eyebrow": "المزيد",
+    "titlePrefix": "ما وراء",
+    "titleSuffix": "الكود",
+    "subtitle": "رحلتي عبر التعليم والخبرة والأفكار والرؤى.",
+    "education": "التعليم",
+    "experience": "الخبرة العملية",
+    "latestPosts": "أحدث منشورات المدونة",
+    "viewAll": "عرض الكل",
+    "caseStudies": "دراسات الحالة",
+    "nav": {
+      "timeline": "الخط الزمني",
+      "caseStudies": "دراسات الحالة",
+      "blog": "المدونة"
+    }
+  },
+  "caseStudy": {
+    "notFound": "دراسة الحالة غير موجودة",
+    "backToStudies": "العودة إلى دراسات الحالة",
+    "eyebrow": "دراسة حالة",
+    "outcome": "النتيجة",
+    "fullAnalysis": "التحليل الكامل",
+    "viewAll": "عرض كل دراسات الحالة"
+  },
+  "contributors": {
+    "eyebrow": "المساهمون",
+    "titlePrefix": "الأشخاص خلف",
+    "subtitle": "كل مساهم — مطوراً أو متبرعاً — يساعد في إبقاء هذا المشروع مجانياً ومفتوح المصدر.",
+    "becomeContributor": "كن مساهماً",
+    "becomeContributorSubtitle": "ادعم المشروع وأدرج اسمك هنا"
+  },
+  "mood": {
+    "title": "تقلب المزاج",
+    "subtitle": "اضبط الأجواء قبل الدخول",
+    "footnote": "اختر مزاجك ← الموسيقى تضبط أجواء الاستكشاف",
+    "moods": {
+      "energetic": {
+        "label": "نشيط",
+        "description": "متحمس ومفعَم بالطاقة"
+      },
+      "calm": {
+        "label": "هادئ",
+        "description": "أجواء استرخاء وهدوء"
+      },
+      "happy": {
+        "label": "سعيد",
+        "description": "مبهج ومشرق"
+      },
+      "focused": {
+        "label": "مركّز",
+        "description": "حالة تدفق عميق"
+      },
+      "mysterious": {
+        "label": "غامض",
+        "description": "داكن وجوي"
+      },
+      "euphoric": {
+        "label": "نشوة",
+        "description": "موجات سامية"
+      }
+    }
+  },
+  "ads": {
+    "ad": "إعلان",
+    "video": "فيديو",
+    "short": "قصير",
+    "sponsored": "ممول",
+    "videoUnavailable": "الفيديو غير متاح",
+    "unavailable": "غير متاح",
+    "adComplete": "اكتمل الإعلان",
+    "enteringIn": "الدخول خلال {{count}}ث",
+    "skip": "تخطي",
+    "autoAd": "إعلان تلقائي",
+    "googleAd": "إعلان Google",
+    "shortAd": "إعلان قصير",
+    "videoAd": "إعلان فيديو"
+  },
+  "youtube": {
+    "watchingToVerify": "شاهد للتحقق",
+    "videos": "فيديوهات",
+    "shorts": "مقاطع قصيرة",
+    "playlists": "قوائم التشغيل",
+    "searchPlaceholder": "ابحث في {{tab}}...",
+    "noVideos": "لم يتم العثور على فيديوهات",
+    "noShorts": "لم يتم العثور على مقاطع قصيرة",
+    "noPlaylists": "لا توجد قوائم تشغيل عامة",
+    "loadMore": "تحميل المزيد",
+    "tryDifferentSearch": "جرّب بحثاً مختلفاً أو عد لاحقاً",
+    "shortsAppearHere": "ستظهر المحتويات القصيرة هنا",
+    "playlistsAppearHere": "ستظهر قوائم تشغيل القناة هنا",
+    "backToVerification": "العودة إلى التحقق",
+    "backToVideos": "العودة إلى الفيديوهات",
+    "browseToVerify": "تصفح للتحقق",
+    "retry": "إعادة المحاولة",
+    "subscribers": "مشترك",
+    "videosCount": "{{count}} فيديو",
+    "noVideosInPlaylist": "لا توجد فيديوهات في قائمة التشغيل هذه"
+  },
+  "theme": {
+    "switchToDark": "التبديل إلى الوضع الداكن",
+    "switchToLight": "التبديل إلى الوضع الفاتح",
+    "searchPlaceholder": "بحث..."
+  }
+}

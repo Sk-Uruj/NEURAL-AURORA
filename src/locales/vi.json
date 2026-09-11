@@ -1,0 +1,349 @@
+{
+  "nav": {
+    "about": "Giới thiệu",
+    "skills": "Kỹ năng",
+    "projects": "Dự án",
+    "services": "Dịch vụ",
+    "resume": "Sơ yếu lý lịch",
+    "contact": "Liên hệ",
+    "more": "Xem thêm",
+    "support": "Ủng hộ",
+    "login": "Đăng nhập & Thiết lập",
+    "admin": "Trang quản trị",
+    "crm": "Bảng điều khiển CRM",
+    "getStarted": "Bắt đầu",
+    "menu": "Menu"
+  },
+  "common": {
+    "home": "Trang chủ",
+    "menu": "Menu"
+  },
+  "hero": {
+    "available": "Sẵn sàng",
+    "collaboration": "hợp tác",
+    "viewProjects": "Xem dự án",
+    "resume": "Sơ yếu lý lịch",
+    "title": "Tạo ra trải nghiệm số",
+    "subtitle": "nơi mạng nơ-ron gặp ánh sáng cực quang"
+  },
+  "about": {
+    "eyebrow": "Giới thiệu",
+    "titleArchitect": "Kiến trúc sư",
+    "titleDigitalExperience": "trải nghiệm số",
+    "knownAsPrefix": "Được biết đến trên internet với tên",
+    "knownAsSuffix": ", tôi xây dựng những hệ thống nơi mã gặp gỡ thi ca thị giác. Mỗi dự án là cơ hội để đẩy xa giới hạn của trình duyệt.",
+    "digitalFootprint": "Dấu chân số",
+    "avatarAlt": "Ảnh đại diện",
+    "currentFocus": "Hiện đang xây dựng NEURAL AURORA và khám phá sự giao thoa giữa đồ họa 3D và công nghệ web."
+  },
+  "skills": {
+    "eyebrow": "Chuyên môn",
+    "titleTechnical": "Bộ công nghệ",
+    "titleStack": "kỹ thuật",
+    "offlineNotice": "Chế độ ngoại tuyến — hiển thị công nghệ tĩnh dự phòng",
+    "noData": "Chưa có dữ liệu kỹ năng kỹ thuật vào lúc này.",
+    "noSkillsInCategory": "Không có kỹ năng nào trong danh mục này",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "language": "Ngôn ngữ",
+      "devops": "DevOps",
+      "design": "Thiết kế"
+    }
+  },
+  "projects": {
+    "eyebrow": "Danh mục",
+    "titleNeural": "Dự án",
+    "titleProjects": "nơ-ron",
+    "subtitle": "Mỗi dự án là một nút trong mạng nơ-ron đang phát triển. Nhấp để mở rộng và khám phá các kết nối synap.",
+    "offlineNotice": "Chế độ ngoại tuyến — hiển thị dự án đã lưu trong bộ nhớ đệm",
+    "noData": "Không tìm thấy dự án nào trong kho nơ-ron.",
+    "source": "Mã nguồn",
+    "link": "Liên kết",
+    "demo": "Demo"
+  },
+  "resume": {
+    "eyebrow": "Sơ yếu lý lịch",
+    "titleDownload": "Tải xuống",
+    "titleResume": "sơ yếu lý lịch",
+    "subtitle": "Tổng quan toàn diện về kinh nghiệm, dự án và chuyên môn kỹ thuật của tôi. Được cập nhật thường xuyên.",
+    "downloadPdf": "Tải PDF",
+    "pdfFormat": "Định dạng PDF . 2,4 MB"
+  },
+  "contact": {
+    "eyebrow": "Liên hệ",
+    "titleLetsBuild": "Cùng nhau",
+    "titleTogether": "xây dựng",
+    "subtitle": "Có dự án trong đầu hay chỉ muốn chào hỏi? Mạng nơ-ron luôn mở cho những kết nối mới.",
+    "findMeOn": "Tìm tôi trên",
+    "nameLabel": "Tên",
+    "namePlaceholder": "Tên của bạn",
+    "emailLabel": "Email",
+    "emailPlaceholder": "your@email.com",
+    "messageLabel": "Tin nhắn",
+    "messagePlaceholder": "Kể cho tôi nghe về dự án của bạn...",
+    "sendMessage": "Gửi tin nhắn",
+    "sending": "Đang gửi...",
+    "sentSuccess": "Tin nhắn đã gửi! Tôi sẽ liên hệ lại sớm.",
+    "tagline": "NEURAL AURORA . Danh mục synap",
+    "builtWith": "Xây dựng bằng React, Three.js và thiết kế tinh tế"
+  },
+  "reviews": {
+    "title": "Mọi người nói gì",
+    "offlineError": "Chế độ ngoại tuyến — không thể tải đánh giá",
+    "offlineRefreshError": "Chế độ ngoại tuyến — không thể làm mới đánh giá",
+    "noReviews": "Chưa có đánh giá nào. Quay lại sớm nhé!",
+    "leaveReview": "Để lại đánh giá",
+    "shareThoughts": "Chia sẻ cảm nghĩ về công việc của tôi",
+    "nameLabel": "Tên",
+    "namePlaceholder": "Tên của bạn",
+    "emailLabel": "Email",
+    "emailPlaceholder": "tùy chọn",
+    "ratingLabel": "Xếp hạng",
+    "messageLabel": "Tin nhắn",
+    "messagePlaceholder": "Viết đánh giá của bạn...",
+    "submitReview": "Gửi đánh giá",
+    "submitting": "Đang gửi...",
+    "thankYou": "Cảm ơn bạn!",
+    "submittedMessage": "Đánh giá của bạn đã được gửi và đang chờ phê duyệt.",
+    "submitAnother": "Gửi đánh giá khác"
+  },
+  "footer": {
+    "skills": "Kỹ năng",
+    "projects": "Dự án",
+    "connect": "Liên hệ",
+    "synapticPortfolio": "Danh mục synap",
+    "reactNext": "React / Next.js",
+    "threeWebGL": "Three.js / WebGL",
+    "uiUxDesign": "Thiết kế UI/UX",
+    "fullStackDev": "Phát triển full-stack",
+    "neuralAurora": "NEURAL AURORA",
+    "synapticDashboard": "Bảng điều khiển synap",
+    "auroraEngine": "Động cơ Aurora",
+    "viewAll": "Xem tất cả"
+  },
+  "loader": {
+    "verificationRequired": "Cần xác minh",
+    "proveIdentity": "Xác minh danh tính của bạn để truy cập hệ thống.",
+    "cards": {
+      "sayName": "Nói \"{{name}}\"",
+      "voiceRecognition": "Nhận dạng giọng nói",
+      "solvePuzzle": "Giải câu đố",
+      "oneQuestion": "Một câu hỏi",
+      "traverseOn": "Tiếp tục",
+      "autoTraverse": "Tự động khám phá",
+      "traverseActiveDesc": "Chế độ demo tự động đang hoạt động",
+      "traverseTourDesc": "Tour demo toàn trang",
+      "watchDevAds": "Xem quảng cáo dev",
+      "videoAdsToUnlock": "Quảng cáo video để mở khóa",
+      "moodSwing": "Thay đổi tâm trạng",
+      "setVibeMusic": "Chọn không khí & nhạc",
+      "neuralCmd": "Neural Aurora CMD",
+      "exploreTerminal": "Khám phá qua terminal",
+      "takeInterview": "Phỏng vấn với tôi",
+      "voiceAiInterview": "Phỏng vấn AI bằng giọng nói",
+      "patternLock": "Khóa mẫu nơ-ron",
+      "memoryChallenge": "Thử thách trí nhớ",
+      "channelStream": "Kênh phát trực tiếp",
+      "browseVideos": "Xem video của tôi",
+      "skipVibes": "Bỏ qua không khí",
+      "directEntry": "Vào thẳng",
+      "openDocs": "Mở tài liệu"
+    },
+    "interview": {
+      "chatWith": "Trò chuyện với {{name}}",
+      "askAnything": "Hỏi tôi bất cứ điều gì",
+      "live": "Trực tiếp",
+      "gettingReady": "Đang chuẩn bị...",
+      "thinking": "{{name}} đang suy nghĩ...",
+      "you": "Bạn",
+      "listening": "Đang lắng nghe... cứ thoải mái, hỏi tôi bất cứ điều gì",
+      "tapMic": "Chạm vào micro rồi đặt câu hỏi",
+      "typeQuestion": "Nhập câu hỏi của bạn...",
+      "ask": "Hỏi",
+      "youAsked": "Bạn đã hỏi",
+      "says": "{{name}} nói",
+      "askAnother": "Hỏi câu khác",
+      "endInterview": "Kết thúc phỏng vấn",
+      "allDone": "Hoàn tất",
+      "enterPortfolio": "Vào danh mục"
+    },
+    "voice": {
+      "instruction": "Nói \"{{name}}\" để xác minh danh tính của bạn",
+      "listening": "Đang lắng nghe...",
+      "trySaying": "Thử nói \"{{name}}\"",
+      "verified": "Đã xác minh danh tính"
+    },
+    "success": {
+      "verified": "Đã xác minh danh tính",
+      "accessGranted": "Đã cấp quyền truy cập",
+      "welcome": "Chào mừng đến với NEURAL AURORA"
+    },
+    "cmd": {
+      "email": "Email",
+      "availableOnRequest": "có theo yêu cầu"
+    }
+  },
+  "blog": {
+    "eyebrow": "Blog",
+    "titlePrefix": "Suy nghĩ &",
+    "titleSuffix": "Ý tưởng",
+    "subtitle": "Chia sẻ những gì tôi học, xây dựng và suy ngẫm.",
+    "searchPlaceholder": "Tìm bài viết...",
+    "noPosts": "Không tìm thấy bài viết. Thử tìm kiếm khác.",
+    "postNotFound": "Không tìm thấy bài viết",
+    "backToBlog": "Quay lại blog",
+    "blogPostEyebrow": "Bài viết blog",
+    "readMore": "Đọc thêm bài viết",
+    "allPosts": "Tất cả bài viết"
+  },
+  "services": {
+    "options": "{{count}} lựa chọn",
+    "viewDetails": "Xem chi tiết",
+    "step": "Bước {{number}}",
+    "whatIncluded": "Bao gồm những gì",
+    "selectType": "Chọn loại dự án",
+    "backToServices": "Quay lại dịch vụ",
+    "getInTouch": "Liên hệ",
+    "projectPlaceholder": "Kể về dự án {{title}} của bạn...",
+    "mostPopular": "Phổ biến nhất",
+    "getStarted": "Bắt đầu",
+    "processing": "Đang xử lý...",
+    "serviceNotFound": "Không tìm thấy dịch vụ",
+    "price": "Giá",
+    "delivery": "Giao hàng",
+    "pay": "Thanh toán",
+    "paymentConfirmed": "Đã xác nhận thanh toán",
+    "nav": {
+      "services": "Dịch vụ",
+      "process": "Quy trình",
+      "pricing": "Bảng giá",
+      "faq": "FAQ",
+      "contact": "Liên hệ"
+    }
+  },
+  "support": {
+    "eyebrow": "Ủng hộ",
+    "heroSubtitle": "Mã nguồn mở & Miễn phí mãi mãi",
+    "heroDescription": "Dự án này 100% miễn phí và mã nguồn mở. Đóng góp của bạn giúp dự án tồn tại, tài trợ các tính năng mới và giúp chúng tôi cạnh tranh với các giải pháp trả phí — đồng thời giữ NEURAL AURORA miễn phí cho mọi người.",
+    "floatingButton": "Ủng hộ",
+    "sponsorPlaceholder": "Kể cho tôi về dự án hoặc ý tưởng tài trợ của bạn...",
+    "nav": {
+      "contribute": "Đóng góp",
+      "whySupport": "Vì sao ủng hộ",
+      "faq": "FAQ",
+      "contact": "Liên hệ"
+    },
+    "presets": {
+      "coffee": "Mua một ly cà phê",
+      "feature": "Ủng hộ một tính năng",
+      "speed": "Tăng tốc phát triển",
+      "rocket": "Tăng tốc ra mắt",
+      "crown": "Nhà tài trợ cao cấp",
+      "legend": "Hạng huyền thoại"
+    }
+  },
+  "more": {
+    "eyebrow": "Xem thêm",
+    "titlePrefix": "Vượt ra ngoài",
+    "titleSuffix": "mã",
+    "subtitle": "Hành trình của tôi qua giáo dục, kinh nghiệm, ý tưởng và hiểu biết.",
+    "education": "Học vấn",
+    "experience": "Kinh nghiệm làm việc",
+    "latestPosts": "Bài viết mới nhất",
+    "viewAll": "Xem tất cả",
+    "caseStudies": "Nghiên cứu điển hình",
+    "nav": {
+      "timeline": "Dòng thời gian",
+      "caseStudies": "Nghiên cứu điển hình",
+      "blog": "Blog"
+    }
+  },
+  "caseStudy": {
+    "notFound": "Không tìm thấy nghiên cứu điển hình",
+    "backToStudies": "Quay lại nghiên cứu điển hình",
+    "eyebrow": "Nghiên cứu điển hình",
+    "outcome": "Kết quả",
+    "fullAnalysis": "Phân tích đầy đủ",
+    "viewAll": "Xem tất cả nghiên cứu điển hình"
+  },
+  "contributors": {
+    "eyebrow": "Người đóng góp",
+    "titlePrefix": "Những người đứng sau",
+    "subtitle": "Mỗi người đóng góp — lập trình viên hay nhà tài trợ — giúp duy trì dự án miễn phí và mã nguồn mở này.",
+    "becomeContributor": "Trở thành người đóng góp",
+    "becomeContributorSubtitle": "Ủng hộ dự án và được liệt kê ở đây"
+  },
+  "mood": {
+    "title": "Thay đổi tâm trạng",
+    "subtitle": "Chọn không khí trước khi vào",
+    "footnote": "Chọn tâm trạng → âm nhạc tạo không khí khám phá",
+    "moods": {
+      "energetic": {
+        "label": "Tràn đầy năng lượng",
+        "description": "Hưng phấn và sôi động"
+      },
+      "calm": {
+        "label": "Bình tĩnh",
+        "description": "Thư giãn và nhẹ nhàng"
+      },
+      "happy": {
+        "label": "Vui vẻ",
+        "description": "Tươi vui và rực rỡ"
+      },
+      "focused": {
+        "label": "Tập trung",
+        "description": "Trạng thái dòng chảy sâu"
+      },
+      "mysterious": {
+        "label": "Bí ẩn",
+        "description": "Tối tăm và đầy không khí"
+      },
+      "euphoric": {
+        "label": "Hưng phấn tột độ",
+        "description": "Những làn sóng siêu việt"
+      }
+    }
+  },
+  "ads": {
+    "ad": "Quảng cáo",
+    "video": "Video",
+    "short": "Ngắn",
+    "sponsored": "Tài trợ",
+    "videoUnavailable": "Video không khả dụng",
+    "unavailable": "Không khả dụng",
+    "adComplete": "Quảng cáo hoàn tất",
+    "enteringIn": "Vào trong {{count}}giây",
+    "skip": "Bỏ qua",
+    "autoAd": "Quảng cáo tự động",
+    "googleAd": "Quảng cáo Google",
+    "shortAd": "Quảng cáo ngắn",
+    "videoAd": "Quảng cáo video"
+  },
+  "youtube": {
+    "watchingToVerify": "Đang xem để xác minh",
+    "videos": "Video",
+    "shorts": "Shorts",
+    "playlists": "Danh sách phát",
+    "searchPlaceholder": "Tìm {{tab}}...",
+    "noVideos": "Không tìm thấy video",
+    "noShorts": "Không tìm thấy shorts",
+    "noPlaylists": "Không có danh sách phát công khai",
+    "loadMore": "Tải thêm",
+    "tryDifferentSearch": "Thử tìm kiếm khác hoặc quay lại sau",
+    "shortsAppearHere": "Nội dung ngắn sẽ xuất hiện tại đây",
+    "playlistsAppearHere": "Danh sách phát của kênh sẽ xuất hiện tại đây",
+    "backToVerification": "Quay lại xác minh",
+    "backToVideos": "Quay lại video",
+    "browseToVerify": "Duyệt để xác minh",
+    "retry": "Thử lại",
+    "subscribers": "người đăng ký",
+    "videosCount": "{{count}} video",
+    "noVideosInPlaylist": "Không có video trong danh sách phát này"
+  },
+  "theme": {
+    "switchToDark": "Chuyển sang chế độ tối",
+    "switchToLight": "Chuyển sang chế độ sáng",
+    "searchPlaceholder": "Tìm kiếm..."
+  }
+}

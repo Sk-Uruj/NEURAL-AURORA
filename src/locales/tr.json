@@ -1,0 +1,349 @@
+{
+  "nav": {
+    "about": "Hakkımda",
+    "skills": "Yetenekler",
+    "projects": "Projeler",
+    "services": "Hizmetler",
+    "resume": "Özgeçmiş",
+    "contact": "İletişim",
+    "more": "Daha Fazla",
+    "support": "Destek",
+    "login": "Giriş ve Kurulum",
+    "admin": "Yönetici Paneli",
+    "crm": "CRM Paneli",
+    "getStarted": "Başlayın",
+    "menu": "Menü"
+  },
+  "common": {
+    "home": "Ana Sayfa",
+    "menu": "Menü"
+  },
+  "hero": {
+    "available": "İşbirliğine",
+    "collaboration": "açığım",
+    "viewProjects": "Projeleri Gör",
+    "resume": "Özgeçmiş",
+    "title": "Dijital deneyimler yaratıyorum",
+    "subtitle": "sinir ağlarının aurora ışığıyla buluştuğu yer"
+  },
+  "about": {
+    "eyebrow": "Hakkımda",
+    "titleArchitect": "Dijital deneyim",
+    "titleDigitalExperience": "mimarı",
+    "knownAsPrefix": "İnternette",
+    "knownAsSuffix": "olarak bilinirim; kodun görsel şiirle buluştuğu sistemler kurarım. Her proje, tarayıcının sınırlarını zorlamak için bir fırsattır.",
+    "digitalFootprint": "Dijital Ayak İzi",
+    "avatarAlt": "Profil avatarı",
+    "currentFocus": "Şu anda NEURAL AURORA'yı inşa ediyor ve 3D grafikler ile web teknolojisinin kesişimini keşfediyorum."
+  },
+  "skills": {
+    "eyebrow": "Uzmanlık",
+    "titleTechnical": "Teknolojik",
+    "titleStack": "yığın",
+    "offlineNotice": "Çevrimdışı mod — statik teknoloji yığını gösteriliyor",
+    "noData": "Şu anda teknik beceri verisi mevcut değil.",
+    "noSkillsInCategory": "Bu kategoride beceri yok",
+    "categories": {
+      "frontend": "Ön Uç",
+      "backend": "Arka Uç",
+      "language": "Diller",
+      "devops": "DevOps",
+      "design": "Tasarım"
+    }
+  },
+  "projects": {
+    "eyebrow": "Portfolyo",
+    "titleNeural": "Nöral",
+    "titleProjects": "projeler",
+    "subtitle": "Her proje, büyüyen bir sinir ağının bir düğümüdür. Sinaptik bağlantıları keşfetmek için tıklayın.",
+    "offlineNotice": "Çevrimdışı mod — önbellekteki projeler gösteriliyor",
+    "noData": "Nöral depoda proje bulunamadı.",
+    "source": "Kaynak",
+    "link": "Bağlantı",
+    "demo": "Demo"
+  },
+  "resume": {
+    "eyebrow": "Özgeçmiş",
+    "titleDownload": "Özgeçmişimi",
+    "titleResume": "indir",
+    "subtitle": "Deneyimimin, projelerimin ve teknik uzmanlığımın kapsamlı bir özeti. Düzenli olarak güncellenir.",
+    "downloadPdf": "PDF İndir",
+    "pdfFormat": "PDF formatı . 2,4 MB"
+  },
+  "contact": {
+    "eyebrow": "İletişim",
+    "titleLetsBuild": "Birlikte",
+    "titleTogether": "inşa edelim",
+    "subtitle": "Aklında bir proje mi var yoksa sadece merhaba mı demek istiyorsun? Sinir ağı yeni bağlantılara her zaman açıktır.",
+    "findMeOn": "Beni şurada bul",
+    "nameLabel": "Ad",
+    "namePlaceholder": "Adınız",
+    "emailLabel": "E-posta",
+    "emailPlaceholder": "your@email.com",
+    "messageLabel": "Mesaj",
+    "messagePlaceholder": "Projenizden bahsedin...",
+    "sendMessage": "Mesaj Gönder",
+    "sending": "Gönderiliyor...",
+    "sentSuccess": "Mesaj gönderildi! En kısa sürede size döneceğim.",
+    "tagline": "NEURAL AURORA . Sinaptik portfolyo",
+    "builtWith": "React, Three.js ve zevkli tasarımla inşa edildi"
+  },
+  "reviews": {
+    "title": "İnsanlar Ne Diyor",
+    "offlineError": "Çevrimdışı mod — yorumlar alınamadı",
+    "offlineRefreshError": "Çevrimdışı mod — canlı yorumlar güncellenemedi",
+    "noReviews": "Henüz yorum yok. Yakında tekrar gelin!",
+    "leaveReview": "Yorum Bırak",
+    "shareThoughts": "Çalışmalarım hakkındaki düşüncelerinizi paylaşın",
+    "nameLabel": "Ad",
+    "namePlaceholder": "Adınız",
+    "emailLabel": "E-posta",
+    "emailPlaceholder": "opsiyonel",
+    "ratingLabel": "Puan",
+    "messageLabel": "Mesaj",
+    "messagePlaceholder": "Yorumunuzu yazın...",
+    "submitReview": "Yorum Gönder",
+    "submitting": "Gönderiliyor...",
+    "thankYou": "Teşekkürler!",
+    "submittedMessage": "Yorumunuz gönderildi ve onay bekliyor.",
+    "submitAnother": "Başka bir yorum gönder"
+  },
+  "footer": {
+    "skills": "Yetenekler",
+    "projects": "Projeler",
+    "connect": "İletişim",
+    "synapticPortfolio": "Sinaptik portfolyo",
+    "reactNext": "React / Next.js",
+    "threeWebGL": "Three.js / WebGL",
+    "uiUxDesign": "UI/UX Tasarım",
+    "fullStackDev": "Full-stack Geliştirme",
+    "neuralAurora": "NEURAL AURORA",
+    "synapticDashboard": "Sinaptik panel",
+    "auroraEngine": "Aurora Motoru",
+    "viewAll": "Tümünü Gör"
+  },
+  "loader": {
+    "verificationRequired": "Doğrulama Gerekli",
+    "proveIdentity": "Sisteme erişmek için kimliğinizi kanıtlayın.",
+    "cards": {
+      "sayName": "\"{{name}}\" de",
+      "voiceRecognition": "Ses tanıma",
+      "solvePuzzle": "Bulmacayı Çöz",
+      "oneQuestion": "Bir soru",
+      "traverseOn": "Devam Et",
+      "autoTraverse": "Otomatik Tur",
+      "traverseActiveDesc": "Otomatik demo modu aktif",
+      "traverseTourDesc": "Tam site demo turu",
+      "watchDevAds": "Dev Reklamları İzle",
+      "videoAdsToUnlock": "Kilidi açmak için video reklamları",
+      "moodSwing": "Ruh Hali",
+      "setVibeMusic": "Ambiyans ve müzik ayarla",
+      "neuralCmd": "Neural Aurora CMD",
+      "exploreTerminal": "Terminal ile keşfet",
+      "takeInterview": "Mülakatımı Yap",
+      "voiceAiInterview": "Sesli yapay zeka mülakatı",
+      "patternLock": "Nöral Desen Kilidi",
+      "memoryChallenge": "Hafıza meydan okuması",
+      "channelStream": "Kanal Yayını",
+      "browseVideos": "Videolarımı izle",
+      "skipVibes": "Ambiyansı Atla",
+      "directEntry": "Doğrudan giriş",
+      "openDocs": "Dokümantasyonu Aç"
+    },
+    "interview": {
+      "chatWith": "{{name}} ile sohbet",
+      "askAnything": "Bana her şeyi sor",
+      "live": "Canlı",
+      "gettingReady": "Hazırlanıyor...",
+      "thinking": "{{name}} düşünüyor...",
+      "you": "Sen",
+      "listening": "Dinliyorum... hadi, bana her şeyi sor",
+      "tapMic": "Mikrofona dokun, sonra sorunu sor",
+      "typeQuestion": "Sorunuzu yazın...",
+      "ask": "Sor",
+      "youAsked": "Sordun",
+      "says": "{{name}} diyor ki",
+      "askAnother": "Başka bir soru sor",
+      "endInterview": "Mülakatı bitir",
+      "allDone": "Hepsi tamam",
+      "enterPortfolio": "Portfolyoya Gir"
+    },
+    "voice": {
+      "instruction": "Kimliğinizi doğrulamak için \"{{name}}\" deyin",
+      "listening": "Dinliyorum...",
+      "trySaying": "\"{{name}}\" demeyi deneyin",
+      "verified": "Kimlik doğrulandı"
+    },
+    "success": {
+      "verified": "Kimlik doğrulandı",
+      "accessGranted": "Erişim verildi",
+      "welcome": "NEURAL AURORA'ya hoş geldiniz"
+    },
+    "cmd": {
+      "email": "E-posta",
+      "availableOnRequest": "talep üzerine"
+    }
+  },
+  "blog": {
+    "eyebrow": "Blog",
+    "titlePrefix": "Düşünceler &",
+    "titleSuffix": "Fikirler",
+    "subtitle": "Öğrendiklerimi, kurduklarımı ve düşündüklerimi paylaşıyorum.",
+    "searchPlaceholder": "Gönderilerde ara...",
+    "noPosts": "Gönderi bulunamadı. Farklı bir arama deneyin.",
+    "postNotFound": "Gönderi bulunamadı",
+    "backToBlog": "Bloga dön",
+    "blogPostEyebrow": "Blog gönderisi",
+    "readMore": "Daha fazla gönderi oku",
+    "allPosts": "Tüm Gönderiler"
+  },
+  "services": {
+    "options": "{{count}} seçenek",
+    "viewDetails": "Detayları Gör",
+    "step": "Adım {{number}}",
+    "whatIncluded": "Neler Dahil",
+    "selectType": "Proje Türünü Seç",
+    "backToServices": "Hizmetlere dön",
+    "getInTouch": "İletişime Geç",
+    "projectPlaceholder": "{{title}} projenizden bahsedin...",
+    "mostPopular": "En Popüler",
+    "getStarted": "Başlayın",
+    "processing": "İşleniyor...",
+    "serviceNotFound": "Hizmet bulunamadı",
+    "price": "Fiyat",
+    "delivery": "Teslim",
+    "pay": "Öde",
+    "paymentConfirmed": "Ödeme onaylandı",
+    "nav": {
+      "services": "Hizmetler",
+      "process": "Süreç",
+      "pricing": "Fiyatlandırma",
+      "faq": "SSS",
+      "contact": "İletişim"
+    }
+  },
+  "support": {
+    "eyebrow": "Destek",
+    "heroSubtitle": "Açık Kaynak ve Sonsuza Kadar Ücretsiz",
+    "heroDescription": "Bu proje %100 ücretsiz ve açık kaynaktır. Katkınız onu hayatta tutar, yeni özellikleri finanse eder ve ücretli alternatiflerle rekabet etmemize yardımcı olur — NEURAL AURORA herkes için ücretsiz kalır.",
+    "floatingButton": "Destekle",
+    "sponsorPlaceholder": "Projenizden veya sponsorluk fikirlerinizden bahsedin...",
+    "nav": {
+      "contribute": "Katkıda Bulun",
+      "whySupport": "Neden Destek",
+      "faq": "SSS",
+      "contact": "İletişim"
+    },
+    "presets": {
+      "coffee": "Kahve ısmarla",
+      "feature": "Bir özelliği destekle",
+      "speed": "Geliştirmeyi hızlandır",
+      "rocket": "Kalkış güçlendirici",
+      "crown": "Premium destekçi",
+      "legend": "Efsane seviyesi"
+    }
+  },
+  "more": {
+    "eyebrow": "Daha Fazla",
+    "titlePrefix": "Kodun",
+    "titleSuffix": "ötesinde",
+    "subtitle": "Eğitim, deneyim, fikir ve içgörüler arasındaki yolculuğum.",
+    "education": "Eğitim",
+    "experience": "İş Deneyimi",
+    "latestPosts": "Son Blog Gönderileri",
+    "viewAll": "Tümünü Gör",
+    "caseStudies": "Vaka Çalışmaları",
+    "nav": {
+      "timeline": "Zaman Çizelgesi",
+      "caseStudies": "Vaka Çalışmaları",
+      "blog": "Blog"
+    }
+  },
+  "caseStudy": {
+    "notFound": "Vaka çalışması bulunamadı",
+    "backToStudies": "Vaka çalışmalarına dön",
+    "eyebrow": "Vaka Çalışması",
+    "outcome": "Sonuç",
+    "fullAnalysis": "Tam Analiz",
+    "viewAll": "Tüm vaka çalışmalarını gör"
+  },
+  "contributors": {
+    "eyebrow": "Katkıda Bulunanlar",
+    "titlePrefix": "Arkasındaki Kişiler",
+    "subtitle": "Her katkıda bulunan — geliştirici veya bağışçı — bu projeyi ücretsiz ve açık kaynak tutmaya yardımcı olur.",
+    "becomeContributor": "Katkıda Bulunan Ol",
+    "becomeContributorSubtitle": "Projeyi destekleyin ve burada listelenin"
+  },
+  "mood": {
+    "title": "Ruh Hali",
+    "subtitle": "Girmeden önce ambiyansı ayarla",
+    "footnote": "Ruh halini seç → müzik keşfin ambiyansını belirler",
+    "moods": {
+      "energetic": {
+        "label": "Enerjik",
+        "description": "Heyecanlı ve dolu"
+      },
+      "calm": {
+        "label": "Sakin",
+        "description": "Rahat ve sakin vibes"
+      },
+      "happy": {
+        "label": "Mutlu",
+        "description": "Neşeli ve parlak"
+      },
+      "focused": {
+        "label": "Odaklanmış",
+        "description": "Derin akış durumu"
+      },
+      "mysterious": {
+        "label": "Gizemli",
+        "description": "Karanlık ve atmosferik"
+      },
+      "euphoric": {
+        "label": "Coşkulu",
+        "description": "Aşkın dalgalar"
+      }
+    }
+  },
+  "ads": {
+    "ad": "Reklam",
+    "video": "Video",
+    "short": "Kısa",
+    "sponsored": "Sponsorlu",
+    "videoUnavailable": "Video kullanılamıyor",
+    "unavailable": "Kullanılamıyor",
+    "adComplete": "Reklam tamamlandı",
+    "enteringIn": "{{count}}sn sonra giriliyor",
+    "skip": "Geç",
+    "autoAd": "Otomatik reklam",
+    "googleAd": "Google reklamı",
+    "shortAd": "Kısa reklam",
+    "videoAd": "Video reklam"
+  },
+  "youtube": {
+    "watchingToVerify": "Doğrulamak için izleniyor",
+    "videos": "Videolar",
+    "shorts": "Shorts",
+    "playlists": "Çalma Listeleri",
+    "searchPlaceholder": "{{tab}} ara...",
+    "noVideos": "Video bulunamadı",
+    "noShorts": "Shorts bulunamadı",
+    "noPlaylists": "Herkese açık çalma listesi yok",
+    "loadMore": "Daha fazla yükle",
+    "tryDifferentSearch": "Farklı bir arama deneyin veya daha sonra gelin",
+    "shortsAppearHere": "Kısa içerikler burada görünecek",
+    "playlistsAppearHere": "Kanal çalma listeleri burada görünecek",
+    "backToVerification": "Doğrulamaya dön",
+    "backToVideos": "Videolara dön",
+    "browseToVerify": "Doğrulamak için göz atın",
+    "retry": "Tekrar Dene",
+    "subscribers": "abone",
+    "videosCount": "{{count}} video",
+    "noVideosInPlaylist": "Bu çalma listesinde video yok"
+  },
+  "theme": {
+    "switchToDark": "Karanlık moda geç",
+    "switchToLight": "Aydınlık moda geç",
+    "searchPlaceholder": "Ara..."
+  }
+}

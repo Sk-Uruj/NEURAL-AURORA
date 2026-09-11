@@ -1,0 +1,349 @@
+{
+  "nav": {
+    "about": "درباره من",
+    "skills": "مهارت‌ها",
+    "projects": "پروژه‌ها",
+    "services": "خدمات",
+    "resume": "رزومه",
+    "contact": "تماس",
+    "more": "بیشتر",
+    "support": "حمایت",
+    "login": "ورود و تنظیم",
+    "admin": "پنل مدیریت",
+    "crm": "پنل CRM",
+    "getStarted": "شروع کنید",
+    "menu": "منو"
+  },
+  "common": {
+    "home": "خانه",
+    "menu": "منو"
+  },
+  "hero": {
+    "available": "آماده",
+    "collaboration": "همکاری",
+    "viewProjects": "مشاهده پروژه‌ها",
+    "resume": "رزومه",
+    "title": "خلق تجربه‌های دیجیتال",
+    "subtitle": "جایی که شبکه‌های عصبی با نور شفق قطبی دیدار می‌کنند"
+  },
+  "about": {
+    "eyebrow": "درباره من",
+    "titleArchitect": "معمار",
+    "titleDigitalExperience": "تجربه دیجیتال",
+    "knownAsPrefix": "در اینترنت با نام",
+    "knownAsSuffix": "شناخته می‌شوم؛ سیستم‌هایی می‌سازم که در آن‌ها کد با شعر بصری دیدار می‌کند. هر پروژه فرصتی برای جابجایی مرزهای مرورگر است.",
+    "digitalFootprint": "اثر دیجیتال",
+    "avatarAlt": "آواتار پروفایل",
+    "currentFocus": "در حال ساخت NEURAL AURORA و کاوش در تقاطع گرافیک سه‌بعدی و فناوری وب هستم."
+  },
+  "skills": {
+    "eyebrow": "تخصص",
+    "titleTechnical": "پشته",
+    "titleStack": "فنی",
+    "offlineNotice": "حالت آفلاین — پشته فناوری ایستا نمایش داده می‌شود",
+    "noData": "در حال حاضر داده‌ای درباره مهارت‌های فنی در دسترس نیست.",
+    "noSkillsInCategory": "هیچ مهارتی در این دسته نیست",
+    "categories": {
+      "frontend": "فرانت‌اند",
+      "backend": "بک‌اند",
+      "language": "زبان‌ها",
+      "devops": " DevOps",
+      "design": "طراحی"
+    }
+  },
+  "projects": {
+    "eyebrow": "نمونه‌کارها",
+    "titleNeural": "پروژه‌های",
+    "titleProjects": "نئورال",
+    "subtitle": "هر پروژه یک گره در شبکه عصبی در حال رشد است. برای گشودن و کاوش اتصالات سیناپسی کلیک کنید.",
+    "offlineNotice": "حالت آفلاین — پروژه‌های کش‌شده نمایش داده می‌شوند",
+    "noData": "هیچ پروژه‌ای در مخزن نئورال یافت نشد.",
+    "source": "منبع",
+    "link": "لینک",
+    "demo": "دمو"
+  },
+  "resume": {
+    "eyebrow": "رزومه",
+    "titleDownload": "دانلود",
+    "titleResume": "رزومه من",
+    "subtitle": "خلاصه‌ای جامع از تجربه‌ها، پروژه‌ها و تخصص فنی من. به‌طور منظم به‌روزرسانی می‌شود.",
+    "downloadPdf": "دانلود PDF",
+    "pdfFormat": "فرمت PDF . ۲.۴ مگابایت"
+  },
+  "contact": {
+    "eyebrow": "تماس",
+    "titleLetsBuild": "بیایید با هم",
+    "titleTogether": "بسازیم",
+    "subtitle": "پروژه‌ای در ذهن دارید یا فقط سلام می‌گویید؟ شبکه عصبی همیشه برای اتصالات جدید باز است.",
+    "findMeOn": "مرا اینجا بیابید",
+    "nameLabel": "نام",
+    "namePlaceholder": "نام شما",
+    "emailLabel": "ایمیل",
+    "emailPlaceholder": "your@email.com",
+    "messageLabel": "پیام",
+    "messagePlaceholder": "از پروژه‌تان بگویید...",
+    "sendMessage": "ارسال پیام",
+    "sending": "در حال ارسال...",
+    "sentSuccess": "پیام ارسال شد! به‌زودی با شما تماس می‌گیرم.",
+    "tagline": "NEURAL AURORA . نمونه‌کار سیناپسی",
+    "builtWith": "ساخته‌شده با React، Three.js و طراحی‌های سنجیده"
+  },
+  "reviews": {
+    "title": "نظر مردم",
+    "offlineError": "حالت آفلاین — بارگذاری دیدگاه‌ها ممکن نشد",
+    "offlineRefreshError": "حالت آفلاین — به‌روزرسانی دیدگاه‌ها ممکن نشد",
+    "noReviews": "هنوز دیدگاهی نیست. به‌زودی بازگردید!",
+    "leaveReview": "ثبت دیدگاه",
+    "shareThoughts": "نظرتان را درباره کار من به اشتراک بگذارید",
+    "nameLabel": "نام",
+    "namePlaceholder": "نام شما",
+    "emailLabel": "ایمیل",
+    "emailPlaceholder": "اختیاری",
+    "ratingLabel": "امتیاز",
+    "messageLabel": "پیام",
+    "messagePlaceholder": "دیدگاه خود را بنویسید...",
+    "submitReview": "ثبت دیدگاه",
+    "submitting": "در حال ارسال...",
+    "thankYou": "سپاسگزارم!",
+    "submittedMessage": "دیدگاه شما ارسال شد و در انتظار تأیید است.",
+    "submitAnother": "ثبت دیدگاه دیگر"
+  },
+  "footer": {
+    "skills": "مهارت‌ها",
+    "projects": "پروژه‌ها",
+    "connect": "اتصال",
+    "synapticPortfolio": "نمونه‌کار سیناپسی",
+    "reactNext": "React / Next.js",
+    "threeWebGL": "Three.js / WebGL",
+    "uiUxDesign": "طراحی UI/UX",
+    "fullStackDev": "توسعه فول‌استک",
+    "neuralAurora": "NEURAL AURORA",
+    "synapticDashboard": "داشبورد سیناپسی",
+    "auroraEngine": "موتور شفق",
+    "viewAll": "مشاهده همه"
+  },
+  "loader": {
+    "verificationRequired": "احراز هویت الزامی است",
+    "proveIdentity": "برای دسترسی به سیستم هویت خود را اثبات کنید.",
+    "cards": {
+      "sayName": "\"{{name}}\" را بگویید",
+      "voiceRecognition": "تشخیص صدا",
+      "solvePuzzle": "حل معما",
+      "oneQuestion": "یک سوال",
+      "traverseOn": "ادامه",
+      "autoTraverse": "تور خودکار",
+      "traverseActiveDesc": "حالت دموی خودکار فعال است",
+      "traverseTourDesc": "تور دموی کامل سایت",
+      "watchDevAds": "تماشای تبلیغات توسعه‌دهنده",
+      "videoAdsToUnlock": "تبلیغات ویدیویی برای باز کردن",
+      "moodSwing": "تغییر حال‌وهوا",
+      "setVibeMusic": "تنظیم فضا و موسیقی",
+      "neuralCmd": "Neural Aurora CMD",
+      "exploreTerminal": "کاوش از طریق ترمینال",
+      "takeInterview": "مصاحبه با من",
+      "voiceAiInterview": "مصاحبه صوتی با هوش مصنوعی",
+      "patternLock": "قفل الگوی نئورال",
+      "memoryChallenge": "چالش حافظه",
+      "channelStream": "پخش کانال",
+      "browseVideos": "مشاهده ویدیوهای من",
+      "skipVibes": "رد شدن از فضا",
+      "directEntry": "ورود مستقیم",
+      "openDocs": "باز کردن مستندات"
+    },
+    "interview": {
+      "chatWith": "گفتگو با {{name}}",
+      "askAnything": "هر چیزی از من بپرسید",
+      "live": "زنده",
+      "gettingReady": "در حال آماده‌سازی...",
+      "thinking": "{{name}} در حال فکر کردن...",
+      "you": "شما",
+      "listening": "در حال گوش دادن... خیالتان راحت، هر چیزی بپرسید",
+      "tapMic": "روی میکروفون بزنید، سپس سوال بپرسید",
+      "typeQuestion": "سوال خود را تایپ کنید...",
+      "ask": "بپرس",
+      "youAsked": "شما پرسیدید",
+      "says": "{{name}} می‌گوید",
+      "askAnother": "سوال دیگری بپرسید",
+      "endInterview": "پایان مصاحبه",
+      "allDone": "همه چیز آماده",
+      "enterPortfolio": "ورود به نمونه‌کارها"
+    },
+    "voice": {
+      "instruction": "برای احراز هویت \"{{name}}\" را بگویید",
+      "listening": "در حال گوش دادن...",
+      "trySaying": "سعی کنید \"{{name}}\" را بگویید",
+      "verified": "هویت تأیید شد"
+    },
+    "success": {
+      "verified": "هویت تأیید شد",
+      "accessGranted": "دسترسی اعطا شد",
+      "welcome": "به NEURAL AURORA خوش آمدید"
+    },
+    "cmd": {
+      "email": "ایمیل",
+      "availableOnRequest": "در صورت درخواست در دسترس"
+    }
+  },
+  "blog": {
+    "eyebrow": "وبلاگ",
+    "titlePrefix": "اندیشه‌ها و",
+    "titleSuffix": "ایده‌ها",
+    "subtitle": "به اشتراک می‌گذارم آنچه می‌آموزم، می‌سازم و می‌اندیشم.",
+    "searchPlaceholder": "جستجوی پست‌ها...",
+    "noPosts": "پستی یافت نشد. جستجوی دیگری امتحان کنید.",
+    "postNotFound": "پست یافت نشد",
+    "backToBlog": "بازگشت به وبلاگ",
+    "blogPostEyebrow": "پست وبلاگ",
+    "readMore": "خواندن پست‌های بیشتر",
+    "allPosts": "همه پست‌ها"
+  },
+  "services": {
+    "options": "{{count}} گزینه",
+    "viewDetails": "مشاهده جزئیات",
+    "step": "مرحله {{number}}",
+    "whatIncluded": "چه چیزهایی شامل می‌شود",
+    "selectType": "انتخاب نوع پروژه",
+    "backToServices": "بازگشت به خدمات",
+    "getInTouch": "ارتباط با ما",
+    "projectPlaceholder": "از پروژه {{title}} خود بگویید...",
+    "mostPopular": "محبوب‌ترین",
+    "getStarted": "شروع کنید",
+    "processing": "در حال پردازش...",
+    "serviceNotFound": "خدمت یافت نشد",
+    "price": "قیمت",
+    "delivery": "تحویل",
+    "pay": "پرداخت",
+    "paymentConfirmed": "پرداخت تأیید شد",
+    "nav": {
+      "services": "خدمات",
+      "process": "فرآیند",
+      "pricing": "قیمت‌گذاری",
+      "faq": "پرسش‌های متداول",
+      "contact": "تماس"
+    }
+  },
+  "support": {
+    "eyebrow": "حمایت",
+    "heroSubtitle": "متن‌باز و برای همیشه رایگان",
+    "heroDescription": "این پروژه ۱۰۰٪ رایگان و متن‌باز است. مشارکت شما آن را زنده نگه می‌دارد، ویژگی‌های جدید را تأمین مالی می‌کند و به ما کمک می‌کند با جایگزین‌های پولی رقابت کنیم — و NEURAL AURORA را برای همه رایگان نگه می‌داریم.",
+    "floatingButton": "حمایت",
+    "sponsorPlaceholder": "از پروژه یا ایده‌های حمایتی خود بگویید...",
+    "nav": {
+      "contribute": "مشارکت",
+      "whySupport": "چرا حمایت",
+      "faq": "پرسش‌های متداول",
+      "contact": "تماس"
+    },
+    "presets": {
+      "coffee": "یک قهوه مهمان کنید",
+      "feature": "حمایت از یک ویژگی",
+      "speed": "تسریع توسعه",
+      "rocket": "بوستر پرتاب",
+      "crown": "حامی ویژه",
+      "legend": "سطح افسانه‌ای"
+    }
+  },
+  "more": {
+    "eyebrow": "بیشتر",
+    "titlePrefix": "فراتر از",
+    "titleSuffix": "کد",
+    "subtitle": "سفر من در خلال آموزش، تجربه، ایده‌ها و بینش‌ها.",
+    "education": "تحصیلات",
+    "experience": "تجربه کاری",
+    "latestPosts": "آخرین پست‌های وبلاگ",
+    "viewAll": "مشاهده همه",
+    "caseStudies": "مطالعات موردی",
+    "nav": {
+      "timeline": "خط زمانی",
+      "caseStudies": "مطالعات موردی",
+      "blog": "وبلاگ"
+    }
+  },
+  "caseStudy": {
+    "notFound": "مطالعه موردی یافت نشد",
+    "backToStudies": "بازگشت به مطالعات موردی",
+    "eyebrow": "مطالعه موردی",
+    "outcome": "نتیجه",
+    "fullAnalysis": "تحلیل کامل",
+    "viewAll": "مشاهده همه مطالعات موردی"
+  },
+  "contributors": {
+    "eyebrow": "مشارکت‌کنندگان",
+    "titlePrefix": "افراد پشت",
+    "subtitle": "هر مشارکت‌کننده — توسعه‌دهنده یا اهداکننده — به رایگان و متن‌باز ماندن این پروژه کمک می‌کند.",
+    "becomeContributor": "مشارکت‌کننده شوید",
+    "becomeContributorSubtitle": "از پروژه حمایت کنید و اینجا نام‌تان ثبت شود"
+  },
+  "mood": {
+    "title": "تغییر حال‌وهوا",
+    "subtitle": "قبل از ورود فضا را تنظیم کنید",
+    "footnote": "حال‌وهوای خود را انتخاب کنید ← موسیقی فضای کاوش را تعیین می‌کند",
+    "moods": {
+      "energetic": {
+        "label": "پر انرژی",
+        "description": "پرشور و شاداب"
+      },
+      "calm": {
+        "label": "آرام",
+        "description": "فضای ریلکس و آرام"
+      },
+      "happy": {
+        "label": "شاد",
+        "description": "سرزنده و روشن"
+      },
+      "focused": {
+        "label": "متمرکز",
+        "description": "حالت جریان عمیق"
+      },
+      "mysterious": {
+        "label": "اسرارآمیز",
+        "description": "تیره و فضاگونه"
+      },
+      "euphoric": {
+        "label": "سرخوش",
+        "description": "امواج متعالی"
+      }
+    }
+  },
+  "ads": {
+    "ad": "تبلیغ",
+    "video": "ویدیو",
+    "short": "کوتاه",
+    "sponsored": "حمایت شده",
+    "videoUnavailable": "ویدیو در دسترس نیست",
+    "unavailable": "در دسترس نیست",
+    "adComplete": "تبلیغ کامل شد",
+    "enteringIn": "ورود تا {{count}} ثانیه دیگر",
+    "skip": "رد شدن",
+    "autoAd": "تبلیغ خودکار",
+    "googleAd": "تبلیغ گوگل",
+    "shortAd": "تبلیغ کوتاه",
+    "videoAd": "تبلیغ ویدیویی"
+  },
+  "youtube": {
+    "watchingToVerify": "در حال تماشا برای احراز هویت",
+    "videos": "ویدیوها",
+    "shorts": "شورت‌ها",
+    "playlists": "لیست پخش",
+    "searchPlaceholder": "جستجو در {{tab}}...",
+    "noVideos": "ویدیویی یافت نشد",
+    "noShorts": "شورتی یافت نشد",
+    "noPlaylists": "لیست پخش عمومی وجود ندارد",
+    "loadMore": "بارگذاری بیشتر",
+    "tryDifferentSearch": "جستجوی دیگری امتحان کنید یا بعداً بازگردید",
+    "shortsAppearHere": "محتوای کوتاه اینجا نمایش داده می‌شود",
+    "playlistsAppearHere": "لیست پخش‌های کانال اینجا نمایش داده می‌شوند",
+    "backToVerification": "بازگشت به احراز هویت",
+    "backToVideos": "بازگشت به ویدیوها",
+    "browseToVerify": "برای احراز هویت مرور کنید",
+    "retry": "تلاش مجدد",
+    "subscribers": "دنبال‌کننده",
+    "videosCount": "{{count}} ویدیو",
+    "noVideosInPlaylist": "ویدیویی در این لیست پخش نیست"
+  },
+  "theme": {
+    "switchToDark": "تغییر به حالت تاریک",
+    "switchToLight": "تغییر به حالت روشن",
+    "searchPlaceholder": "جستجو..."
+  }
+}

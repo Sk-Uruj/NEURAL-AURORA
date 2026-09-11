@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
-import { motion, useSpring, useMotionValue, AnimatePresence } from 'framer-motion'
+import { motion, useSpring, useMotionValue, AnimatePresence, useReducedMotion } from 'framer-motion'
 import { useAutoTraverse } from '../../context/AutoTraverseContext'
 
 const TRAVERSAL_PLAN = [
@@ -16,7 +16,7 @@ const ELEMENT_MAX_RETRIES = 10
 
 const NAV_LINKED = new Set(['about', 'skills', 'projects', 'resume', 'contact'])
 
-function AutoTraverseCursor({ visible, springX, springY }) {
+function AutoTraverseCursor({ visible, springX, springY, shouldReduceMotion }) {
   return (
     <AnimatePresence>
       {visible && (
@@ -24,46 +24,60 @@ function AutoTraverseCursor({ visible, springX, springY }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.4 }}
+          transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.4 }}
           className="fixed pointer-events-none z-[99999]"
-          style={{ left: springX, top: springY, x: '-50%', y: '-50%' }}
+          style={{
+            left: springX,
+            top: springY,
+            x: '-50%',
+            y: '-50%',
+          }}
         >
           <div className="relative w-7 h-7 flex items-center justify-center">
-            <div className="absolute inset-0 rounded-full border-2 border-[#00f0ff]/70"
+            <div
+              className="absolute inset-0 rounded-full border-2 border-[#00f0ff]/70"
               style={{ boxShadow: '0 0 10px rgba(0,240,255,0.3)' }}
             />
             <div className="absolute inset-[5px] rounded-full bg-[#00f0ff]/50" />
-            <motion.div className="absolute inset-0 rounded-full border border-[#00f0ff]/30"
-              animate={{ scale: [1, 1.5, 1], opacity: [0.3, 0, 0.3] }}
-              transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
-            />
+
+            {!shouldReduceMotion && (
+              <motion.div
+                className="absolute inset-0 rounded-full border border-[#00f0ff]/30"
+                animate={{ scale: [1, 1.5, 1], opacity: [0.3, 0, 0.3] }}
+                transition={{
+                  duration: 2.5,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                }}
+              />
+            )}
           </div>
         </motion.div>
       )}
     </AnimatePresence>
   )
 }
-
-function TraverseSuggestion({ visible }) {
+function TraverseSuggestion({ visible, shouldReduceMotion }) {
   return (
     <AnimatePresence>
       {visible && (
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 10 }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 20 }}
+          animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
+          exit={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 10 }}
+          transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[99998]"
         >
           <div className="flex items-center gap-2.5 rounded-full border border-white/10 bg-black/60 backdrop-blur-xl px-4 py-2"
             style={{ boxShadow: '0 4px 20px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.06)' }}
           >
+            {!shouldReduceMotion && (
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
               className="w-3 h-3 rounded-full border-2 border-transparent shrink-0"
               style={{ borderTopColor: '#00f0ff', borderRightColor: '#00f0ff' }}
-            />
+            />)}
             <span className="text-[11px] text-white/60 font-mono tracking-wide">
               Auto-traversing
             </span>
@@ -91,7 +105,12 @@ function easeOutCubic(t) {
   return 1 - Math.pow(1 - t, 3)
 }
 
-function scrollBetween(fromY, toY, duration, onY) {
+function scrollBetween(fromY, toY, duration, onY, shouldReduceMotion) {
+  if (shouldReduceMotion) {
+    window.scrollTo(0, toY)
+    if (onY) onY(toY, 1)
+      return Promise.resolve()
+  }
   return new Promise((resolve) => {
     const startTime = performance.now()
     function tick(now) {
@@ -107,7 +126,7 @@ function scrollBetween(fromY, toY, duration, onY) {
   })
 }
 
-function scrollToSection(el, moveCursor, isLinked) {
+function scrollToSection(el, moveCursor, isLinked, shouldReduceMotion) {
   const rect = el.getBoundingClientRect()
   const elTop = rect.top + window.scrollY
   const elHeight = rect.height
@@ -127,7 +146,7 @@ function scrollToSection(el, moveCursor, isLinked) {
 
     await scrollBetween(window.scrollY, revealY, arriveTime, (y) => {
       moveCursor(cursorX, y + vh * 0.35)
-    })
+    }, shouldReduceMotion)
 
     if (needsPan) {
       const panDist = panEndY - revealY
@@ -136,7 +155,7 @@ function scrollToSection(el, moveCursor, isLinked) {
       await scrollBetween(revealY, panEndY, panTime, (y) => {
         const readingDepth = Math.min((y - revealY) / panDist, 1)
         moveCursor(cursorX, y + vh * (0.25 + readingDepth * 0.25))
-      })
+      }, shouldReduceMotion)
     }
 
     resolve()
@@ -147,6 +166,7 @@ export default function AutoTraverseEffect() {
   const { enabled } = useAutoTraverse()
   const location = useLocation()
   const navigate = useNavigate()
+  const shouldReduceMotion = useReducedMotion()
 
   const [cursorVisible, setCursorVisible] = useState(false)
   const cursorX = useMotionValue(0)
@@ -193,7 +213,7 @@ export default function AutoTraverseEffect() {
 
         const moveCursor = (x, y) => { cursorX.set(x); cursorY.set(y) }
 
-        await scrollToSection(el, moveCursor, NAV_LINKED.has(id))
+        await scrollToSection(el, moveCursor, NAV_LINKED.has(id), shouldReduceMotion)
 
         if (!runningRef.current) return
         await new Promise(r => { timerRef.current = setTimeout(r, DWELL_MS) })
@@ -214,7 +234,7 @@ export default function AutoTraverseEffect() {
       runningRef.current = false
       if (timerRef.current) { clearTimeout(timerRef.current); timerRef.current = null }
     }
-  }, [enabled, location.pathname, navigate, getPlanIndexForPath, cursorX, cursorY])
+  }, [enabled, location.pathname, navigate, getPlanIndexForPath, cursorX, cursorY, shouldReduceMotion])
 
   return (
     <>
@@ -222,8 +242,9 @@ export default function AutoTraverseEffect() {
         visible={cursorVisible}
         springX={springX}
         springY={springY}
+        shouldReduceMotion={shouldReduceMotion}
       />
-      <TraverseSuggestion visible={cursorVisible} />
+      <TraverseSuggestion visible={cursorVisible} shouldReduceMotion={shouldReduceMotion} />
     </>
   )
 }

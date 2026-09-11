@@ -1,4 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { usePersonalInfo } from '../lib/usePortfolioData'
 import MagneticButton from './ui/magnetic-button'
 
@@ -31,7 +32,9 @@ function ParallaxBlur({ className, color, scrollOffset }) {
 }
 
 export default function Resume() {
+  const { t } = useTranslation()
   const { data: personalInfo } = usePersonalInfo()
+
   return (
     <section id="resume" className="relative z-10 py-32 md:py-40">
       <div className="w-full max-w-[1400px] mx-auto px-6 md:px-12">
@@ -46,15 +49,15 @@ export default function Resume() {
 
           <div className="relative z-10 max-w-xl mx-auto space-y-8">
             <motion.span variants={childVariants} className="eyebrow">
-              Curriculum Vitae
+              {t('resume.eyebrow')}
             </motion.span>
 
             <motion.h2 variants={childVariants} className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tighter leading-none">
-              Download My <span className="text-gradient">Resume</span>
+              {t('resume.titleDownload')} <span className="text-gradient">{t('resume.titleResume')}</span>
             </motion.h2>
 
             <motion.p variants={childVariants} className="text-base text-black/50 dark:text-white/40 leading-relaxed">
-              A comprehensive overview of my experience, projects, and technical expertise. Updated regularly to reflect my latest work.
+              {t('resume.subtitle')}
             </motion.p>
 
             <motion.div variants={childVariants}>
@@ -67,12 +70,12 @@ export default function Resume() {
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
-                Download PDF
+                {t('resume.downloadPdf')}
               </MagneticButton>
             </motion.div>
 
             <motion.p variants={childVariants} className="text-xs text-black/30 dark:text-white/20">
-              PDF format . 2.4 MB
+              {t('resume.pdfFormat')}
             </motion.p>
           </div>
 

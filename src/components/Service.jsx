@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { motion, useMotionValue, useTransform, useSpring, AnimatePresence, useInView } from 'framer-motion'
+import { motion, useMotionValue, useTransform, useSpring, AnimatePresence, useInView, useReducedMotion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import * as LucideIcons from 'lucide-react'
 const { CheckCircle, ArrowRight, ChevronDown, Layers, Send, Wallet } = LucideIcons
 import { useSocialLinks, useServices, useServicePage } from '../lib/usePortfolioData'
@@ -29,6 +30,7 @@ const childVariants = {
 
 function TiltCard({ children, className }) {
   const ref = useRef(null)
+  const shouldReduceMotion = useReducedMotion()
   const x = useMotionValue(0)
   const y = useMotionValue(0)
   const mouseX = useSpring(x, { stiffness: 300, damping: 30 })
@@ -37,19 +39,24 @@ function TiltCard({ children, className }) {
   const rotateY = useTransform(mouseX, [-0.5, 0.5], [-4, 4])
 
   const handleMouse = (e) => {
+    if (shouldReduceMotion) return
     const rect = ref.current.getBoundingClientRect()
     x.set((e.clientX - rect.left) / rect.width - 0.5)
     y.set((e.clientY - rect.top) / rect.height - 0.5)
   }
 
-  const handleLeave = () => { x.set(0); y.set(0) }
+  const handleLeave = () => {
+    if (shouldReduceMotion) return
+    x.set(0)
+    y.set(0)
+  }
 
   return (
     <motion.div
       ref={ref}
       onMouseMove={handleMouse}
       onMouseLeave={handleLeave}
-      style={{ rotateX, rotateY, perspective: 1000 }}
+      style={{ rotateX: shouldReduceMotion ? 0 : rotateX, rotateY: shouldReduceMotion ? 0 : rotateY, perspective: 1000 }}
       className={className}
     >
       {children}
@@ -59,11 +66,16 @@ function TiltCard({ children, className }) {
 
 function AnimatedCounter({ value, suffix = '' }) {
   const ref = useRef(null)
+  const shouldReduceMotion = useReducedMotion()
   const inView = useInView(ref, { once: true })
   const [count, setCount] = useState(0)
 
   useEffect(() => {
     if (!inView) return
+    if (shouldReduceMotion) {
+      setCount(value)
+      return
+    }
     let start = 0
     const duration = 2000
     const steps = 40
@@ -78,7 +90,7 @@ function AnimatedCounter({ value, suffix = '' }) {
       }
     }, duration / steps)
     return () => clearInterval(timer)
-  }, [inView, value])
+  }, [inView, value, shouldReduceMotion])
 
   return (
     <span ref={ref} className="text-3xl md:text-4xl font-display font-bold tracking-tight text-black/80 dark:text-white/90 tabular-nums">
@@ -88,6 +100,8 @@ function AnimatedCounter({ value, suffix = '' }) {
 }
 
 function ServiceCard({ service, index }) {
+  const { t } = useTranslation()
+  const shouldReduceMotion = useReducedMotion()
   const hasPrice = service.price && service.price !== '0'
   const navigate = useNavigate()
   return (
@@ -114,8 +128,8 @@ function ServiceCard({ service, index }) {
           className="relative flex flex-col h-full"
         >
           <motion.div
-            whileHover={{ scale: 1.05, rotate: [0, -4, 4, 0] }}
-            transition={{ type: 'spring', stiffness: 300, damping: 15 }}
+            whileHover={shouldReduceMotion ? undefined : { scale: 1.05, rotate: [0, -4, 4, 0] }}
+            transition={shouldReduceMotion ? { duration: 0 } : { type: 'spring', stiffness: 300, damping: 15 }}
             className="w-12 h-12 rounded-2xl bg-black/5 dark:bg-white/5 flex items-center justify-center mb-5 ring-1 ring-black/5 dark:ring-white/10 group-hover:ring-cyan-500/30 transition-all duration-500"
           >
             <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center">
@@ -145,8 +159,8 @@ function ServiceCard({ service, index }) {
                 className="flex items-start gap-2.5 text-xs text-black/50 dark:text-white/50"
               >
                 <motion.span
-                  whileHover={{ scale: 1.3, rotate: [0, -10, 10, 0] }}
-                  transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+                  whileHover={shouldReduceMotion ? undefined : { scale: 1.3, rotate: [0, -10, 10, 0] }}
+                  transition={shouldReduceMotion ? { duration: 0 } : { type: 'spring', stiffness: 400, damping: 10 }}
                 >
                   <CheckCircle className="w-3.5 h-3.5 text-cyan-500 mt-0.5 shrink-0" />
                 </motion.span>
@@ -164,7 +178,7 @@ function ServiceCard({ service, index }) {
               className="flex items-center gap-2 mb-4 px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-500/5 to-purple-500/5 border border-cyan-500/10"
             >
               <span className="text-[9px] uppercase tracking-widest text-cyan-500/70 font-medium whitespace-nowrap">
-                {service.pricing.length} options
+                {t('services.options', { count: service.pricing.length })}
               </span>
               <span className="w-px h-3 bg-cyan-500/20" />
               <span className="text-[9px] uppercase tracking-widest text-black/40 dark:text-white/40">
@@ -182,7 +196,7 @@ function ServiceCard({ service, index }) {
               className="w-full group/btn inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs uppercase tracking-widest font-medium transition-all duration-[400ms] ease-[cubic-bezier(0.16,1,0.3,1)] shadow-lg shadow-cyan-500/10 hover:shadow-cyan-500/25"
             >
               <Wallet className="w-3.5 h-3.5 transition-transform duration-300 group-hover/btn:scale-110" />
-              View Details
+              {t('services.viewDetails')}
               <motion.span
                 initial={{ x: 0 }}
                 whileHover={{ x: 3 }}
@@ -204,11 +218,11 @@ function ServiceCard({ service, index }) {
                 whileHover={{ x: 4 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 20 }}
               >
-                View Details
+                {t('services.viewDetails')}
               </motion.span>
               <motion.span
-                animate={{ x: [0, 3, 0] }}
-                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                animate={shouldReduceMotion ? undefined : { x: [0, 3, 0] }}
+                transition={shouldReduceMotion ? { duration: 0 } : { duration: 2, repeat: Infinity, ease: 'easeInOut' }}
                 className="w-6 h-6 rounded-full bg-cyan-500/10 flex items-center justify-center group-hover/btn:bg-cyan-500/20 transition-colors duration-300"
               >
                 <ArrowRight className="w-3 h-3" />
@@ -222,6 +236,7 @@ function ServiceCard({ service, index }) {
 }
 
 function ProcessStep({ step, index }) {
+  const { t } = useTranslation()
   return (
     <motion.div
       initial={{ opacity: 0, x: -20 }}
@@ -236,7 +251,7 @@ function ProcessStep({ step, index }) {
       <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-cyan-500/30 via-purple-500/20 to-transparent translate-x-[3px]" />
       <div className="glass-panel rounded-xl p-4 ml-2">
         <span className="text-[10px] uppercase tracking-widest text-cyan-500 font-medium">
-          Step {index + 1}
+          {t('services.step', { number: index + 1 })}
         </span>
         <h3 className="text-sm font-semibold text-black/80 dark:text-white/80 mt-1">
           {step.title}
@@ -250,6 +265,8 @@ function ProcessStep({ step, index }) {
 }
 
 function PackageCard({ pkg, index, onPayment, paying }) {
+  const { t } = useTranslation()
+  const shouldReduceMotion = useReducedMotion()
   return (
     <motion.div
       custom={index}
@@ -258,7 +275,7 @@ function PackageCard({ pkg, index, onPayment, paying }) {
     >
       {pkg.popular && (
         <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-[9px] uppercase tracking-widest text-white font-medium">
-          Most Popular
+          {t('services.mostPopular')}
         </span>
       )}
       <div className="w-10 h-10 rounded-xl bg-black/5 dark:bg-white/5 flex items-center justify-center mb-4">
@@ -281,7 +298,7 @@ function PackageCard({ pkg, index, onPayment, paying }) {
       <button
         onClick={() => onPayment?.(pkg)}
         disabled={paying}
-        className={`w-full group inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full text-xs uppercase tracking-widest font-medium transition-all duration-[400ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.02] active:scale-[0.97] disabled:opacity-50 disabled:hover:scale-100 ${
+        className={`w-full group inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full text-xs uppercase tracking-widest font-medium transition-all duration-[400ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${shouldReduceMotion ? '' : 'hover:scale-[1.02] active:scale-[0.97]'} disabled:opacity-50 disabled:hover:scale-100 ${
           pkg.popular
             ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white'
             : 'bg-black/5 dark:bg-white/5 text-black/60 dark:text-white/70 hover:bg-black/10 dark:hover:bg-white/10'
@@ -289,11 +306,11 @@ function PackageCard({ pkg, index, onPayment, paying }) {
         {paying ? (
           <span className="flex items-center gap-2">
             <span className="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
-            Processing...
+            {t('services.processing')}
           </span>
         ) : (
           <>
-            Get Started
+            {t('services.getStarted')}
             <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
           </>
         )}
@@ -345,15 +362,17 @@ function FAQItem({ faq, index, openIndex, setOpenIndex }) {
 }
 
 function LiveStatusCard({ items }) {
+  const shouldReduceMotion = useReducedMotion()
   const [visible, setVisible] = useState(true)
 
   useEffect(() => {
+    if (shouldReduceMotion) return
     const interval = setInterval(() => {
       setVisible(false)
       setTimeout(() => setVisible(true), 200)
     }, 5000)
     return () => clearInterval(interval)
-  }, [])
+  }, [shouldReduceMotion])
 
   if (!items || items.length === 0) return null
 
@@ -361,7 +380,7 @@ function LiveStatusCard({ items }) {
     <div className="glass-panel rounded-2xl p-6 md:p-8 overflow-hidden relative">
       <div className="flex items-center gap-2 mb-5">
         <span className="relative flex w-2 h-2">
-          <span className={`absolute inset-0 rounded-full bg-green-500 ${visible ? 'animate-ping' : ''}`} />
+          <span className={`absolute inset-0 rounded-full bg-green-500 ${visible && !shouldReduceMotion ? 'animate-ping' : ''}`} />
           <span className="relative rounded-full w-2 h-2 bg-green-500" />
         </span>
         <span className="text-[10px] uppercase tracking-widest text-black/40 dark:text-white/40 font-medium">
@@ -395,6 +414,7 @@ function LiveStatusCard({ items }) {
 }
 
 function FutureReleaseCard({ release, index }) {
+  const shouldReduceMotion = useReducedMotion()
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -418,7 +438,7 @@ function FutureReleaseCard({ release, index }) {
               </div>
             </div>
             <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[9px] uppercase tracking-widest font-medium border bg-amber-500/10 border-amber-500/20 text-amber-400 shrink-0 ml-3">
-              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+              <span className={`w-1.5 h-1.5 rounded-full bg-amber-400 ${shouldReduceMotion ? '' : 'animate-pulse'}`} />
               Coming Soon
             </span>
           </div>
@@ -438,9 +458,11 @@ function FutureReleaseCard({ release, index }) {
 }
 
 export default function Service() {
-  const socialLinks = useSocialLinks()
-  const services = useServices()
-  const page = useServicePage()
+  const { t } = useTranslation()
+  const shouldReduceMotion = useReducedMotion()
+  const { data: socialLinks } = useSocialLinks()
+  const { data: services } = useServices()
+  const { data: page } = useServicePage()
   const [openFAQ, setOpenFAQ] = useState(null)
   const [payingPackage, setPayingPackage] = useState(null)
   const [payingService, setPayingService] = useState(null)
@@ -460,60 +482,66 @@ export default function Service() {
     setPayingPackage(pkg.name)
     const priceNum = parsePrice(pkg.price)
     if (!priceNum) { setPayingPackage(null); return }
-    await openRazorpayCheckout({
-      amount: priceNum,
-      currency: 'INR',
-      description: `${pkg.name} Package — ${pkg.currency}${pkg.price}`,
-      prefill: { name: '', email: '' },
-      async onSuccess(response) {
-        try {
-          await savePayment({
-            service_id: 'package',
-            service_title: `${pkg.name} Package`,
-            pricing_label: pkg.name,
-            amount: priceNum,
-            currency: 'INR',
-            razorpay_payment_id: response.razorpay_payment_id,
-            razorpay_order_id: response.razorpay_order_id,
-          })
-        } catch (e) {
-          console.warn('Payment saved but failed to record:', e)
-        }
-        setPayingPackage(null)
-      },
-      onError() { setPayingPackage(null) },
-    })
-    setPayingPackage(null)
+    try {
+      await openRazorpayCheckout({
+        amount: priceNum,
+        currency: 'INR',
+        description: `${pkg.name} Package — ${pkg.currency}${pkg.price}`,
+        prefill: { name: '', email: '' },
+        async onSuccess(response) {
+          try {
+            await savePayment({
+              service_id: 'package',
+              service_title: `${pkg.name} Package`,
+              pricing_label: pkg.name,
+              amount: priceNum,
+              currency: 'INR',
+              razorpay_payment_id: response.razorpay_payment_id,
+              razorpay_order_id: response.razorpay_order_id,
+            })
+          } catch (e) {
+            console.warn('Payment saved but failed to record:', e)
+          }
+        },
+      })
+    } catch (err) {
+      console.log('[Service] Package payment cancelled or failed:', err)
+    } finally {
+      setPayingPackage(null)
+    }
   }
 
   async function handleServicePayment(service) {
     setPayingService(service.service_id)
     const priceNum = parsePrice(service.price)
     if (!priceNum) { setPayingService(null); return }
-    await openRazorpayCheckout({
-      amount: priceNum,
-      currency: 'INR',
-      description: `${service.title} — ${service.currency || '₹'}${service.price}`,
-      prefill: { name: '', email: '' },
-      async onSuccess(response) {
-        try {
-          await savePayment({
-            service_id: service.service_id || 'service',
-            service_title: service.title,
-            pricing_label: 'Direct Payment',
-            amount: priceNum,
-            currency: 'INR',
-            razorpay_payment_id: response.razorpay_payment_id,
-            razorpay_order_id: response.razorpay_order_id,
-          })
-        } catch (e) {
-          console.warn('Payment saved but failed to record:', e)
-        }
-        setPayingService(null)
-      },
-      onError() { setPayingService(null) },
-    })
-    setPayingService(null)
+    try {
+      await openRazorpayCheckout({
+        amount: priceNum,
+        currency: 'INR',
+        description: `${service.title} — ${service.currency || '₹'}${service.price}`,
+        prefill: { name: '', email: '' },
+        async onSuccess(response) {
+          try {
+            await savePayment({
+              service_id: service.service_id || 'service',
+              service_title: service.title,
+              pricing_label: 'Direct Payment',
+              amount: priceNum,
+              currency: 'INR',
+              razorpay_payment_id: response.razorpay_payment_id,
+              razorpay_order_id: response.razorpay_order_id,
+            })
+          } catch (e) {
+            console.warn('Payment saved but failed to record:', e)
+          }
+        },
+      })
+    } catch (err) {
+      console.log('[Service] Service payment cancelled or failed:', err)
+    } finally {
+      setPayingService(null)
+    }
   }
 
   async function handleContactSubmit(e) {
@@ -752,7 +780,7 @@ export default function Service() {
                   {techStack.map((tech) => (
                     <motion.span
                       key={tech.label}
-                      whileHover={{ scale: 1.05, y: -1 }}
+                      whileHover={shouldReduceMotion ? undefined : { scale: 1.05, y: -1 }}
                       className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/5 dark:bg-white/5 text-[10px] uppercase tracking-wider text-black/50 dark:text-white/50 hover:text-black/80 dark:hover:text-white/80 hover:bg-black/10 dark:hover:bg-white/10 transition-all duration-[400ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
                     >
                       <ResolvedIcon name={tech.icon_name} className="w-3 h-3" />
@@ -808,13 +836,13 @@ export default function Service() {
                   visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 80, damping: 20 } },
                 }}
               >
-                <span className="eyebrow">Connect</span>
+                <span className="eyebrow">{t('contact.eyebrow')}</span>
                 <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tighter leading-none">
-                  Let's Build{' '}
-                  <span className="text-gradient">Together</span>
+                  {t('contact.titleLetsBuild')}{' '}
+                  <span className="text-gradient">{t('contact.titleTogether')}</span>
                 </h2>
                 <p className="mt-4 text-sm text-black/50 dark:text-white/40 max-w-[65ch] leading-relaxed">
-                  Have a project in mind or just want to say hello? The network is always open to new connections.
+                  {t('contact.subtitle')}
                 </p>
               </motion.div>
 
@@ -826,7 +854,7 @@ export default function Service() {
                 className="glass-panel rounded-[2rem] p-6 md:p-8 space-y-4"
               >
                 <h3 className="text-[10px] uppercase tracking-[0.15em] text-black/40 dark:text-white/30 font-medium">
-                  Find me on
+                  {t('contact.findMeOn')}
                 </h3>
                 <div className="grid grid-cols-2 gap-2">
                   {socialLinks.map((link) => (
@@ -835,7 +863,7 @@ export default function Service() {
                       href={link.url}
                       target="_self"
                       rel="noopener noreferrer"
-                      whileHover={{ x: 4 }}
+                      whileHover={shouldReduceMotion ? undefined : { x: 4 }}
                       className="group flex items-center gap-2 text-xs text-black/50 dark:text-white/40 hover:text-black/80 dark:hover:text-white/80 transition-colors duration-300"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-black/10 dark:bg-white/10 group-hover:bg-[#00f0ff]" />
@@ -858,14 +886,14 @@ export default function Service() {
               >
                 <div className="space-y-2">
                   <label htmlFor="s-name" className="block text-[10px] text-black/50 dark:text-white/40 uppercase tracking-[0.1em]">
-                    Name
+                    {t('contact.nameLabel')}
                   </label>
                   <input
                     type="text"
                     id="s-name"
                     value={contactForm.name}
                     onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
-                    placeholder="Your name"
+                    placeholder={t('contact.namePlaceholder')}
                     required
                     className="w-full px-4 py-3 rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/5 text-sm text-black/70 dark:text-white/80 placeholder:text-black/30 dark:placeholder:text-white/20 outline-none focus:border-black/20 dark:focus:border-white/10 transition-all duration-[400ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
                   />
@@ -873,14 +901,14 @@ export default function Service() {
 
                 <div className="space-y-2">
                   <label htmlFor="s-email" className="block text-[10px] text-black/50 dark:text-white/40 uppercase tracking-[0.1em]">
-                    Email
+                    {t('contact.emailLabel')}
                   </label>
                   <input
                     type="email"
                     id="s-email"
                     value={contactForm.email}
                     onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
-                    placeholder="your@email.com"
+                    placeholder={t('contact.emailPlaceholder')}
                     required
                     className="w-full px-4 py-3 rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/5 text-sm text-black/70 dark:text-white/80 placeholder:text-black/30 dark:placeholder:text-white/20 outline-none focus:border-black/20 dark:focus:border-white/10 transition-all duration-[400ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
                   />
@@ -888,14 +916,14 @@ export default function Service() {
 
                 <div className="space-y-2">
                   <label htmlFor="s-message" className="block text-[10px] text-black/50 dark:text-white/40 uppercase tracking-[0.1em]">
-                    Message
+                    {t('contact.messageLabel')}
                   </label>
                   <textarea
                     id="s-message"
                     rows={4}
                     value={contactForm.message}
                     onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
-                    placeholder="Tell me about your project..."
+                    placeholder={t('contact.messagePlaceholder')}
                     required
                     className="w-full px-4 py-3 rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/5 text-sm text-black/70 dark:text-white/80 placeholder:text-black/30 dark:placeholder:text-white/20 outline-none focus:border-black/20 dark:focus:border-white/10 transition-all duration-300 resize-none"
                   />
@@ -907,24 +935,24 @@ export default function Service() {
                     animate={{ opacity: 1, scale: 1 }}
                     className="w-full py-3.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-sm text-emerald-500 text-center"
                   >
-                    Message sent! I'll get back to you soon.
+                    {t('contact.sentSuccess')}
                   </motion.div>
                 ) : (
                   <motion.button
                     type="submit"
                     disabled={contactStatus === 'sending'}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
+                    whileHover={shouldReduceMotion ? undefined : { scale: 1.02 }}
+                    whileTap={shouldReduceMotion ? undefined : { scale: 0.98 }}
                     className="group w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs uppercase tracking-widest font-medium transition-all duration-[400ms] ease-[cubic-bezier(0.16,1,0.3,1)] disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     {contactStatus === 'sending' ? (
                       <span className="flex items-center justify-center gap-2">
                         <span className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
-                        Sending...
+                        {t('contact.sending')}
                       </span>
                     ) : (
                       <>
-                        Send Message
+                        {t('contact.sendMessage')}
                         <Send className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                       </>
                     )}

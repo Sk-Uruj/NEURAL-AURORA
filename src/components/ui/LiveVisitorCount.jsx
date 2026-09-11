@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
+import { motion, useMotionValue, useSpring, useTransform, useReducedMotion } from 'framer-motion'
 import { supabase } from '../../lib/supabase'
 
 const EASE = [0.16, 1, 0.3, 1]
@@ -37,7 +37,8 @@ function useVisitorCount() {
 }
 
 function AnimatedCounter({ value }) {
-  const motionValue = useMotionValue(0)
+  const shouldReduceMotion = useReducedMotion()
+  const motionValue = useMotionValue(shouldReduceMotion ? value : 0)
   const springValue = useSpring(motionValue, { stiffness: 60, damping: 20 })
   const rounded = useTransform(springValue, (v) => Math.round(v))
 
@@ -45,7 +46,7 @@ function AnimatedCounter({ value }) {
     motionValue.set(value)
   }, [value, motionValue])
 
-  return <motion.span>{rounded}</motion.span>
+  return shouldReduceMotion ? <span>{value}</span> : <motion.span>{rounded}</motion.span>
 }
 
 function formatNumber(n) {
@@ -56,11 +57,12 @@ function formatNumber(n) {
 
 export default function LiveVisitorCount() {
   const { count, loading } = useVisitorCount()
+  const shouldReduceMotion = useReducedMotion()
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 8 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={shouldReduceMotion ? false : { opacity: 0, y: 8 }}
+      whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once: true }}
       className="relative"
     >
@@ -90,8 +92,12 @@ export default function LiveVisitorCount() {
                       key={i}
                       className="block w-2 h-3.5 rounded-[2px]"
                       style={{ background: 'var(--text-tertiary)' }}
-                      animate={{ opacity: [0.08, 0.25, 0.08] }}
-                      transition={{ duration: 1.2, repeat: Infinity, delay: i * 0.15 }}
+                      animate={shouldReduceMotion ? undefined : { opacity: [0.08, 0.25, 0.08] }}
+                      transition={
+                        shouldReduceMotion
+                          ? { duration: 0 }
+                          : { duration: 1.2, repeat: Infinity, delay: i * 0.15 }
+                      }
                     />
                   ))}
                 </div>
@@ -125,6 +131,8 @@ export default function LiveVisitorCount() {
 }
 
 function LiveDot() {
+  const shouldReduceMotion = useReducedMotion()
+
   return (
     <div className="relative flex-shrink-0">
       <div
@@ -139,14 +147,20 @@ function LiveDot() {
         style={{
           background: 'var(--accent-glow)',
         }}
-        animate={{ opacity: [0.4, 0, 0.4], scale: [1, 2.5, 1] }}
-        transition={{ duration: 2, repeat: Infinity, ease: 'easeOut' }}
+        animate={shouldReduceMotion ? undefined : { opacity: [0.4, 0, 0.4], scale: [1, 2.5, 1] }}
+        transition={
+          shouldReduceMotion
+            ? { duration: 0 }
+            : { duration: 2, repeat: Infinity, ease: 'easeOut' }
+        }
       />
     </div>
   )
 }
 
 function ShimmerOverlay() {
+  const shouldReduceMotion = useReducedMotion()
+
   return (
     <motion.div
       className="absolute inset-0 pointer-events-none overflow-hidden rounded-xl"
@@ -157,8 +171,12 @@ function ShimmerOverlay() {
         style={{
           background: 'linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.04) 45%, rgba(0,240,255,0.02) 50%, transparent 65%)',
         }}
-        animate={{ x: ['-100%', '200%'] }}
-        transition={{ duration: 5, repeat: Infinity, ease: EASE, delay: 0.5 }}
+        animate={shouldReduceMotion ? undefined : { x: ['-100%', '200%'] }}
+        transition={
+          shouldReduceMotion
+            ? { duration: 0 }
+            : { duration: 5, repeat: Infinity, ease: EASE, delay: 0.5 }
+        }
       />
     </motion.div>
   )

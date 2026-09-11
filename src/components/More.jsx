@@ -1,6 +1,7 @@
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 import { Calendar, Briefcase, BookOpen, FileText } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { useEducation, useExperience, useBlogPosts, useCaseStudies } from '../lib/usePortfolioData'
 import { sanitizeHtml } from '../lib/utils'
 import MoreNavbar from './MoreNavbar'
@@ -17,6 +18,8 @@ const sectionVariants = {
 }
 
 function TimelineItem({ item, icon: Icon, index }) {
+  const shouldReduceMotion = useReducedMotion()
+
   return (
     <motion.div
       custom={index}
@@ -25,27 +28,48 @@ function TimelineItem({ item, icon: Icon, index }) {
       viewport={{ once: true }}
       variants={{
         hidden: { opacity: 0, x: -20 },
-        visible: { opacity: 1, x: 0, transition: { delay: index * 0.1, duration: 0.5, ease: [0.16, 1, 0.3, 1] } },
+        visible: {
+          opacity: 1,
+          x: 0,
+          transition: {
+            delay: index * 0.1,
+            duration: 0.5,
+            ease: [0.16, 1, 0.3, 1],
+          },
+        },
       }}
       className="relative pl-8 pb-8 border-l border-black/10 dark:border-white/10"
     >
       <motion.div
         className="absolute left-0 top-0 -translate-x-1/2 w-8 h-8 rounded-full bg-[var(--bg-secondary)] border border-black/10 dark:border-white/10 flex items-center justify-center"
-        animate={{ y: [0, -3, 0] }}
-        transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: index * 0.3 }}
+        animate={shouldReduceMotion ? {} : { y: [0, -3, 0] }}
+        transition={
+          shouldReduceMotion
+            ? { duration: 0 }
+            : {
+                duration: 3,
+                repeat: Infinity,
+                ease: 'easeInOut',
+                delay: index * 0.3,
+              }
+        }
       >
         <Icon className="w-3.5 h-3.5 text-black/50 dark:text-white/50" />
       </motion.div>
+
       <div className="glass-panel rounded-xl p-4">
         <span className="text-[10px] uppercase tracking-widest text-black/40 dark:text-white/30 font-medium">
           {item.year}
         </span>
+
         <h3 className="text-sm font-semibold text-black/80 dark:text-white/80 mt-1">
           {'degree' in item ? item.degree : item.role}
         </h3>
+
         <p className="text-xs text-black/50 dark:text-white/50 mt-0.5">
           {'school' in item ? item.school : item.company}
         </p>
+
         <p className="text-xs text-black/40 dark:text-white/40 mt-2 leading-relaxed">
           {item.description}
         </p>
@@ -63,7 +87,15 @@ function BlogCard({ post, index }) {
       viewport={{ once: true }}
       variants={{
         hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0, transition: { delay: index * 0.1, duration: 0.5, ease: [0.16, 1, 0.3, 1] } },
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: {
+            delay: index * 0.1,
+            duration: 0.5,
+            ease: [0.16, 1, 0.3, 1],
+          },
+        },
       }}
     >
       <Link
@@ -76,15 +108,21 @@ function BlogCard({ post, index }) {
           <span className="mx-1">·</span>
           <span>{post.readTime}</span>
         </div>
+
         <h3 className="text-sm font-semibold text-black/80 dark:text-white/80 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 transition-all duration-300">
           {post.title}
         </h3>
+
         <p className="text-xs text-black/50 dark:text-white/50 mt-2 leading-relaxed line-clamp-2">
           {post.excerpt}
         </p>
+
         <div className="flex flex-wrap gap-1.5 mt-3">
           {post.tags.map((tag) => (
-            <span key={tag} className="text-[9px] uppercase tracking-wider px-2 py-0.5 rounded-full bg-black/5 dark:bg-white/5 text-black/50 dark:text-white/50">
+            <span
+              key={tag}
+              className="text-[9px] uppercase tracking-wider px-2 py-0.5 rounded-full bg-black/5 dark:bg-white/5 text-black/50 dark:text-white/50"
+            >
               {tag}
             </span>
           ))}
@@ -95,6 +133,7 @@ function BlogCard({ post, index }) {
 }
 
 function CaseStudyCard({ study, index }) {
+  const { t } = useTranslation()
   return (
     <motion.div
       custom={index}
@@ -103,7 +142,15 @@ function CaseStudyCard({ study, index }) {
       viewport={{ once: true }}
       variants={{
         hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0, transition: { delay: index * 0.15, duration: 0.5, ease: [0.16, 1, 0.3, 1] } },
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: {
+            delay: index * 0.15,
+            duration: 0.5,
+            ease: [0.16, 1, 0.3, 1],
+          },
+        },
       }}
     >
       <Link
@@ -113,17 +160,29 @@ function CaseStudyCard({ study, index }) {
         <h3 className="text-sm font-semibold text-black/80 dark:text-white/80 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 transition-all duration-300">
           {study.title}
         </h3>
+
         <div
           className="text-xs text-black/50 dark:text-white/50 mt-2 leading-relaxed line-clamp-2"
           dangerouslySetInnerHTML={{ __html: sanitizeHtml(study.description) }}
         />
+
         <div className="mt-3 p-3 rounded-lg bg-black/5 dark:bg-white/5">
-          <span className="text-[9px] uppercase tracking-widest text-black/40 dark:text-white/30 font-medium">Outcome</span>
-          <div className="text-xs text-black/60 dark:text-white/60 mt-1 line-clamp-2" dangerouslySetInnerHTML={{ __html: sanitizeHtml(study.outcome) }} />
+          <span className="text-[9px] uppercase tracking-widest text-black/40 dark:text-white/30 font-medium">
+            {t('caseStudy.outcome')}
+          </span>
+
+          <div
+            className="text-xs text-black/60 dark:text-white/60 mt-1 line-clamp-2"
+            dangerouslySetInnerHTML={{ __html: sanitizeHtml(study.outcome) }}
+          />
         </div>
+
         <div className="flex flex-wrap gap-1.5 mt-3">
           {study.tech.map((t) => (
-            <span key={t} className="text-[9px] uppercase tracking-wider px-2 py-0.5 rounded-full bg-black/5 dark:bg-white/5 text-black/50 dark:text-white/50">
+            <span
+              key={t}
+              className="text-[9px] uppercase tracking-wider px-2 py-0.5 rounded-full bg-black/5 dark:bg-white/5 text-black/50 dark:text-white/50"
+            >
               {t}
             </span>
           ))}
@@ -134,10 +193,11 @@ function CaseStudyCard({ study, index }) {
 }
 
 export default function More() {
-  const education = useEducation()
-  const experience = useExperience()
-  const blogPosts = useBlogPosts()
-  const caseStudies = useCaseStudies()
+  const { t } = useTranslation()
+  const { data: education } = useEducation()
+  const { data: experience } = useExperience()
+  const { data: blogPosts } = useBlogPosts()
+  const { data: caseStudies } = useCaseStudies()
   return (
     <div className="relative min-h-screen overflow-hidden">
       <AuroraBackground />
@@ -150,12 +210,14 @@ export default function More() {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-16"
         >
-          <span className="eyebrow">More</span>
+          <span className="eyebrow">{t('more.eyebrow')}</span>
+
           <h1 className="text-3xl md:text-5xl font-display font-bold tracking-tight text-black/80 dark:text-white/90 mt-4">
-            Beyond the <span className="text-gradient">Code</span>
+            {t('more.titlePrefix')} <span className="text-gradient">{t('more.titleSuffix')}</span>
           </h1>
+
           <p className="text-sm text-black/50 dark:text-white/50 mt-3 max-w-md mx-auto">
-            My journey through education, experience, ideas, and insights.
+            {t('more.subtitle')}
           </p>
         </motion.div>
 
@@ -172,13 +234,20 @@ export default function More() {
               <div className="w-8 h-8 rounded-lg bg-black/5 dark:bg-white/5 flex items-center justify-center">
                 <BookOpen className="w-4 h-4 text-black/50 dark:text-white/50" />
               </div>
+
               <h2 className="text-sm font-semibold uppercase tracking-widest text-black/60 dark:text-white/60">
-                Education
+                {t('more.education')}
               </h2>
             </motion.div>
+
             <div>
               {education.map((item, i) => (
-                <TimelineItem key={item.id} item={item} icon={BookOpen} index={i} />
+                <TimelineItem
+                  key={item.id}
+                  item={item}
+                  icon={BookOpen}
+                  index={i}
+                />
               ))}
             </div>
           </section>
@@ -195,13 +264,20 @@ export default function More() {
               <div className="w-8 h-8 rounded-lg bg-black/5 dark:bg-white/5 flex items-center justify-center">
                 <Briefcase className="w-4 h-4 text-black/50 dark:text-white/50" />
               </div>
+
               <h2 className="text-sm font-semibold uppercase tracking-widest text-black/60 dark:text-white/60">
-                Work Experience
+                {t('more.experience')}
               </h2>
             </motion.div>
+
             <div>
               {experience.map((item, i) => (
-                <TimelineItem key={item.id} item={item} icon={Briefcase} index={i} />
+                <TimelineItem
+                  key={item.id}
+                  item={item}
+                  icon={Briefcase}
+                  index={i}
+                />
               ))}
             </div>
           </section>
@@ -220,17 +296,20 @@ export default function More() {
               <div className="w-8 h-8 rounded-lg bg-black/5 dark:bg-white/5 flex items-center justify-center">
                 <FileText className="w-4 h-4 text-black/50 dark:text-white/50" />
               </div>
+
               <h2 className="text-sm font-semibold uppercase tracking-widest text-black/60 dark:text-white/60">
-                Latest Blog Posts
+                {t('more.latestPosts')}
               </h2>
             </div>
+
             <Link
               to="/blog"
               className="text-[10px] uppercase tracking-widest text-cyan-500 hover:text-cyan-400 transition-colors"
             >
-              View all
+              {t('more.viewAll')}
             </Link>
           </motion.div>
+
           <div className="grid md:grid-cols-3 gap-4">
             {blogPosts.slice(0, 3).map((post, i) => (
               <BlogCard key={post.id} post={post} index={i} />
@@ -250,13 +329,19 @@ export default function More() {
             <div className="w-8 h-8 rounded-lg bg-black/5 dark:bg-white/5 flex items-center justify-center">
               <FileText className="w-4 h-4 text-black/50 dark:text-white/50" />
             </div>
+
             <h2 className="text-sm font-semibold uppercase tracking-widest text-black/60 dark:text-white/60">
-              Case Studies
+              {t('more.caseStudies')}
             </h2>
           </motion.div>
+
           <div className="grid md:grid-cols-2 gap-4">
             {caseStudies.map((study, i) => (
-              <CaseStudyCard key={study.id} study={study} index={i} />
+              <CaseStudyCard
+                key={study.id}
+                study={study}
+                index={i}
+              />
             ))}
           </div>
         </section>

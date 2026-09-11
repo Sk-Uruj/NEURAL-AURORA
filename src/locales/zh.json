@@ -1,0 +1,349 @@
+{
+  "nav": {
+    "about": "关于",
+    "skills": "技能",
+    "projects": "项目",
+    "services": "服务",
+    "resume": "简历",
+    "contact": "联系",
+    "more": "更多",
+    "support": "支持",
+    "login": "登录与设置",
+    "admin": "管理后台",
+    "crm": "CRM 后台",
+    "getStarted": "开始使用",
+    "menu": "菜单"
+  },
+  "common": {
+    "home": "首页",
+    "menu": "菜单"
+  },
+  "hero": {
+    "available": "可接洽",
+    "collaboration": "合作",
+    "viewProjects": "查看项目",
+    "resume": "简历",
+    "title": "打造数字体验",
+    "subtitle": "当神经网络遇上极光"
+  },
+  "about": {
+    "eyebrow": "关于",
+    "titleArchitect": "打造",
+    "titleDigitalExperience": "数字体验的架构师",
+    "knownAsPrefix": "在互联网上广为人知的名字是",
+    "knownAsSuffix": "，我构建代码与视觉诗意相遇的系统。每个项目都是探索浏览器边界的机遇。",
+    "digitalFootprint": "数字足迹",
+    "avatarAlt": "个人头像",
+    "currentFocus": "目前正在构建 NEURAL AURORA，探索 3D 图形与网络技术的交汇点。"
+  },
+  "skills": {
+    "eyebrow": "专长",
+    "titleTechnical": "技术",
+    "titleStack": "栈",
+    "offlineNotice": "离线模式 — 显示静态技术栈回退",
+    "noData": "暂无可用的技术技能数据。",
+    "noSkillsInCategory": "该类别中没有列出技能",
+    "categories": {
+      "frontend": "前端",
+      "backend": "后端",
+      "language": "语言",
+      "devops": "DevOps",
+      "design": "设计"
+    }
+  },
+  "projects": {
+    "eyebrow": "作品集",
+    "titleNeural": "神经",
+    "titleProjects": "项目",
+    "subtitle": "每个项目都是不断增长的神经网络中的一个节点。点击展开，探索突触连接。",
+    "offlineNotice": "离线模式 — 显示缓存项目回退",
+    "noData": "在神经存储库中未找到任何项目。",
+    "source": "源码",
+    "link": "链接",
+    "demo": "演示"
+  },
+  "resume": {
+    "eyebrow": "个人履历",
+    "titleDownload": "下载我的",
+    "titleResume": "简历",
+    "subtitle": "我的经验、项目和技术专长的全面概览。会定期更新以及时反映我的最新工作。",
+    "downloadPdf": "下载 PDF",
+    "pdfFormat": "PDF 格式 . 2.4 MB"
+  },
+  "contact": {
+    "eyebrow": "联系",
+    "titleLetsBuild": "让我们",
+    "titleTogether": "一起构建",
+    "subtitle": "有项目想法，或只是想打个招呼？神经网络始终欢迎新的连接。",
+    "findMeOn": "在这里找到我",
+    "nameLabel": "姓名",
+    "namePlaceholder": "您的姓名",
+    "emailLabel": "邮箱",
+    "emailPlaceholder": "your@email.com",
+    "messageLabel": "留言",
+    "messagePlaceholder": "告诉我您的项目...",
+    "sendMessage": "发送消息",
+    "sending": "发送中...",
+    "sentSuccess": "消息已发送！我会尽快回复您。",
+    "tagline": "NEURAL AURORA . 突触作品集",
+    "builtWith": "使用 React、Three.js 和精湛设计构建"
+  },
+  "reviews": {
+    "title": "大家怎么说",
+    "offlineError": "离线模式 — 无法获取评论",
+    "offlineRefreshError": "离线模式 — 无法刷新实时评论",
+    "noReviews": "暂无评论。请稍后再来！",
+    "leaveReview": "发表评论",
+    "shareThoughts": "分享您对我工作的看法",
+    "nameLabel": "姓名",
+    "namePlaceholder": "您的姓名",
+    "emailLabel": "邮箱",
+    "emailPlaceholder": "选填",
+    "ratingLabel": "评分",
+    "messageLabel": "留言",
+    "messagePlaceholder": "写下您的评论...",
+    "submitReview": "提交评论",
+    "submitting": "提交中...",
+    "thankYou": "谢谢！",
+    "submittedMessage": "您的评论已提交，正在等待审核。",
+    "submitAnother": "再提交一条评论"
+  },
+  "footer": {
+    "skills": "技能",
+    "projects": "项目",
+    "connect": "联系",
+    "synapticPortfolio": "突触作品集",
+    "reactNext": "React / Next.js",
+    "threeWebGL": "Three.js / WebGL",
+    "uiUxDesign": "UI/UX 设计",
+    "fullStackDev": "全栈开发",
+    "neuralAurora": "NEURAL AURORA",
+    "synapticDashboard": "突触后台",
+    "auroraEngine": "极光引擎",
+    "viewAll": "查看全部"
+  },
+  "loader": {
+    "verificationRequired": "需要验证",
+    "proveIdentity": "证明您的身份以访问系统。",
+    "cards": {
+      "sayName": "说出“{{name}}”",
+      "voiceRecognition": "语音识别",
+      "solvePuzzle": "解谜",
+      "oneQuestion": "一个问题",
+      "traverseOn": "继续浏览",
+      "autoTraverse": "自动浏览",
+      "traverseActiveDesc": "自动演示模式已激活",
+      "traverseTourDesc": "完整站点演示导览",
+      "watchDevAds": "观看开发广告",
+      "videoAdsToUnlock": "解锁需观看视频广告",
+      "moodSwing": "心情摇摆",
+      "setVibeMusic": "设定氛围与音乐",
+      "neuralCmd": "Neural Aurora 终端",
+      "exploreTerminal": "通过终端探索",
+      "takeInterview": "参加我的面试",
+      "voiceAiInterview": "语音 AI 面试",
+      "patternLock": "神经图案锁",
+      "memoryChallenge": "记忆挑战",
+      "channelStream": "频道直播",
+      "browseVideos": "浏览我的视频",
+      "skipVibes": "跳过氛围",
+      "directEntry": "直接进入",
+      "openDocs": "打开文档"
+    },
+    "interview": {
+      "chatWith": "与 {{name}} 聊天",
+      "askAnything": "问我任何问题",
+      "live": "在线",
+      "gettingReady": "正在准备...",
+      "thinking": "{{name}} 正在思考...",
+      "you": "您",
+      "listening": "正在聆听... 请随便问我任何问题",
+      "tapMic": "点击麦克风，然后提问",
+      "typeQuestion": "输入您的问题...",
+      "ask": "提问",
+      "youAsked": "您问道",
+      "says": "{{name}} 说",
+      "askAnother": "再问一个问题",
+      "endInterview": "结束面试",
+      "allDone": "全部完成",
+      "enterPortfolio": "进入作品集"
+    },
+    "voice": {
+      "instruction": "说出“{{name}}”以验证您的身份",
+      "listening": "正在聆听...",
+      "trySaying": "试着说出“{{name}}”",
+      "verified": "身份已验证"
+    },
+    "success": {
+      "verified": "身份已验证",
+      "accessGranted": "已授予访问权限",
+      "welcome": "欢迎来到 NEURAL AURORA"
+    },
+    "cmd": {
+      "email": "邮箱",
+      "availableOnRequest": "应要求提供"
+    }
+  },
+  "blog": {
+    "eyebrow": "博客",
+    "titlePrefix": "思想与",
+    "titleSuffix": "想法",
+    "subtitle": "分享我的所学、所建与所思。",
+    "searchPlaceholder": "搜索文章...",
+    "noPosts": "未找到文章。请尝试其他搜索。",
+    "postNotFound": "未找到文章",
+    "backToBlog": "返回博客",
+    "blogPostEyebrow": "博客文章",
+    "readMore": "阅读更多文章",
+    "allPosts": "全部文章"
+  },
+  "services": {
+    "options": "{{count}} 个选项",
+    "viewDetails": "查看详情",
+    "step": "步骤 {{number}}",
+    "whatIncluded": "包含内容",
+    "selectType": "选择项目类型",
+    "backToServices": "返回服务",
+    "getInTouch": "联系我们",
+    "projectPlaceholder": "告诉我您的 {{title}} 项目...",
+    "mostPopular": "最受欢迎",
+    "getStarted": "开始使用",
+    "processing": "处理中...",
+    "serviceNotFound": "未找到服务",
+    "price": "价格",
+    "delivery": "交付",
+    "pay": "支付",
+    "paymentConfirmed": "支付已确认",
+    "nav": {
+      "services": "服务",
+      "process": "流程",
+      "pricing": "定价",
+      "faq": "常见问题",
+      "contact": "联系"
+    }
+  },
+  "support": {
+    "eyebrow": "支持",
+    "heroSubtitle": "开源且永久免费",
+    "heroDescription": "这个项目 100% 免费且开源。您的贡献让它保持活力，资助新功能，并帮助我们与付费替代品竞争——同时让 NEURAL AURORA 对所有人保持免费。",
+    "floatingButton": "支持",
+    "sponsorPlaceholder": "告诉我您的项目或赞助想法...",
+    "nav": {
+      "contribute": "贡献",
+      "whySupport": "为何支持",
+      "faq": "常见问题",
+      "contact": "联系"
+    },
+    "presets": {
+      "coffee": "请喝咖啡",
+      "feature": "支持功能",
+      "speed": "加速开发",
+      "rocket": "助推发射",
+      "crown": "高级赞助者",
+      "legend": "传奇等级"
+    }
+  },
+  "more": {
+    "eyebrow": "更多",
+    "titlePrefix": "代码",
+    "titleSuffix": "之外",
+    "subtitle": "我的教育、经验、想法和见解之旅。",
+    "education": "教育",
+    "experience": "工作经历",
+    "latestPosts": "最新博客文章",
+    "viewAll": "查看全部",
+    "caseStudies": "案例研究",
+    "nav": {
+      "timeline": "时间线",
+      "caseStudies": "案例研究",
+      "blog": "博客"
+    }
+  },
+  "caseStudy": {
+    "notFound": "未找到案例研究",
+    "backToStudies": "返回案例研究",
+    "eyebrow": "案例研究",
+    "outcome": "结果",
+    "fullAnalysis": "完整分析",
+    "viewAll": "查看所有案例研究"
+  },
+  "contributors": {
+    "eyebrow": "贡献者",
+    "titlePrefix": "幕后的",
+    "subtitle": "每位贡献者——开发者或捐赠者——都帮助保持这个项目的免费和开源。",
+    "becomeContributor": "成为贡献者",
+    "becomeContributorSubtitle": "支持项目并在列表中展示"
+  },
+  "mood": {
+    "title": "心情摇摆",
+    "subtitle": "进入前设定氛围",
+    "footnote": "选择心情 → 音乐为探索设定氛围",
+    "moods": {
+      "energetic": {
+        "label": "活力",
+        "description": "充满活力与兴奋"
+      },
+      "calm": {
+        "label": "平静",
+        "description": "闲适放松的氛围"
+      },
+      "happy": {
+        "label": "开心",
+        "description": "愉悦而明亮"
+      },
+      "focused": {
+        "label": "专注",
+        "description": "深度心流状态"
+      },
+      "mysterious": {
+        "label": "神秘",
+        "description": "黑暗而富有氛围"
+      },
+      "euphoric": {
+        "label": "狂喜",
+        "description": "超凡的波动"
+      }
+    }
+  },
+  "ads": {
+    "ad": "广告",
+    "video": "视频",
+    "short": "短视频",
+    "sponsored": "赞助",
+    "videoUnavailable": "视频不可用",
+    "unavailable": "不可用",
+    "adComplete": "广告完成",
+    "enteringIn": "{{count}} 秒后进入",
+    "skip": "跳过",
+    "autoAd": "自动广告",
+    "googleAd": "Google 广告",
+    "shortAd": "短视频广告",
+    "videoAd": "视频广告"
+  },
+  "youtube": {
+    "watchingToVerify": "观看以验证",
+    "videos": "视频",
+    "shorts": "短视频",
+    "playlists": "播放列表",
+    "searchPlaceholder": "搜索{{tab}}...",
+    "noVideos": "未找到视频",
+    "noShorts": "未找到短视频",
+    "noPlaylists": "没有公开播放列表",
+    "loadMore": "加载更多",
+    "tryDifferentSearch": "换个搜索词或稍后再来",
+    "shortsAppearHere": "短视频内容将显示在这里",
+    "playlistsAppearHere": "频道播放列表将显示在这里",
+    "backToVerification": "返回验证",
+    "backToVideos": "返回视频",
+    "browseToVerify": "浏览以验证",
+    "retry": "重试",
+    "subscribers": "订阅者",
+    "videosCount": "{{count}} 个视频",
+    "noVideosInPlaylist": "此播放列表中没有视频"
+  },
+  "theme": {
+    "switchToDark": "切换到深色模式",
+    "switchToLight": "切换到浅色模式",
+    "searchPlaceholder": "搜索..."
+  }
+}

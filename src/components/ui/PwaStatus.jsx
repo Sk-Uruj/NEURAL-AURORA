@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
 import { Wifi, WifiOff, RefreshCw, X } from 'lucide-react'
 
 export default function PwaStatus() {
   const [online, setOnline] = useState(navigator.onLine)
   const [showOffline, setShowOffline] = useState(false)
   const [updateAvailable, setUpdateAvailable] = useState(false)
+  const shouldReduceMotion = useReducedMotion()
 
   useEffect(() => {
     function goOnline() {
@@ -46,10 +47,14 @@ export default function PwaStatus() {
       <AnimatePresence>
         {showOffline && (
           <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.9 }}
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 20, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.9 }}
-            transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+            exit={shouldReduceMotion ? undefined : { opacity: 0, y: 20, scale: 0.9 }}
+            transition={
+              shouldReduceMotion
+                ? { duration: 0 }
+                : { type: 'spring', stiffness: 400, damping: 25 }
+            }
             className="flex items-center gap-3 rounded-2xl border border-rose-500/20 px-4 py-3 shadow-lg backdrop-blur-xl"
             style={{ background: 'rgba(15, 5, 10, 0.9)' }}
           >
@@ -68,10 +73,14 @@ export default function PwaStatus() {
       <AnimatePresence>
         {updateAvailable && (
           <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.9 }}
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 20, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.9 }}
-            transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+            exit={shouldReduceMotion ? undefined : { opacity: 0, y: 20, scale: 0.9 }}
+            transition={
+              shouldReduceMotion
+                ? { duration: 0 }
+                : { type: 'spring', stiffness: 400, damping: 25 }
+            }
             className="flex items-center gap-3 rounded-2xl border border-cyan-500/20 px-4 py-3 shadow-lg backdrop-blur-xl"
             style={{ background: 'rgba(5, 15, 20, 0.9)' }}
           >
@@ -97,15 +106,20 @@ export default function PwaStatus() {
       <AnimatePresence>
         {online && !showOffline && !updateAvailable && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={shouldReduceMotion ? false : { opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
+            exit={shouldReduceMotion ? undefined : { opacity: 0, scale: 0.8 }}
+            transition={shouldReduceMotion ? { duration: 0 } : undefined}
             className="w-9 h-9 rounded-full flex items-center justify-center backdrop-blur-xl border border-white/5"
             style={{ background: 'rgba(5, 15, 10, 0.6)' }}
           >
             <motion.div
-              animate={{ scale: [1, 1.1, 1] }}
-              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+              animate={shouldReduceMotion ? undefined : { scale: [1, 1.1, 1] }}
+              transition={
+                shouldReduceMotion
+                  ? { duration: 0 }
+                  : { duration: 3, repeat: Infinity, ease: 'easeInOut' }
+              }
             >
               <Wifi className="w-3.5 h-3.5 text-emerald-400/60" strokeWidth={1.5} />
             </motion.div>

@@ -178,7 +178,7 @@ function SynapticFire({ mouse, shouldReduceMotion }) {
   useFrame((state) => {
     if (!ref.current) return
     if (shouldReduceMotion) return
-    
+
     try {
       const tx = (mouse?.current?.x || 0) * 2
       const ty = -(mouse?.current?.y || 0) * 2
@@ -265,7 +265,7 @@ export default function AuroraBackground({ mouse }) {
   return (
     <div className="fixed inset-0 z-0 noise-overlay">
       {noWebGl ? null : (
-        <ThreeScene 
+        <ThreeScene
         mouse={mouse}
         shouldReduceMotion={shouldReduceMotion}
       />

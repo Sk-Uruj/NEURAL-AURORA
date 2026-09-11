@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 
 const YT_BASE = 'https://www.googleapis.com/youtube/v3'
 
@@ -55,16 +56,16 @@ function VideoSkeleton({ tall }) {
             background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.03), transparent)',
             transform: 'translateX(-100%)',
           }}
-          animate={{ transform: ['translateX(-100%)', 'translateX(200%)'] }}
-          transition={{ duration: 1.8, repeat: Infinity, ease: 'linear' }}
+          animate={shouldReduceMotion ? undefined : { transform: ['translateX(-100%)', 'translateX(200%)'] }}
+          transition={shouldReduceMotion ? { duration: 0 } : { duration: 1.8, repeat: Infinity, ease: 'linear' }}
         />
       </div>
       {!tall && (
         <div className="p-3 sm:p-4 space-y-2.5">
           <div className="h-3 bg-white/[0.05] rounded-full w-3/4 overflow-hidden relative">
             <motion.div className="absolute inset-0" style={{ background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.04), transparent)', transform: 'translateX(-100%)' }}
-              animate={{ transform: ['translateX(-100%)', 'translateX(200%)'] }}
-              transition={{ duration: 1.8, repeat: Infinity, ease: 'linear' }}
+              animate={shouldReduceMotion ? undefined : { transform: ['translateX(-100%)', 'translateX(200%)'] }}
+              transition={shouldReduceMotion ? { duration: 0 } : { duration: 1.8, repeat: Infinity, ease: 'linear' }}
             />
           </div>
           <div className="h-2 bg-white/[0.03] rounded-full w-1/2" />
@@ -75,6 +76,7 @@ function VideoSkeleton({ tall }) {
 }
 
 function PlaylistCard({ playlist, onSelect }) {
+  const { t } = useTranslation()
   const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY
   const [videos, setVideos] = useState(null)
   const [open, setOpen] = useState(false)
@@ -106,7 +108,15 @@ function PlaylistCard({ playlist, onSelect }) {
       >
         <div className="w-14 h-10 rounded-lg overflow-hidden shrink-0 relative bg-white/[0.04]">
           {playlist.snippet.thumbnails?.default?.url && (
-            <img src={playlist.snippet.thumbnails.default.url} alt="" className="w-full h-full object-cover" />
+            <img 
+              src={playlist.snippet.thumbnails.default.url} 
+              alt="" 
+              width={120} 
+              height={90} 
+              loading="lazy" 
+              decoding="async" 
+              className="w-full h-full object-cover" 
+            />
           )}
           <div className="absolute inset-0 flex items-center justify-center bg-black/40">
             <motion.svg viewBox="0 0 24 24" fill="white" className="w-5 h-5 opacity-90"
@@ -118,7 +128,7 @@ function PlaylistCard({ playlist, onSelect }) {
         </div>
         <div className="min-w-0 flex-1">
           <p className="text-white/80 text-xs font-medium truncate leading-relaxed">{playlist.snippet.title}</p>
-          <p className="text-white/30 text-[10px] font-mono mt-0.5">{playlist.contentDetails?.itemCount || 0} videos</p>
+          <p className="text-white/30 text-[10px] font-mono mt-0.5">{t('youtube.videosCount', { count: playlist.contentDetails?.itemCount || 0 })}</p>
         </div>
         <motion.div
           animate={{ rotate: open ? 180 : 0 }}
@@ -144,13 +154,13 @@ function PlaylistCard({ playlist, onSelect }) {
               {loadingItems ? (
                 <div className="flex items-center justify-center py-4">
                   <motion.div
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+                    animate={shouldReduceMotion ? undefined : { rotate: 360 }}
+                    transition={shouldReduceMotion ? { duration: 0 } : { duration: 1, repeat: Infinity, ease: 'linear' }}
                     className="w-4 h-4 rounded-full border border-white/10 border-t-white/30"
                   />
                 </div>
               ) : videos?.length === 0 ? (
-                <p className="text-[11px] font-mono text-white/20 text-center py-3">No videos in this playlist</p>
+                <p className="text-[11px] font-mono text-white/20 text-center py-3">{t('youtube.noVideosInPlaylist')}</p>
               ) : (
                 videos?.map((v, i) => (
                   <motion.button
@@ -163,7 +173,15 @@ function PlaylistCard({ playlist, onSelect }) {
                   >
                     <div className="w-12 h-8 rounded-md overflow-hidden shrink-0 bg-white/[0.04]">
                       {v.snippet.thumbnails?.default?.url && (
-                        <img src={v.snippet.thumbnails.default.url} alt="" className="w-full h-full object-cover" />
+                        <img 
+                          src={v.snippet.thumbnails.default.url} 
+                          alt="" 
+                          width={120} 
+                          height={90} 
+                          loading="lazy" 
+                          decoding="async" 
+                          className="w-full h-full object-cover" 
+                        />
                       )}
                     </div>
                     <span className="text-white/50 group-hover:text-white/70 text-[11px] truncate leading-relaxed transition-colors">{v.snippet.title}</span>
@@ -198,6 +216,8 @@ const videoCardVariants = {
 }
 
 export default function YouTubeBrowse({ channelId, onComplete, onBack }) {
+  const { t } = useTranslation()
+  const shouldReduceMotion = useReducedMotion()
   const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY
   const [tab, setTab] = useState('videos')
   const [videos, setVideos] = useState([])
@@ -437,8 +457,8 @@ export default function YouTubeBrowse({ channelId, onComplete, onBack }) {
           </motion.div>
           <div className="ml-auto w-16 h-2 rounded-full bg-white/[0.03] overflow-hidden relative">
             <motion.div className="absolute inset-0" style={{ background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.04), transparent)', transform: 'translateX(-100%)' }}
-              animate={{ transform: ['translateX(-100%)', 'translateX(200%)'] }}
-              transition={{ duration: 1.8, repeat: Infinity, ease: 'linear' }}
+              animate={shouldReduceMotion ? undefined : { transform: ['translateX(-100%)', 'translateX(200%)'] }}
+              transition={shouldReduceMotion ? { duration: 0 } : { duration: 1.8, repeat: Infinity, ease: 'linear' }}
             />
           </div>
         </div>
@@ -487,7 +507,7 @@ export default function YouTubeBrowse({ channelId, onComplete, onBack }) {
           whileTap={{ scale: 0.98 }}
           className="text-[11px] font-mono text-white/25 hover:text-white/50 transition-colors tracking-wider uppercase"
         >
-          Back to verification
+          {t('youtube.backToVerification')}
         </motion.button>
       </div>
     )
@@ -537,7 +557,11 @@ export default function YouTubeBrowse({ channelId, onComplete, onBack }) {
             {channelInfo.snippet.thumbnails?.default?.url && (
               <motion.img
                 src={channelInfo.snippet.thumbnails.default.url}
-                alt=""
+                alt="Channel avatar"
+                width={88}
+                height={88}
+                loading="eager"
+                decoding="async"
                 className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-white/10 shrink-0"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
@@ -547,7 +571,7 @@ export default function YouTubeBrowse({ channelId, onComplete, onBack }) {
             <div className="min-w-0">
               <h2 className="text-white font-semibold text-sm truncate tracking-tight">{channelInfo.snippet.title}</h2>
               <p className="text-white/25 text-[10px] font-mono mt-0.5">
-                {parseInt(channelInfo.statistics?.subscriberCount || 0).toLocaleString()} subscribers
+                {parseInt(channelInfo.statistics?.subscriberCount || 0).toLocaleString()} {t('youtube.subscribers')}
               </p>
             </div>
             <div className="ml-auto">
@@ -556,7 +580,7 @@ export default function YouTubeBrowse({ channelId, onComplete, onBack }) {
                 transition={{ duration: 1.5, repeat: Infinity, type: 'spring', stiffness: 80, damping: 10 }}
                 className="px-2 py-0.5 rounded-full border border-emerald-400/15 bg-emerald-400/5"
               >
-                <span className="text-[9px] font-mono text-emerald-400/70 tracking-wider uppercase">Browse to verify</span>
+                <span className="text-[9px] font-mono text-emerald-400/70 tracking-wider uppercase">{t('youtube.browseToVerify')}</span>
               </motion.div>
             </div>
           </motion.div>
@@ -589,7 +613,7 @@ export default function YouTubeBrowse({ channelId, onComplete, onBack }) {
                       whileTap={{ scale: 0.95 }}
                       className="px-3 py-1.5 rounded-lg bg-white/10 border border-white/10 text-[10px] font-mono text-white/60 hover:text-white/80 hover:bg-white/15 transition-colors"
                     >
-                      Retry
+                      {t('youtube.retry')}
                     </motion.button>
                     <motion.button
                       onClick={stopVideo}
@@ -597,7 +621,7 @@ export default function YouTubeBrowse({ channelId, onComplete, onBack }) {
                       whileTap={{ scale: 0.95 }}
                       className="px-3 py-1.5 rounded-lg bg-white/[0.04] border border-white/[0.06] text-[11px] font-mono text-white/30 hover:text-white/50 transition-colors"
                     >
-                      Back to videos
+                      {t('youtube.backToVideos')}
                     </motion.button>
                   </div>
                 </div>
@@ -628,11 +652,11 @@ export default function YouTubeBrowse({ channelId, onComplete, onBack }) {
               <div className="flex flex-col sm:flex-row sm:items-center justify-between mt-2 gap-2 sm:gap-0">
                 <div className="flex items-center gap-2">
                   <motion.div
-                    animate={{ scale: [1, 1.2, 1] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
+                    animate={shouldReduceMotion ? undefined : { scale: [1, 1.2, 1] }}
+                    transition={shouldReduceMotion ? { duration: 0 } : { duration: 1.5, repeat: Infinity }}
                     className="w-1.5 h-1.5 rounded-full bg-emerald-400/60 shrink-0"
                   />
-                  <p className="text-[10px] font-mono text-white/20 tracking-wider">Watching to verify</p>
+                  <p className="text-[10px] font-mono text-white/20 tracking-wider">{t('youtube.watchingToVerify')}</p>
                 </div>
                 <div className="flex items-center gap-2 sm:gap-2.5">
                   {vidDuration && (
@@ -678,23 +702,23 @@ export default function YouTubeBrowse({ channelId, onComplete, onBack }) {
               </svg>
             </motion.button>
             <div className="flex gap-0.5 p-0.5 rounded-xl bg-white/[0.03] border border-white/[0.04] overflow-x-auto scrollbar-thin shrink min-w-0">
-              {['videos', 'shorts', 'playlists'].map(t => (
+              {['videos', 'shorts', 'playlists'].map(tKey => (
                 <motion.button
-                  key={t}
-                  onClick={() => setTab(t)}
+                  key={tKey}
+                  onClick={() => setTab(tKey)}
                   whileTap={{ scale: 0.96 }}
                   className={`relative shrink-0 px-3.5 py-1.5 rounded-lg text-[11px] font-medium transition-colors ${
-                    tab === t ? 'text-white' : 'text-white/30 hover:text-white/50'
+                    tab === tKey ? 'text-white' : 'text-white/30 hover:text-white/50'
                   }`}
                 >
-                  {tab === t && (
+                  {tab === tKey && (
                     <motion.div
                       layoutId="tab-indicator"
                       className="absolute inset-0 rounded-lg bg-white/[0.08]"
                       transition={{ type: 'spring', stiffness: 300, damping: 25 }}
                     />
                   )}
-                  <span className="relative z-10 font-mono tracking-wider uppercase">{t}</span>
+                  <span className="relative z-10 font-mono tracking-wider uppercase">{t('youtube.' + tKey)}</span>
                 </motion.button>
               ))}
             </div>
@@ -707,7 +731,7 @@ export default function YouTubeBrowse({ channelId, onComplete, onBack }) {
                   value={search}
                   onChange={e => setSearch(e.target.value)}
                   onKeyDown={e => e.key === 'Enter' && handleSearch()}
-                  placeholder={`Search ${tab}...`}
+                  placeholder={t('youtube.searchPlaceholder', { tab: t('youtube.' + tab) })}
                   className="w-28 sm:w-36 lg:w-44 bg-white/[0.03] border border-white/[0.06] rounded-lg pl-2.5 pr-7 py-1.5 text-[11px] text-white/60 placeholder-white/15 outline-none focus:border-white/15 focus:bg-white/[0.04] transition-all font-mono"
                   style={{ boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.03)' }}
                 />
@@ -759,7 +783,11 @@ export default function YouTubeBrowse({ channelId, onComplete, onBack }) {
                             {v.snippet.thumbnails?.high?.url && (
                               <motion.img
                                 src={v.snippet.thumbnails.high.url}
-                                alt=""
+                                alt={v.snippet.title}
+                                width={480}
+                                height={360}
+                                loading="lazy"
+                                decoding="async"
                                 className="w-full h-full object-cover"
                                 whileHover={{ scale: 1.06 }}
                                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
@@ -811,11 +839,11 @@ export default function YouTubeBrowse({ channelId, onComplete, onBack }) {
                       >
                         {loadingMore ? (
                           <span className="flex items-center gap-2">
-                            <motion.div animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: 'linear' }} className="w-3 h-3 rounded-full border border-white/10 border-t-white/30" />
+                            <motion.div animate={shouldReduceMotion ? undefined : { rotate: 360 }} transition={shouldReduceMotion ? { duration: 0 } : { duration: 1, repeat: Infinity, ease: 'linear' }} className="w-3 h-3 rounded-full border border-white/10 border-t-white/30" />
                             Loading
                           </span>
                         ) : (
-                          'Load more videos'
+                          t('youtube.loadMore')
                         )}
                       </motion.button>
                     </motion.div>
@@ -831,8 +859,8 @@ export default function YouTubeBrowse({ channelId, onComplete, onBack }) {
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className="w-6 h-6 text-white/15"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" strokeLinecap="round" /><polyline points="14 2 14 8 20 8" strokeLinecap="round" /><line x1="9" y1="15" x2="15" y2="15" strokeLinecap="round" /></svg>
                       </div>
                       <div className="text-center">
-                        <p className="text-sm font-medium text-white/20">No videos found</p>
-                        <p className="text-[10px] font-mono text-white/10 mt-1">Try a different search or check back later</p>
+                        <p className="text-sm font-medium text-white/20">{t('youtube.noVideos')}</p>
+                        <p className="text-[10px] font-mono text-white/10 mt-1">{t('youtube.tryDifferentSearch')}</p>
                       </div>
                     </motion.div>
                   )}
@@ -868,7 +896,11 @@ export default function YouTubeBrowse({ channelId, onComplete, onBack }) {
                             {v.snippet.thumbnails?.high?.url && (
                               <motion.img
                                 src={v.snippet.thumbnails.high.url}
-                                alt=""
+                                alt={v.snippet.title}
+                                width={480}
+                                height={360}
+                                loading="lazy"
+                                decoding="async"
                                 className="w-full h-full object-cover"
                                 whileHover={{ scale: 1.1 }}
                                 transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
@@ -922,11 +954,11 @@ export default function YouTubeBrowse({ channelId, onComplete, onBack }) {
                       >
                         {loadingMore ? (
                           <span className="flex items-center gap-2">
-                            <motion.div animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: 'linear' }} className="w-3 h-3 rounded-full border border-white/10 border-t-white/30" />
+                            <motion.div animate={shouldReduceMotion ? undefined : { rotate: 360 }} transition={shouldReduceMotion ? { duration: 0 } : { duration: 1, repeat: Infinity, ease: 'linear' }} className="w-3 h-3 rounded-full border border-white/10 border-t-white/30" />
                             Loading
                           </span>
                         ) : (
-                          'Load more shorts'
+                          t('youtube.loadMore')
                         )}
                       </motion.button>
                     </motion.div>
@@ -944,8 +976,8 @@ export default function YouTubeBrowse({ channelId, onComplete, onBack }) {
                         </svg>
                       </div>
                       <div className="text-center">
-                        <p className="text-sm font-medium text-white/20">No shorts found</p>
-                        <p className="text-[10px] font-mono text-white/10 mt-1">Short-form content will appear here</p>
+                        <p className="text-sm font-medium text-white/20">{t('youtube.noShorts')}</p>
+                        <p className="text-[10px] font-mono text-white/10 mt-1">{t('youtube.shortsAppearHere')}</p>
                       </div>
                     </motion.div>
                   )}
@@ -980,8 +1012,8 @@ export default function YouTubeBrowse({ channelId, onComplete, onBack }) {
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className="w-6 h-6 text-white/15"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z" strokeLinecap="round" /></svg>
                       </div>
                       <div className="text-center">
-                        <p className="text-sm font-medium text-white/20">No public playlists</p>
-                        <p className="text-[10px] font-mono text-white/10 mt-1">Channel playlists will appear here</p>
+                        <p className="text-sm font-medium text-white/20">{t('youtube.noPlaylists')}</p>
+                        <p className="text-[10px] font-mono text-white/10 mt-1">{t('youtube.playlistsAppearHere')}</p>
                       </div>
                     </motion.div>
                   )}

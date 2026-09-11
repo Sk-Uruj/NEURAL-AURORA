@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
 import { getAdminSettings, updateAdminSettings } from '../../lib/supabase'
 
 function Skeleton() {
@@ -20,6 +20,7 @@ export default function AdminYouTubeConfig() {
   const [message, setMessage] = useState(null)
   const [loading, setLoading] = useState(true)
   const [testStatus, setTestStatus] = useState(null)
+  const shouldReduceMotion = useReducedMotion()
 
   useEffect(() => { load() }, [])
 
@@ -95,9 +96,9 @@ export default function AdminYouTubeConfig() {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ type: 'spring', stiffness: 80, damping: 18 }}
+      initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 12 }}
+      animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
+      transition={shouldReduceMotion ? { duration: 0 } : { type: 'spring', stiffness: 80, damping: 18 }}
     >
       <div className="mb-8">
         <h1 className="font-display text-2xl font-bold tracking-tight" style={{ color: 'var(--text-primary)' }}>
@@ -109,9 +110,9 @@ export default function AdminYouTubeConfig() {
       </div>
 
       <motion.div
-        initial={{ opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1, type: 'spring', stiffness: 80, damping: 18 }}
+        initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 16 }}
+        animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
+        transition={shouldReduceMotion ? { duration: 0 } : { delay: 0.1, type: 'spring', stiffness: 80, damping: 18 }}
         className="max-w-xl rounded-2xl border p-5 md:p-7 space-y-6"
         style={{
           borderColor: 'var(--border-color)',
@@ -167,16 +168,16 @@ export default function AdminYouTubeConfig() {
           <motion.button
             onClick={handleSave}
             disabled={saving || !channelId.trim()}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            whileHover={shouldReduceMotion ? undefined : { scale: 1.02 }}
+            whileTap={shouldReduceMotion ? undefined : { scale: 0.98 }}
             className="relative overflow-hidden rounded-xl px-5 py-2.5 text-sm font-medium text-white transition-all disabled:opacity-40"
             style={{ background: 'var(--accent)' }}
           >
             {saving ? (
               <span className="flex items-center gap-2">
                 <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+                  animate={shouldReduceMotion ? undefined : { rotate: 360 }}
+                  transition={shouldReduceMotion ? { duration: 0 } : { duration: 1, repeat: Infinity, ease: 'linear' }}
                   className="w-3.5 h-3.5 rounded-full border-2 border-white/20 border-t-white/80"
                 />
                 Saving
@@ -189,8 +190,8 @@ export default function AdminYouTubeConfig() {
           <motion.button
             onClick={handleTestConnection}
             disabled={testStatus?.type === 'testing'}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            whileHover={shouldReduceMotion ? undefined : { scale: 1.02 }}
+            whileTap={shouldReduceMotion ? undefined : { scale: 0.98 }}
             className="rounded-xl px-4 py-2.5 text-sm font-medium transition-all border disabled:opacity-40"
             style={{
               borderColor: 'var(--border-color)',
@@ -201,8 +202,8 @@ export default function AdminYouTubeConfig() {
             {testStatus?.type === 'testing' ? (
               <span className="flex items-center gap-2">
                 <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+                  animate={shouldReduceMotion ? undefined : { rotate: 360 }}
+                  transition={shouldReduceMotion ? { duration: 0 } : { duration: 1, repeat: Infinity, ease: 'linear' }}
                   className="w-3.5 h-3.5 rounded-full border-2 border-white/10 border-t-white/30"
                 />
                 Testing
@@ -217,10 +218,10 @@ export default function AdminYouTubeConfig() {
         <AnimatePresence>
           {message && (
             <motion.div
-              initial={{ opacity: 0, y: -8, height: 0 }}
-              animate={{ opacity: 1, y: 0, height: 'auto' }}
-              exit={{ opacity: 0, y: -8, height: 0 }}
-              transition={{ type: 'spring', stiffness: 100, damping: 20 }}
+              initial={shouldReduceMotion ? { opacity: 1, height: 'auto' } : { opacity: 0, y: -8, height: 0 }}
+              animate={shouldReduceMotion ? { opacity: 1, height: 'auto' } : { opacity: 1, y: 0, height: 'auto' }}
+              exit={shouldReduceMotion ? { opacity: 0, height: 'auto' } : { opacity: 0, y: -8, height: 0 }}
+              transition={shouldReduceMotion ? { duration: 0 } : { type: 'spring', stiffness: 100, damping: 20 }}
               className="flex items-center gap-2 text-sm overflow-hidden"
             >
               <div className={`w-1.5 h-1.5 rounded-full shrink-0 ${message.type === 'success' ? 'bg-emerald-400' : 'bg-red-400'}`} />
@@ -232,10 +233,10 @@ export default function AdminYouTubeConfig() {
 
           {testStatus && testStatus.type !== 'testing' && (
             <motion.div
-              initial={{ opacity: 0, y: -8, height: 0 }}
-              animate={{ opacity: 1, y: 0, height: 'auto' }}
-              exit={{ opacity: 0, y: -8, height: 0 }}
-              transition={{ type: 'spring', stiffness: 100, damping: 20 }}
+              initial={shouldReduceMotion ? { opacity: 1, height: 'auto' } : { opacity: 0, y: -8, height: 0 }}
+              animate={shouldReduceMotion ? { opacity: 1, height: 'auto' } : { opacity: 1, y: 0, height: 'auto' }}
+              exit={shouldReduceMotion ? { opacity: 0, height: 'auto' } : { opacity: 0, y: -8, height: 0 }}
+              transition={shouldReduceMotion ? { duration: 0 } : { type: 'spring', stiffness: 100, damping: 20 }}
               className="flex items-start gap-2.5 text-sm overflow-hidden p-3 rounded-xl"
               style={{
                 background: testStatus.type === 'success' ? 'rgba(16,185,129,0.06)' : 'rgba(239,68,68,0.06)',
@@ -260,9 +261,9 @@ export default function AdminYouTubeConfig() {
 
       {/* Setup guide */}
       <motion.div
-        initial={{ opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, type: 'spring', stiffness: 80, damping: 18 }}
+        initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 16 }}
+        animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
+        transition={shouldReduceMotion ? { duration: 0 } : { delay: 0.2, type: 'spring', stiffness: 80, damping: 18 }}
         className="max-w-xl mt-6 rounded-2xl border p-5 md:p-7"
         style={{
           borderColor: 'var(--border-color)',
@@ -281,9 +282,9 @@ export default function AdminYouTubeConfig() {
           ].map(([title, desc], i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, x: -8 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.3 + i * 0.06, type: 'spring', stiffness: 100, damping: 20 }}
+              initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, x: -8 }}
+              animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, x: 0 }}
+              transition={shouldReduceMotion ? { duration: 0 } : { delay: 0.3 + i * 0.06, type: 'spring', stiffness: 100, damping: 20 }}
               className="flex gap-3"
             >
               <div className="flex items-center justify-center w-6 h-6 rounded-full shrink-0 mt-0.5"

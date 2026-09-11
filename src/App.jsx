@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
-import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion'
+import { motion, AnimatePresence, useScroll, useSpring , MotionConfig } from 'framer-motion'
 import { AuthProvider } from './context/AuthContext'
+import { ToastProvider } from './context/ToastContext'
 import { AutoTraverseProvider } from './context/AutoTraverseContext'
 import { MoodProvider } from './context/MoodContext'
 import AutoTraverseEffect from './components/ui/auto-traverse-effect'
@@ -31,6 +32,7 @@ import AdminDashboard from './components/admin/AdminDashboard'
 import { AdminRoute } from './components/admin/ProtectedRoute'
 import BottomToTop from './components/ui/bottom-to-top'
 import PwaStatus from './components/ui/PwaStatus'
+import { NeuralCursor } from './components/ui/neural-cursor'
 import { usePersonalInfo } from './lib/usePortfolioData'
 import { useMood } from './context/MoodContext'
 
@@ -43,7 +45,7 @@ function SectionSeparator() {
 }
 
 function HomePage() {
-  const { loaded } = usePersonalInfo()
+  const { hasLoaded } = usePersonalInfo()
   const mouse = useRef({ x: 0, y: 0 })
 
   const handleMouseMove = (e) => {
@@ -53,7 +55,7 @@ function HomePage() {
     }
   }
 
-  if (!loaded) {
+  if (!hasLoaded) {
     return <div className="relative min-h-[100dvh] overflow-hidden" />
   }
 
@@ -189,18 +191,6 @@ function AppContent() {
   const location = useLocation()
   const isAuthRoute = location.pathname.startsWith('/login') || location.pathname.startsWith('/forgot-password') || location.pathname.startsWith('/admin') || location.pathname.startsWith('/support')
   const [loaderDone, setLoaderDone] = useState(isAuthRoute)
-  const glowRef = useRef(null)
-
-  useEffect(() => {
-    function onMouseMove(e) {
-      if (glowRef.current) {
-        glowRef.current.style.left = e.clientX + 'px'
-        glowRef.current.style.top = e.clientY + 'px'
-      }
-    }
-    window.addEventListener('mousemove', onMouseMove)
-    return () => window.removeEventListener('mousemove', onMouseMove)
-  }, [])
 
   useEffect(() => {
     import('@splinetool/react-spline')
@@ -213,7 +203,7 @@ function AppContent() {
       <BottomToTop />
       <PwaStatus />
       {loaderDone && <MoodMusicToggle />}
-      <div ref={glowRef} className="cursor-glow" />
+      <NeuralCursor />
       {!loaderDone && <StartingLoader onComplete={() => setLoaderDone(true)} />}
       <AnimatePresence>
         {loaderDone && (
@@ -250,12 +240,16 @@ function AppContent() {
 
 export default function App() {
   return (
+    <MotionConfig reducedMotion="user">
     <AuthProvider>
-      <AutoTraverseProvider>
-        <MoodProvider>
-          <AppContent />
-        </MoodProvider>
-      </AutoTraverseProvider>
+      <ToastProvider>
+        <AutoTraverseProvider>
+          <MoodProvider>
+            <AppContent />
+          </MoodProvider>
+        </AutoTraverseProvider>
+      </ToastProvider>
     </AuthProvider>
+    </MotionConfig>
   )
 }

@@ -1,0 +1,349 @@
+{
+  "nav": {
+    "about": "Over mij",
+    "skills": "Vaardigheden",
+    "projects": "Projecten",
+    "services": "Diensten",
+    "resume": "CV",
+    "contact": "Contact",
+    "more": "Meer",
+    "support": "Steun",
+    "login": "Inloggen en instellen",
+    "admin": "Admin-dashboard",
+    "crm": "CRM-dashboard",
+    "getStarted": "Aan de slag",
+    "menu": "Menu"
+  },
+  "common": {
+    "home": "Home",
+    "menu": "Menu"
+  },
+  "hero": {
+    "available": "Beschikbaar voor",
+    "collaboration": "samenwerking",
+    "viewProjects": "Projecten bekijken",
+    "resume": "CV",
+    "title": "Digitale ervaringen creëren",
+    "subtitle": "waar neurale netwerken aurora-licht ontmoeten"
+  },
+  "about": {
+    "eyebrow": "Over mij",
+    "titleArchitect": "Architect van",
+    "titleDigitalExperience": "digitale ervaring",
+    "knownAsPrefix": "Op internet bekend als",
+    "knownAsSuffix": ", bouw ik systemen waar code visuele poëzie ontmoet. Elk project is een kans om de grenzen van de browser te verleggen.",
+    "digitalFootprint": "Digitale voetafdruk",
+    "avatarAlt": "Profielavatar",
+    "currentFocus": "Ik bouw momenteel NEURAL AURORA en verken de kruising van 3D-graphics en webtechnologie."
+  },
+  "skills": {
+    "eyebrow": "Expertise",
+    "titleTechnical": "Technische",
+    "titleStack": "stack",
+    "offlineNotice": "Offline-modus — statische tech-stack als fallback",
+    "noData": "Er is momenteel geen data over technische vaardigheden beschikbaar.",
+    "noSkillsInCategory": "Geen vaardigheden in deze categorie",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "language": "Talen",
+      "devops": "DevOps",
+      "design": "Design"
+    }
+  },
+  "projects": {
+    "eyebrow": "Portfolio",
+    "titleNeural": "Neurale",
+    "titleProjects": "projecten",
+    "subtitle": "Elk project is een knooppunt in een groeiend neuraal netwerk. Klik om de synaptische verbindingen te verkennen.",
+    "offlineNotice": "Offline-modus — gecachte projecten als fallback",
+    "noData": "Geen projecten gevonden in de neurale repository.",
+    "source": "Bron",
+    "link": "Link",
+    "demo": "Demo"
+  },
+  "resume": {
+    "eyebrow": "Curriculum Vitae",
+    "titleDownload": "Download mijn",
+    "titleResume": "CV",
+    "subtitle": "Een uitgebreid overzicht van mijn ervaring, projecten en technische expertise. Wordt regelmatig bijgewerkt.",
+    "downloadPdf": "PDF downloaden",
+    "pdfFormat": "PDF-formaat . 2,4 MB"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "titleLetsBuild": "Laten we",
+    "titleTogether": "samen bouwen",
+    "subtitle": "Een project in gedachten of gewoon hallo zeggen? Het neurale netwerk staat altijd open voor nieuwe verbindingen.",
+    "findMeOn": "Vind me op",
+    "nameLabel": "Naam",
+    "namePlaceholder": "Uw naam",
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "your@email.com",
+    "messageLabel": "Bericht",
+    "messagePlaceholder": "Vertel me over uw project...",
+    "sendMessage": "Bericht verzenden",
+    "sending": "Verzenden...",
+    "sentSuccess": "Bericht verzonden! Ik neem binnenkort contact met u op.",
+    "tagline": "NEURAL AURORA . Synaptisch portfolio",
+    "builtWith": "Gebouwd met React, Three.js en smaakvolle designkeuzes"
+  },
+  "reviews": {
+    "title": "Wat mensen zeggen",
+    "offlineError": "Offline-modus — recensies konden niet worden geladen",
+    "offlineRefreshError": "Offline-modus — live recensies konden niet worden ververst",
+    "noReviews": "Nog geen recensies. Kom snel terug!",
+    "leaveReview": "Recensie achterlaten",
+    "shareThoughts": "Deel uw mening over mijn werk",
+    "nameLabel": "Naam",
+    "namePlaceholder": "Uw naam",
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "optioneel",
+    "ratingLabel": "Beoordeling",
+    "messageLabel": "Bericht",
+    "messagePlaceholder": "Schrijf uw recensie...",
+    "submitReview": "Recensie versturen",
+    "submitting": "Versturen...",
+    "thankYou": "Dank u!",
+    "submittedMessage": "Uw recensie is verzonden en wacht op goedkeuring.",
+    "submitAnother": "Nog een recensie versturen"
+  },
+  "footer": {
+    "skills": "Vaardigheden",
+    "projects": "Projecten",
+    "connect": "Contact",
+    "synapticPortfolio": "Synaptisch portfolio",
+    "reactNext": "React / Next.js",
+    "threeWebGL": "Three.js / WebGL",
+    "uiUxDesign": "UI/UX-design",
+    "fullStackDev": "Full-stack ontwikkeling",
+    "neuralAurora": "NEURAL AURORA",
+    "synapticDashboard": "Synaptisch dashboard",
+    "auroraEngine": "Aurora-engine",
+    "viewAll": "Alles bekijken"
+  },
+  "loader": {
+    "verificationRequired": "Verificatie vereist",
+    "proveIdentity": "Bewijs uw identiteit om toegang te krijgen tot het systeem.",
+    "cards": {
+      "sayName": "Zeg \"{{name}}\"",
+      "voiceRecognition": "Spraakherkenning",
+      "solvePuzzle": "Puzzel oplossen",
+      "oneQuestion": "Eén vraag",
+      "traverseOn": "Verder",
+      "autoTraverse": "Auto-rondleiding",
+      "traverseActiveDesc": "Automatische demo-modus actief",
+      "traverseTourDesc": "Volledige site-demo-rondleiding",
+      "watchDevAds": "Dev-advertenties bekijken",
+      "videoAdsToUnlock": "Video-advertenties om te ontgrendelen",
+      "moodSwing": "Mood Swing",
+      "setVibeMusic": "Sfeer en muziek instellen",
+      "neuralCmd": "Neural Aurora CMD",
+      "exploreTerminal": "Verken via terminal",
+      "takeInterview": "Doe mijn interview",
+      "voiceAiInterview": "Gesproken AI-interview",
+      "patternLock": "Neuraal patroonslot",
+      "memoryChallenge": "Geheugenuitdaging",
+      "channelStream": "Kanaalstream",
+      "browseVideos": "Mijn video's bekijken",
+      "skipVibes": "Sfeer overslaan",
+      "directEntry": "Directe toegang",
+      "openDocs": "Documentatie openen"
+    },
+    "interview": {
+      "chatWith": "Chat met {{name}}",
+      "askAnything": "Vraag me alles",
+      "live": "Live",
+      "gettingReady": "Voorbereiden...",
+      "thinking": "{{name}} denkt...",
+      "you": "U",
+      "listening": "Ik luister... ga uw gang, vraag me alles",
+      "tapMic": "Tik op de microfoon en stel uw vraag",
+      "typeQuestion": "Typ uw vraag...",
+      "ask": "Vragen",
+      "youAsked": "U vroeg",
+      "says": "{{name}} zegt",
+      "askAnother": "Nog een vraag stellen",
+      "endInterview": "Interview beëindigen",
+      "allDone": "Alles klaar",
+      "enterPortfolio": "Portfolio openen"
+    },
+    "voice": {
+      "instruction": "Zeg \"{{name}}\" om uw identiteit te verifiëren",
+      "listening": "Ik luister...",
+      "trySaying": "Probeer \"{{name}}\" te zeggen",
+      "verified": "Identiteit geverifieerd"
+    },
+    "success": {
+      "verified": "Identiteit geverifieerd",
+      "accessGranted": "Toegang verleend",
+      "welcome": "Welkom bij NEURAL AURORA"
+    },
+    "cmd": {
+      "email": "E-mail",
+      "availableOnRequest": "beschikbaar op aanvraag"
+    }
+  },
+  "blog": {
+    "eyebrow": "Blog",
+    "titlePrefix": "Gedachten en",
+    "titleSuffix": "ideeën",
+    "subtitle": "Ik deel wat ik leer, bouw en denk.",
+    "searchPlaceholder": "Zoek berichten...",
+    "noPosts": "Geen berichten gevonden. Probeer een andere zoekopdracht.",
+    "postNotFound": "Bericht niet gevonden",
+    "backToBlog": "Terug naar blog",
+    "blogPostEyebrow": "Blogbericht",
+    "readMore": "Meer berichten lezen",
+    "allPosts": "Alle berichten"
+  },
+  "services": {
+    "options": "{{count}} opties",
+    "viewDetails": "Details bekijken",
+    "step": "Stap {{number}}",
+    "whatIncluded": "Wat is inbegrepen",
+    "selectType": "Projecttype kiezen",
+    "backToServices": "Terug naar diensten",
+    "getInTouch": "Neem contact op",
+    "projectPlaceholder": "Vertel me over uw {{title}}-project...",
+    "mostPopular": "Meest populair",
+    "getStarted": "Aan de slag",
+    "processing": "Verwerken...",
+    "serviceNotFound": "Dienst niet gevonden",
+    "price": "Prijs",
+    "delivery": "Levering",
+    "pay": "Betalen",
+    "paymentConfirmed": "Betaling bevestigd",
+    "nav": {
+      "services": "Diensten",
+      "process": "Proces",
+      "pricing": "Prijzen",
+      "faq": "FAQ",
+      "contact": "Contact"
+    }
+  },
+  "support": {
+    "eyebrow": "Steun",
+    "heroSubtitle": "Open source & voor altijd gratis",
+    "heroDescription": "Dit project is 100% gratis en open source. Uw bijdrage houdt het levend, financiert nieuwe functies en helpt ons concurreren met betaalde alternatieven — terwijl NEURAL AURORA gratis blijft voor iedereen.",
+    "floatingButton": "Steun",
+    "sponsorPlaceholder": "Vertel me over uw project of sponsorideeën...",
+    "nav": {
+      "contribute": "Bijdragen",
+      "whySupport": "Waarom steunen",
+      "faq": "FAQ",
+      "contact": "Contact"
+    },
+    "presets": {
+      "coffee": "Koffie kopen",
+      "feature": "Een functie steunen",
+      "speed": "Ontwikkeling versnellen",
+      "rocket": "Lanceerbooster",
+      "crown": "Premium-backer",
+      "legend": "Legendarisch"
+    }
+  },
+  "more": {
+    "eyebrow": "Meer",
+    "titlePrefix": "Voorbij de",
+    "titleSuffix": "code",
+    "subtitle": "Mijn reis door onderwijs, ervaring, ideeën en inzichten.",
+    "education": "Opleiding",
+    "experience": "Werkervaring",
+    "latestPosts": "Laatste blogberichten",
+    "viewAll": "Alles bekijken",
+    "caseStudies": "Casestudy's",
+    "nav": {
+      "timeline": "Tijdlijn",
+      "caseStudies": "Casestudy's",
+      "blog": "Blog"
+    }
+  },
+  "caseStudy": {
+    "notFound": "Casestudy niet gevonden",
+    "backToStudies": "Terug naar casestudy's",
+    "eyebrow": "Casestudy",
+    "outcome": "Resultaat",
+    "fullAnalysis": "Volledige analyse",
+    "viewAll": "Alle casestudy's bekijken"
+  },
+  "contributors": {
+    "eyebrow": "Bijdragers",
+    "titlePrefix": "De mensen achter",
+    "subtitle": "Elke bijdrager — ontwikkelaar of donateur — helpt dit project gratis en open source te houden.",
+    "becomeContributor": "Word een bijdrager",
+    "becomeContributorSubtitle": "Steun het project en word hier vermeld"
+  },
+  "mood": {
+    "title": "Mood Swing",
+    "subtitle": "Stel de sfeer in voor het binnenkomen",
+    "footnote": "Kies uw stemming → muziek bepaalt de sfeer van het verkennen",
+    "moods": {
+      "energetic": {
+        "label": "Energiek",
+        "description": "Opgeladen en enthousiast"
+      },
+      "calm": {
+        "label": "Rustig",
+        "description": "Chill en ontspannen sfeer"
+      },
+      "happy": {
+        "label": "Blij",
+        "description": "Vrolijk en helder"
+      },
+      "focused": {
+        "label": "Gefocust",
+        "description": "Diepe flow-staat"
+      },
+      "mysterious": {
+        "label": "Mysterieus",
+        "description": "Donker en sfeervol"
+      },
+      "euphoric": {
+        "label": "Euforisch",
+        "description": "Transcendente golven"
+      }
+    }
+  },
+  "ads": {
+    "ad": "Advertentie",
+    "video": "Video",
+    "short": "Kort",
+    "sponsored": "Gesponsord",
+    "videoUnavailable": "Video niet beschikbaar",
+    "unavailable": "Niet beschikbaar",
+    "adComplete": "Advertentie voltooid",
+    "enteringIn": "Binnenkomen over {{count}}s",
+    "skip": "Overslaan",
+    "autoAd": "Auto-advertentie",
+    "googleAd": "Google-advertentie",
+    "shortAd": "Korte advertentie",
+    "videoAd": "Video-advertentie"
+  },
+  "youtube": {
+    "watchingToVerify": "Bekijken om te verifiëren",
+    "videos": "Video's",
+    "shorts": "Shorts",
+    "playlists": "Afspeellijsten",
+    "searchPlaceholder": "Zoek in {{tab}}...",
+    "noVideos": "Geen video's gevonden",
+    "noShorts": "Geen shorts gevonden",
+    "noPlaylists": "Geen openbare afspeellijsten",
+    "loadMore": "Meer laden",
+    "tryDifferentSearch": "Probeer een andere zoekopdracht of kom later terug",
+    "shortsAppearHere": "Korte content verschijnt hier",
+    "playlistsAppearHere": "Afspeellijsten van het kanaal verschijnen hier",
+    "backToVerification": "Terug naar verificatie",
+    "backToVideos": "Terug naar video's",
+    "browseToVerify": "Bladeren om te verifiëren",
+    "retry": "Opnieuw",
+    "subscribers": "abonnees",
+    "videosCount": "{{count}} video's",
+    "noVideosInPlaylist": "Geen video's in deze afspeellijst"
+  },
+  "theme": {
+    "switchToDark": "Overschakelen naar donkere modus",
+    "switchToLight": "Overschakelen naar lichte modus",
+    "searchPlaceholder": "Zoeken..."
+  }
+}

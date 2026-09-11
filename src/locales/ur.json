@@ -1,0 +1,349 @@
+{
+  "nav": {
+    "about": "میرے بارے میں",
+    "skills": "مہارتیں",
+    "projects": "پراجیکٹس",
+    "services": "خدمات",
+    "resume": "ریزیومے",
+    "contact": "رابطہ",
+    "more": "مزید",
+    "support": "سپورٹ",
+    "login": "لاگ ان اور سیٹ اپ",
+    "admin": "ایڈمن پینل",
+    "crm": "CRM پینل",
+    "getStarted": "شروع کریں",
+    "menu": "مینو"
+  },
+  "common": {
+    "home": "ہوم",
+    "menu": "مینو"
+  },
+  "hero": {
+    "available": "شراکت کے لیے",
+    "collaboration": "تیار",
+    "viewProjects": "پراجیکٹس دیکھیں",
+    "resume": "ریزیومے",
+    "title": "ڈیجیٹل تجربات تخلیق کرنا",
+    "subtitle": "جہاں نیورل نیٹ ورک ارورہ کی روشنی سے ملتے ہیں"
+  },
+  "about": {
+    "eyebrow": "میرے بارے میں",
+    "titleArchitect": "ڈیجیٹل",
+    "titleDigitalExperience": "تجربے کے معمار",
+    "knownAsPrefix": "انٹرنیٹ پر",
+    "knownAsSuffix": "کے نام سے مشہور ہوں، میں ایسے نظام بناتا ہوں جہاں کوڈ بصری شاعری سے ملتا ہے۔ ہر پراجیکٹ براؤزر کی حدود کو آگے بڑھانے کا موقع ہے۔",
+    "digitalFootprint": "ڈیجیٹل نقش",
+    "avatarAlt": "پروفائل ایوار",
+    "currentFocus": "فی الحال NEURAL AURORA بنا رہا ہوں اور تھری ڈی گرافکس اور ویب ٹیکنالوجی کے سنگم کو تلاش کر رہا ہوں۔"
+  },
+  "skills": {
+    "eyebrow": "مہارت",
+    "titleTechnical": "تکنیکی",
+    "titleStack": "اسٹیک",
+    "offlineNotice": "آف لائن موڈ — اسٹیٹک ٹیکنالوجی اسٹیک دکھایا جا رہا ہے",
+    "noData": "فی الحال تکنیکی مہارتوں کا کوئی ڈیٹا دستیاب نہیں ہے۔",
+    "noSkillsInCategory": "اس زمرے میں کوئی مہارت نہیں",
+    "categories": {
+      "frontend": "فرنٹ اینڈ",
+      "backend": "بیک اینڈ",
+      "language": "زبانیں",
+      "devops": "DevOps",
+      "design": "ڈیزائن"
+    }
+  },
+  "projects": {
+    "eyebrow": "پورٹ فولیو",
+    "titleNeural": "نیورل",
+    "titleProjects": "پراجیکٹس",
+    "subtitle": "ہر پراجیکٹ ایک بڑھتے ہوئے نیورل نیٹ ورک کا ایک نوڈ ہے۔ سیناپٹک روابط دریافت کرنے کے لیے کلک کریں۔",
+    "offlineNotice": "آف لائن موڈ — کیشڈ پراجیکٹس دکھائے جا رہے ہیں",
+    "noData": "نیورل ریپوزٹری میں کوئی پراجیکٹ نہیں ملا۔",
+    "source": "سورس",
+    "link": "لنک",
+    "demo": "ڈیمو"
+  },
+  "resume": {
+    "eyebrow": "ریزیومے",
+    "titleDownload": "ڈاؤن لوڈ",
+    "titleResume": "میرا ریزیومے",
+    "subtitle": "میرے تجربے، پراجیکٹس اور تکنیکی مہارت کا جامع خلاصہ۔ باقاعدگی سے اپ ڈیٹ ہوتا ہے۔",
+    "downloadPdf": "PDF ڈاؤن لوڈ",
+    "pdfFormat": "PDF فارمیٹ . 2.4 MB"
+  },
+  "contact": {
+    "eyebrow": "رابطہ",
+    "titleLetsBuild": "آئیے مل کر",
+    "titleTogether": "بنائیں",
+    "subtitle": "کوئی پراجیکٹ ذہن میں ہے یا صرف سلام کرنا چاہتے ہیں؟ نیورل نیٹ ورک نئے رابطوں کے لیے ہمیشہ کھلا ہے۔",
+    "findMeOn": "مجھے یہاں تلاش کریں",
+    "nameLabel": "نام",
+    "namePlaceholder": "آپ کا نام",
+    "emailLabel": "ای میل",
+    "emailPlaceholder": "your@email.com",
+    "messageLabel": "پیغام",
+    "messagePlaceholder": "اپنے پراجیکٹ کے بارے میں بتائیں...",
+    "sendMessage": "پیغام بھیجیں",
+    "sending": "بھیجا جا رہا ہے...",
+    "sentSuccess": "پیغام بھیج دیا گیا! میں جلد آپ سے رابطہ کروں گا۔",
+    "tagline": "NEURAL AURORA . سیناپٹک پورٹ فولیو",
+    "builtWith": "React، Three.js اور شائستہ ڈیزائن کے ساتھ بنایا گیا"
+  },
+  "reviews": {
+    "title": "لوگ کیا کہتے ہیں",
+    "offlineError": "آف لائن موڈ — جائزے لوڈ نہیں ہو سکے",
+    "offlineRefreshError": "آف لائن موڈ — لائیو جائزے ریفریش نہیں ہو سکے",
+    "noReviews": "ابھی کوئی جائزہ نہیں۔ جلد واپس آئیں!",
+    "leaveReview": "جائزہ دیں",
+    "shareThoughts": "میرے کام کے بارے میں اپنی رائے شیئر کریں",
+    "nameLabel": "نام",
+    "namePlaceholder": "آپ کا نام",
+    "emailLabel": "ای میل",
+    "emailPlaceholder": "اختیاری",
+    "ratingLabel": "درجہ",
+    "messageLabel": "پیغام",
+    "messagePlaceholder": "اپنا جائزہ لکھیں...",
+    "submitReview": "جائزہ بھیجیں",
+    "submitting": "بھیجا جا رہا ہے...",
+    "thankYou": "شکریہ!",
+    "submittedMessage": "آپ کا جائزہ بھیج دیا گیا ہے اور منظوری کے منتظر ہے۔",
+    "submitAnother": "ایک اور جائزہ بھیجیں"
+  },
+  "footer": {
+    "skills": "مہارتیں",
+    "projects": "پراجیکٹس",
+    "connect": "رابطہ",
+    "synapticPortfolio": "سیناپٹک پورٹ فولیو",
+    "reactNext": "React / Next.js",
+    "threeWebGL": "Three.js / WebGL",
+    "uiUxDesign": "UI/UX ڈیزائن",
+    "fullStackDev": "فل اسٹیک ڈیولپمنٹ",
+    "neuralAurora": "NEURAL AURORA",
+    "synapticDashboard": "سیناپٹک پینل",
+    "auroraEngine": "ارورہ انجن",
+    "viewAll": "سب دیکھیں"
+  },
+  "loader": {
+    "verificationRequired": "تصدیق درکار",
+    "proveIdentity": "سسٹم تک رسائی کے لیے اپنی شناخت ثابت کریں۔",
+    "cards": {
+      "sayName": "\"{{name}}\" کہیں",
+      "voiceRecognition": "آواز کی پہچان",
+      "solvePuzzle": "پہیلی حل کریں",
+      "oneQuestion": "ایک سوال",
+      "traverseOn": "آگے بڑھیں",
+      "autoTraverse": "خودکار ٹور",
+      "traverseActiveDesc": "خودکار ڈیمو موڈ فعال",
+      "traverseTourDesc": "پوری سائٹ کا ڈیمو ٹور",
+      "watchDevAds": "ڈیو اشتہارات دیکھیں",
+      "videoAdsToUnlock": "انلاک کرنے کے لیے ویڈیو اشتہارات",
+      "moodSwing": "موڈ سوئنگ",
+      "setVibeMusic": "محاورہ اور موسیقی طے کریں",
+      "neuralCmd": "Neural Aurora CMD",
+      "exploreTerminal": "ٹرمینل کے ذریعے دریافت کریں",
+      "takeInterview": "میرا انٹرویو لیں",
+      "voiceAiInterview": "آواز والا AI انٹرویو",
+      "patternLock": "نیورل پیٹرن لاک",
+      "memoryChallenge": "میموری چیلنج",
+      "channelStream": "چینل اسٹریم",
+      "browseVideos": "میری ویڈیوز دیکھیں",
+      "skipVibes": "محاورہ چھوڑیں",
+      "directEntry": "براہ راست داخلہ",
+      "openDocs": "دستاویزات کھولیں"
+    },
+    "interview": {
+      "chatWith": "{{name}} کے ساتھ بات کریں",
+      "askAnything": "مجھ سے کچھ بھی پوچھیں",
+      "live": "لائیو",
+      "gettingReady": "تیاری ہو رہی ہے...",
+      "thinking": "{{name}} سوچ رہا ہے...",
+      "you": "آپ",
+      "listening": "سن رہا ہوں... بلا جھجھک مجھ سے کچھ بھی پوچھیں",
+      "tapMic": "مائیکروفون پر دبائیں، پھر سوال پوچھیں",
+      "typeQuestion": "اپنا سوال ٹائپ کریں...",
+      "ask": "پوچھیں",
+      "youAsked": "آپ نے پوچھا",
+      "says": "{{name}} کہتے ہیں",
+      "askAnother": "ایک اور سوال پوچھیں",
+      "endInterview": "انٹرویو ختم کریں",
+      "allDone": "سب مکمل",
+      "enterPortfolio": "پورٹ فولیو میں داخل ہوں"
+    },
+    "voice": {
+      "instruction": "اپنی شناخت کی تصدیق کے لیے \"{{name}}\" کہیں",
+      "listening": "سن رہا ہوں...",
+      "trySaying": "\"{{name}}\" کہنے کی کوشش کریں",
+      "verified": "شناخت کی تصدیق ہو گئی"
+    },
+    "success": {
+      "verified": "شناخت کی تصدیق ہو گئی",
+      "accessGranted": "رسائی دی گئی",
+      "welcome": "NEURAL AURORA میں خوش آمدید"
+    },
+    "cmd": {
+      "email": "ای میل",
+      "availableOnRequest": "درخواست پر دستیاب"
+    }
+  },
+  "blog": {
+    "eyebrow": "بلاگ",
+    "titlePrefix": "خیالات اور",
+    "titleSuffix": "تصورات",
+    "subtitle": "میں جو کچھ سیکھتا ہوں، بناتا ہوں اور سوچتا ہوں اسے شیئر کر رہا ہوں۔",
+    "searchPlaceholder": "پوسٹس تلاش کریں...",
+    "noPosts": "کوئی پوسٹ نہیں ملی۔ کوئی اور تلاش آزمائیں۔",
+    "postNotFound": "پوسٹ نہیں ملی",
+    "backToBlog": "بلاگ پر واپس",
+    "blogPostEyebrow": "بلاگ پوسٹ",
+    "readMore": "مزید پوسٹس پڑھیں",
+    "allPosts": "تمام پوسٹس"
+  },
+  "services": {
+    "options": "{{count}} اختیارات",
+    "viewDetails": "تفصیلات دیکھیں",
+    "step": "مرحلہ {{number}}",
+    "whatIncluded": "کس چیز کو شامل",
+    "selectType": "پراجیکٹ کی قسم منتخب کریں",
+    "backToServices": "خدمات پر واپس",
+    "getInTouch": "رابطہ کریں",
+    "projectPlaceholder": "اپنے {{title}} پراجیکٹ کے بارے میں بتائیں...",
+    "mostPopular": "سب سے مشہور",
+    "getStarted": "شروع کریں",
+    "processing": "عمل جاری ہے...",
+    "serviceNotFound": "خدمت نہیں ملی",
+    "price": "قیمت",
+    "delivery": "ترسیل",
+    "pay": "ادائیگی کریں",
+    "paymentConfirmed": "ادائیگی کی تصدیق ہو گئی",
+    "nav": {
+      "services": "خدمات",
+      "process": "عمل",
+      "pricing": "قیمتیں",
+      "faq": "عمومی سوالات",
+      "contact": "رابطہ"
+    }
+  },
+  "support": {
+    "eyebrow": "سپورٹ",
+    "heroSubtitle": "اوپن سورس اور ہمیشہ کے لیے مفت",
+    "heroDescription": "یہ پراجیکٹ 100% مفت اور اوپن سورس ہے۔ آپ کا تعاون اسے زندہ رکھتا ہے، نئی خصوصیات فنڈ کرتا ہے اور ہمیں پیڈ متبادل کے ساتھ مقابلہ کرنے میں مدد دیتا ہے — یوں NEURAL AURORA سب کے لیے مفت رہتا ہے۔",
+    "floatingButton": "سپورٹ",
+    "sponsorPlaceholder": "اپنے پراجیکٹ یا سپانسرشپ خیالات کے بارے میں بتائیں...",
+    "nav": {
+      "contribute": "تعاون کریں",
+      "whySupport": "کیوں سپورٹ کریں",
+      "faq": "عمومی سوالات",
+      "contact": "رابطہ"
+    },
+    "presets": {
+      "coffee": "کافی کے لیے بتائیں",
+      "feature": "ایک فیچر سپورٹ کریں",
+      "speed": "ڈیولپمنٹ تیز کریں",
+      "rocket": "لانچ بوسٹر",
+      "crown": "پریمیم سپورٹر",
+      "legend": "لیجنڈ لیول"
+    }
+  },
+  "more": {
+    "eyebrow": "مزید",
+    "titlePrefix": "کوڈ سے",
+    "titleSuffix": "آگے",
+    "subtitle": "تعلیم، تجربے، خیالات اور بصیرتوں کے ذریعے میرا سفر۔",
+    "education": "تعلیم",
+    "experience": "کام کا تجربہ",
+    "latestPosts": "تازہ ترین بلاگ پوسٹس",
+    "viewAll": "سب دیکھیں",
+    "caseStudies": "کیس اسٹڈیز",
+    "nav": {
+      "timeline": "ٹائم لائن",
+      "caseStudies": "کیس اسٹڈیز",
+      "blog": "بلاگ"
+    }
+  },
+  "caseStudy": {
+    "notFound": "کیس اسٹڈی نہیں ملی",
+    "backToStudies": "کیس اسٹڈیز پر واپس",
+    "eyebrow": "کیس اسٹڈی",
+    "outcome": "نتیجہ",
+    "fullAnalysis": "مکمل تجزیہ",
+    "viewAll": "تمام کیس اسٹڈیز دیکھیں"
+  },
+  "contributors": {
+    "eyebrow": "تعاون کنندگان",
+    "titlePrefix": "پیچھے والے لوگ",
+    "subtitle": "ہر تعاون کنندہ — ڈیولپر یا عطیہ دینے والا — اس پراجیکٹ کو مفت اور اوپن سورس رکھنے میں مدد دیتا ہے۔",
+    "becomeContributor": "تعاون کنندہ بنیں",
+    "becomeContributorSubtitle": "پراجیکٹ کو سپورٹ کریں اور یہاں درج ہوں"
+  },
+  "mood": {
+    "title": "موڈ سوئنگ",
+    "subtitle": "داخل ہونے سے پہلے محاورہ طے کریں",
+    "footnote": "موڈ منتخب کریں → موسیقی تلاش کا محاورہ طے کرے گی",
+    "moods": {
+      "energetic": {
+        "label": "پر جوش",
+        "description": "پرلطف اور توانا"
+      },
+      "calm": {
+        "label": "پرسکون",
+        "description": "آرام دہ اور سکون بخش محاورہ"
+      },
+      "happy": {
+        "label": "خوش",
+        "description": "مسرور اور روشن"
+      },
+      "focused": {
+        "label": "مرکوز",
+        "description": "گہرا فلو حالت"
+      },
+      "mysterious": {
+        "label": "پراسرار",
+        "description": "سیاہ اور محیطی"
+      },
+      "euphoric": {
+        "label": "سرخوش",
+        "description": "ماورائی لہریں"
+      }
+    }
+  },
+  "ads": {
+    "ad": "اشتہار",
+    "video": "ویڈیو",
+    "short": "مختصر",
+    "sponsored": "سپانسر شدہ",
+    "videoUnavailable": "ویڈیو دستیاب نہیں",
+    "unavailable": "دستیاب نہیں",
+    "adComplete": "اشتہار مکمل",
+    "enteringIn": "{{count}} سیکنڈ میں داخل",
+    "skip": "چھوڑیں",
+    "autoAd": "خودکار اشتہار",
+    "googleAd": "گوگل اشتہار",
+    "shortAd": "مختصر اشتہار",
+    "videoAd": "ویڈیو اشتہار"
+  },
+  "youtube": {
+    "watchingToVerify": "تصدیق کے لیے دیکھا جا رہا ہے",
+    "videos": "ویڈیوز",
+    "shorts": "شارٹس",
+    "playlists": "پلے لسٹس",
+    "searchPlaceholder": "{{tab}} تلاش کریں...",
+    "noVideos": "کوئی ویڈیو نہیں ملی",
+    "noShorts": "کوئی شارٹس نہیں ملی",
+    "noPlaylists": "کوئی عوامی پلے لسٹ نہیں",
+    "loadMore": "مزید لوڈ کریں",
+    "tryDifferentSearch": "کوئی اور تلاش آزمائیں یا بعد میں آئیں",
+    "shortsAppearHere": "مختصر مواد یہاں ظاہر ہوگا",
+    "playlistsAppearHere": "چینل کی پلے لسٹس یہاں ظاہر ہوں گی",
+    "backToVerification": "تصدیق پر واپس",
+    "backToVideos": "ویڈیوز پر واپس",
+    "browseToVerify": "تصدیق کے لیے براؤز کریں",
+    "retry": "دوبارہ کوشش کریں",
+    "subscribers": "سبسکرائبر",
+    "videosCount": "{{count}} ویڈیوز",
+    "noVideosInPlaylist": "اس پلے لسٹ میں کوئی ویڈیو نہیں"
+  },
+  "theme": {
+    "switchToDark": "ڈارک موڈ پر سوئچ کریں",
+    "switchToLight": "لائٹ موڈ پر سوئچ کریں",
+    "searchPlaceholder": "تلاش کریں..."
+  }
+}

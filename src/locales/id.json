@@ -1,0 +1,349 @@
+{
+  "nav": {
+    "about": "Tentang",
+    "skills": "Keahlian",
+    "projects": "Proyek",
+    "services": "Layanan",
+    "resume": "Resume",
+    "contact": "Kontak",
+    "more": "Lainnya",
+    "support": "Dukungan",
+    "login": "Masuk & Pengaturan",
+    "admin": "Panel Admin",
+    "crm": "Panel CRM",
+    "getStarted": "Mulai",
+    "menu": "Menu"
+  },
+  "common": {
+    "home": "Beranda",
+    "menu": "Menu"
+  },
+  "hero": {
+    "available": "Terbuka untuk",
+    "collaboration": "kolaborasi",
+    "viewProjects": "Lihat Proyek",
+    "resume": "Resume",
+    "title": "Menciptakan pengalaman digital",
+    "subtitle": "di mana jaringan saraf bertemu cahaya aurora"
+  },
+  "about": {
+    "eyebrow": "Tentang",
+    "titleArchitect": "Arsitek",
+    "titleDigitalExperience": "Pengalaman Digital",
+    "knownAsPrefix": "Dikenal di internet sebagai",
+    "knownAsSuffix": ", saya membangun sistem di mana kode bertemu puisi visual. Setiap proyek adalah kesempatan untuk mendorong batas kemampuan browser.",
+    "digitalFootprint": "Jejak Digital",
+    "avatarAlt": "Avatar profil",
+    "currentFocus": "Saat ini membangun NEURAL AURORA dan mengeksplorasi perpaduan grafis 3D dan teknologi web."
+  },
+  "skills": {
+    "eyebrow": "Keahlian",
+    "titleTechnical": "Tumpukan",
+    "titleStack": "Teknis",
+    "offlineNotice": "Mode offline — menampilkan cadangan tumpukan teknis statis",
+    "noData": "Belum ada data keahlian teknis yang tersedia.",
+    "noSkillsInCategory": "Tidak ada keahlian dalam kategori ini",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "language": "Bahasa",
+      "devops": "DevOps",
+      "design": "Desain"
+    }
+  },
+  "projects": {
+    "eyebrow": "Portofolio",
+    "titleNeural": "Proyek",
+    "titleProjects": "Neural",
+    "subtitle": "Setiap proyek adalah simpul dalam jaringan saraf yang terus tumbuh. Klik untuk memperluas dan menjelajah koneksi sinaptik.",
+    "offlineNotice": "Mode offline — menampilkan proyek yang di-cache",
+    "noData": "Tidak ada proyek ditemukan di repositori neural.",
+    "source": "Sumber",
+    "link": "Tautan",
+    "demo": "Demo"
+  },
+  "resume": {
+    "eyebrow": "Curriculum Vitae",
+    "titleDownload": "Unduh",
+    "titleResume": "Resume Saya",
+    "subtitle": "Ringkasan komprehensif pengalaman, proyek, dan keahlian teknis saya. Diperbarui secara rutin.",
+    "downloadPdf": "Unduh PDF",
+    "pdfFormat": "Format PDF . 2,4 MB"
+  },
+  "contact": {
+    "eyebrow": "Kontak",
+    "titleLetsBuild": "Mari Bangun",
+    "titleTogether": "Bersama",
+    "subtitle": "Punya proyek dalam pikiran atau sekadar ingin menyapa? Jaringan saraf selalu terbuka untuk koneksi baru.",
+    "findMeOn": "Temukan saya di",
+    "nameLabel": "Nama",
+    "namePlaceholder": "Nama Anda",
+    "emailLabel": "Email",
+    "emailPlaceholder": "your@email.com",
+    "messageLabel": "Pesan",
+    "messagePlaceholder": "Ceritakan tentang proyek Anda...",
+    "sendMessage": "Kirim Pesan",
+    "sending": "Mengirim...",
+    "sentSuccess": "Pesan terkirim! Saya akan segera menghubungi Anda.",
+    "tagline": "NEURAL AURORA . Portofolio sinaptik",
+    "builtWith": "Dibangun dengan React, Three.js, dan desain yang berkelas"
+  },
+  "reviews": {
+    "title": "Kata Mereka",
+    "offlineError": "Mode offline — tidak dapat mengambil ulasan",
+    "offlineRefreshError": "Mode offline — tidak dapat memperbarui ulasan",
+    "noReviews": "Belum ada ulasan. Kembalilah lagi nanti!",
+    "leaveReview": "Tinggalkan Ulasan",
+    "shareThoughts": "Bagikan pendapat Anda tentang karya saya",
+    "nameLabel": "Nama",
+    "namePlaceholder": "Nama Anda",
+    "emailLabel": "Email",
+    "emailPlaceholder": "opsional",
+    "ratingLabel": "Penilaian",
+    "messageLabel": "Pesan",
+    "messagePlaceholder": "Tulis ulasan Anda...",
+    "submitReview": "Kirim Ulasan",
+    "submitting": "Mengirim...",
+    "thankYou": "Terima Kasih!",
+    "submittedMessage": "Ulasan Anda telah dikirim dan menunggu persetujuan.",
+    "submitAnother": "Kirim ulasan lain"
+  },
+  "footer": {
+    "skills": "Keahlian",
+    "projects": "Proyek",
+    "connect": "Kontak",
+    "synapticPortfolio": "Portofolio sinaptik",
+    "reactNext": "React / Next.js",
+    "threeWebGL": "Three.js / WebGL",
+    "uiUxDesign": "Desain UI/UX",
+    "fullStackDev": "Pengembang Full-Stack",
+    "neuralAurora": "NEURAL AURORA",
+    "synapticDashboard": "Panel sinaptik",
+    "auroraEngine": "Mesin Aurora",
+    "viewAll": "Lihat Semua"
+  },
+  "loader": {
+    "verificationRequired": "Verifikasi Diperlukan",
+    "proveIdentity": "Buktikan identitas Anda untuk mengakses sistem.",
+    "cards": {
+      "sayName": "Ucapkan \"{{name}}\"",
+      "voiceRecognition": "Pengenalan suara",
+      "solvePuzzle": "Pecahkan Teka-teki",
+      "oneQuestion": "Satu pertanyaan",
+      "traverseOn": "Lanjutkan",
+      "autoTraverse": "Tur Otomatis",
+      "traverseActiveDesc": "Mode demo otomatis aktif",
+      "traverseTourDesc": "Tur demo lengkap situs",
+      "watchDevAds": "Tonton Iklan Dev",
+      "videoAdsToUnlock": "Iklan video untuk membuka",
+      "moodSwing": "Mood Swing",
+      "setVibeMusic": "Atur suasana & musik",
+      "neuralCmd": "Neural Aurora CMD",
+      "exploreTerminal": "Jelajahi melalui terminal",
+      "takeInterview": "Ikuti Wawancara Saya",
+      "voiceAiInterview": "Wawancara AI bersuara",
+      "patternLock": "Kunci Pola Neural",
+      "memoryChallenge": "Tantangan memori",
+      "channelStream": "Streaming Kanal",
+      "browseVideos": "Jelajahi video saya",
+      "skipVibes": "Lewati Suasana",
+      "directEntry": "Masuk langsung",
+      "openDocs": "Buka Dokumentasi"
+    },
+    "interview": {
+      "chatWith": "Mengobrol dengan {{name}}",
+      "askAnything": "Tanyakan apa saja",
+      "live": "Langsung",
+      "gettingReady": "Menyiapkan...",
+      "thinking": "{{name}} sedang berpikir...",
+      "you": "Anda",
+      "listening": "Mendengarkan... silakan, tanyakan apa saja",
+      "tapMic": "Sentuh mikrofon, lalu ajukan pertanyaan",
+      "typeQuestion": "Ketik pertanyaan Anda...",
+      "ask": "Tanya",
+      "youAsked": "Anda bertanya",
+      "says": "{{name}} berkata",
+      "askAnother": "Ajukan pertanyaan lain",
+      "endInterview": "Akhiri wawancara",
+      "allDone": "Selesai",
+      "enterPortfolio": "Masuk Portofolio"
+    },
+    "voice": {
+      "instruction": "Ucapkan \"{{name}}\" untuk memverifikasi identitas Anda",
+      "listening": "Mendengarkan...",
+      "trySaying": "Coba ucapkan \"{{name}}\"",
+      "verified": "Identitas Terverifikasi"
+    },
+    "success": {
+      "verified": "Identitas Terverifikasi",
+      "accessGranted": "Akses Diberikan",
+      "welcome": "Selamat datang di NEURAL AURORA"
+    },
+    "cmd": {
+      "email": "Email",
+      "availableOnRequest": "tersedia berdasarkan permintaan"
+    }
+  },
+  "blog": {
+    "eyebrow": "Blog",
+    "titlePrefix": "Pikiran &",
+    "titleSuffix": "Ide",
+    "subtitle": "Membagikan apa yang saya pelajari, bangun, dan pikirkan.",
+    "searchPlaceholder": "Cari artikel...",
+    "noPosts": "Tidak ada artikel ditemukan. Coba pencarian lain.",
+    "postNotFound": "Artikel tidak ditemukan",
+    "backToBlog": "Kembali ke blog",
+    "blogPostEyebrow": "Artikel blog",
+    "readMore": "Baca lebih banyak artikel",
+    "allPosts": "Semua Artikel"
+  },
+  "services": {
+    "options": "{{count}} opsi",
+    "viewDetails": "Lihat Detail",
+    "step": "Langkah {{number}}",
+    "whatIncluded": "Apa yang Termasuk",
+    "selectType": "Pilih Jenis Proyek",
+    "backToServices": "Kembali ke layanan",
+    "getInTouch": "Hubungi Kami",
+    "projectPlaceholder": "Ceritakan tentang proyek {{title}} Anda...",
+    "mostPopular": "Terpopuler",
+    "getStarted": "Mulai",
+    "processing": "Memproses...",
+    "serviceNotFound": "Layanan tidak ditemukan",
+    "price": "Harga",
+    "delivery": "Pengiriman",
+    "pay": "Bayar",
+    "paymentConfirmed": "Pembayaran Dikonfirmasi",
+    "nav": {
+      "services": "Layanan",
+      "process": "Proses",
+      "pricing": "Harga",
+      "faq": "FAQ",
+      "contact": "Kontak"
+    }
+  },
+  "support": {
+    "eyebrow": "Dukungan",
+    "heroSubtitle": "Open Source & Gratis Selamanya",
+    "heroDescription": "Proyek ini 100% gratis dan open source. Kontribusi Anda menjaganya tetap hidup, mendanai fitur baru, dan membantu kami bersaing dengan alternatif berbayar — sambil menjaga NEURAL AURORA tetap gratis untuk semua orang.",
+    "floatingButton": "Dukung",
+    "sponsorPlaceholder": "Ceritakan tentang proyek atau ide sponsorship Anda...",
+    "nav": {
+      "contribute": "Berkontribusi",
+      "whySupport": "Mengapa Mendukung",
+      "faq": "FAQ",
+      "contact": "Kontak"
+    },
+    "presets": {
+      "coffee": "Beli kopi",
+      "feature": "Dukung fitur",
+      "speed": "Percepat pengembangan",
+      "rocket": "Pendorong peluncuran",
+      "crown": "Pendukung premium",
+      "legend": "Tingkat legenda"
+    }
+  },
+  "more": {
+    "eyebrow": "Lainnya",
+    "titlePrefix": "Di Balik",
+    "titleSuffix": "Kode",
+    "subtitle": "Perjalanan saya melalui pendidikan, pengalaman, ide, dan wawasan.",
+    "education": "Pendidikan",
+    "experience": "Pengalaman Kerja",
+    "latestPosts": "Artikel Blog Terbaru",
+    "viewAll": "Lihat Semua",
+    "caseStudies": "Studi Kasus",
+    "nav": {
+      "timeline": "Linimasa",
+      "caseStudies": "Studi Kasus",
+      "blog": "Blog"
+    }
+  },
+  "caseStudy": {
+    "notFound": "Studi kasus tidak ditemukan",
+    "backToStudies": "Kembali ke studi kasus",
+    "eyebrow": "Studi Kasus",
+    "outcome": "Hasil",
+    "fullAnalysis": "Analisis Lengkap",
+    "viewAll": "Lihat semua studi kasus"
+  },
+  "contributors": {
+    "eyebrow": "Kontributor",
+    "titlePrefix": "Orang di Balik",
+    "subtitle": "Setiap kontributor — pengembang atau donatur — membantu menjaga proyek ini gratis dan open source.",
+    "becomeContributor": "Jadi Kontributor",
+    "becomeContributorSubtitle": "Dukung proyek dan tampil di sini"
+  },
+  "mood": {
+    "title": "Mood Swing",
+    "subtitle": "Atur suasana sebelum masuk",
+    "footnote": "Pilih suasana hati → musik mengatur nada penjelajahan",
+    "moods": {
+      "energetic": {
+        "label": "Energik",
+        "description": "Semangat dan bersemangat"
+      },
+      "calm": {
+        "label": "Tenang",
+        "description": "Suasana santai dan rileks"
+      },
+      "happy": {
+        "label": "Senang",
+        "description": "Ceria dan cerah"
+      },
+      "focused": {
+        "label": "Fokus",
+        "description": "Keadaan aliran yang dalam"
+      },
+      "mysterious": {
+        "label": "Misterius",
+        "description": "Gelap dan atmosferik"
+      },
+      "euphoric": {
+        "label": "Euforia",
+        "description": "Gelombang transenden"
+      }
+    }
+  },
+  "ads": {
+    "ad": "Iklan",
+    "video": "Video",
+    "short": "Pendek",
+    "sponsored": "Disponsori",
+    "videoUnavailable": "Video tidak tersedia",
+    "unavailable": "Tidak tersedia",
+    "adComplete": "Iklan Selesai",
+    "enteringIn": "Masuk dalam {{count}}d",
+    "skip": "Lewati",
+    "autoAd": "Iklan otomatis",
+    "googleAd": "Iklan Google",
+    "shortAd": "Iklan pendek",
+    "videoAd": "Iklan video"
+  },
+  "youtube": {
+    "watchingToVerify": "Menonton untuk memverifikasi",
+    "videos": "Video",
+    "shorts": "Shorts",
+    "playlists": "Daftar Putar",
+    "searchPlaceholder": "Cari {{tab}}...",
+    "noVideos": "Tidak ada video ditemukan",
+    "noShorts": "Tidak ada shorts ditemukan",
+    "noPlaylists": "Tidak ada daftar putar publik",
+    "loadMore": "Muat lebih banyak",
+    "tryDifferentSearch": "Coba pencarian lain atau kembali lagi nanti",
+    "shortsAppearHere": "Konten pendek akan muncul di sini",
+    "playlistsAppearHere": "Daftar putar kanal akan muncul di sini",
+    "backToVerification": "Kembali ke verifikasi",
+    "backToVideos": "Kembali ke video",
+    "browseToVerify": "Jelajahi untuk memverifikasi",
+    "retry": "Coba Lagi",
+    "subscribers": "pelanggan",
+    "videosCount": "{{count}} video",
+    "noVideosInPlaylist": "Tidak ada video dalam daftar putar ini"
+  },
+  "theme": {
+    "switchToDark": "Beralih ke mode gelap",
+    "switchToLight": "Beralih ke mode terang",
+    "searchPlaceholder": "Cari..."
+  }
+}

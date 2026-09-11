@@ -3,6 +3,7 @@
 import React from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { ExternalLink } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import LiveVisitorCount from './LiveVisitorCount'
 import { BrandLogoFull } from './BrandLogo'
 
@@ -25,29 +26,6 @@ const iconMap = {
   facebook: FacebookIcon,
 }
 
-function getStaticSections() {
-  return [
-    {
-      label: 'Skills',
-      links: [
-        { title: 'React / Next.js', href: '#skills' },
-        { title: 'Three.js / WebGL', href: '#skills' },
-        { title: 'UI/UX Design', href: '#skills' },
-        { title: 'Full-Stack Dev', href: '#skills' },
-      ],
-    },
-    {
-      label: 'Projects',
-      links: [
-        { title: 'NEURAL AURORA', href: '#projects' },
-        { title: 'Synaptic Dashboard', href: '#projects' },
-        { title: 'Aurora Engine', href: '#projects' },
-        { title: 'View All', href: '#projects' },
-      ],
-    },
-  ]
-}
-
 function AnimatedContainer({ className, delay = 0.1, children }) {
   const shouldReduceMotion = useReducedMotion()
 
@@ -67,14 +45,32 @@ function AnimatedContainer({ className, delay = 0.1, children }) {
 }
 
 export function Footer() {
+  const { t } = useTranslation()
   const { data: personalInfo } = usePersonalInfo()
-  const socialLinks = useSocialLinks()
+  const { data: socialLinks } = useSocialLinks()
   const currentYear = new Date().getFullYear()
 
   const footerSections = [
-    ...getStaticSections(),
     {
-      label: 'Connect',
+      label: t('footer.skills'),
+      links: [
+        { title: t('footer.reactNext'), href: '#skills' },
+        { title: t('footer.threeWebGL'), href: '#skills' },
+        { title: t('footer.uiUxDesign'), href: '#skills' },
+        { title: t('footer.fullStackDev'), href: '#skills' },
+      ],
+    },
+    {
+      label: t('footer.projects'),
+      links: [
+        { title: t('footer.neuralAurora'), href: '#projects' },
+        { title: t('footer.synapticDashboard'), href: '#projects' },
+        { title: t('footer.auroraEngine'), href: '#projects' },
+        { title: t('footer.viewAll'), href: '#projects' },
+      ],
+    },
+    {
+      label: t('footer.connect'),
       links: socialLinks
         .filter((l) => ['github', 'linkedin', 'youtube', 'instagram'].includes(l.icon))
         .map((l) => ({
@@ -122,7 +118,7 @@ export function Footer() {
         <AnimatedContainer delay={0.4} className="w-full mt-12 pt-8 border-t border-black/10 dark:border-white/[0.04]">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-xs text-black/25 dark:text-white/15">
-              {currentYear} {personalInfo.handle}. Synaptic Portfolio
+              {currentYear} {personalInfo.handle}. {t('footer.synapticPortfolio')}
             </p>
             <LiveVisitorCount />
             <div className="flex gap-4">

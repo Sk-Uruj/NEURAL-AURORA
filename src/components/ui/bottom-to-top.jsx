@@ -1,7 +1,9 @@
 import { useRef } from 'react'
-import { motion, useScroll, useMotionValueEvent, useMotionValue, useTransform, useSpring } from 'framer-motion'
+import { motion, useScroll, useMotionValueEvent, useMotionValue, useTransform, useSpring, useReducedMotion } from 'framer-motion'
 
 function BrainSVG() {
+  const shouldReduceMotion = useReducedMotion()
+
   return (
     <svg viewBox="0 0 48 48" fill="none" className="w-6 h-6">
       <defs>
@@ -13,8 +15,8 @@ function BrainSVG() {
       </defs>
 
       <motion.g
-        animate={{ rotate: [0, 0.5, -0.5, 0] }}
-        transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+        animate={shouldReduceMotion ? undefined : { rotate: [0, 0.5, -0.5, 0] }}
+        transition={shouldReduceMotion ? { duration: 0 } : { duration: 6, repeat: Infinity, ease: 'easeInOut' }}
       >
         {/* Left hemisphere - outer */}
         <motion.path
@@ -105,16 +107,16 @@ function BrainSVG() {
           fill="#050508"
           stroke="#00f0ff"
           strokeWidth="0.8"
-          animate={{ strokeOpacity: [0.4, 1, 0.4] }}
-          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+          animate={shouldReduceMotion ? undefined : { strokeOpacity: [0.4, 1, 0.4] }}
+          transition={shouldReduceMotion ? { duration: 0 } : { duration: 2, repeat: Infinity, ease: 'easeInOut' }}
         />
         <motion.circle
           cx="24"
           cy="18"
           r="1"
           fill="#00f0ff"
-          animate={{ opacity: [0.3, 0.8, 0.3], scale: [0.8, 1.2, 0.8] }}
-          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+          animate={shouldReduceMotion ? undefined : { opacity: [0.3, 0.8, 0.3], scale: [0.8, 1.2, 0.8] }}
+          transition={shouldReduceMotion ? { duration: 0 } : { duration: 2, repeat: Infinity, ease: 'easeInOut' }}
         />
 
         {/* Text inside the brain */}
@@ -138,6 +140,7 @@ function BrainSVG() {
 
 export default function BottomToTop() {
   const ref = useRef(null)
+  const shouldReduceMotion = useReducedMotion()
   const { scrollY } = useScroll()
   const visible = useMotionValue(0)
   const x = useMotionValue(0)
@@ -146,13 +149,14 @@ export default function BottomToTop() {
   const translateX = useTransform(x, [-1, 1], [-6, 6])
   const translateY = useTransform(y, [-1, 1], [-6, 6])
   const rotate = useTransform(x, [-1, 1], [-4, 4])
-  const scale = useSpring(visible, { stiffness: 200, damping: 20 })
+  const scaleSpring = useSpring(visible, { stiffness: 200, damping: 20 })
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
     visible.set(latest > 600 ? 1 : 0)
   })
 
   function handleMouse(e) {
+    if (shouldReduceMotion) return
     const rect = ref.current?.getBoundingClientRect()
     if (!rect) return
     const dx = (e.clientX - (rect.left + rect.width / 2)) / rect.width
@@ -162,12 +166,13 @@ export default function BottomToTop() {
   }
 
   function handleLeave() {
+    if (shouldReduceMotion) return
     x.set(0)
     y.set(0)
   }
 
   function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    window.scrollTo({ top: 0, behavior: shouldReduceMotion ? 'auto' : 'smooth' })
   }
 
   return (
@@ -176,29 +181,34 @@ export default function BottomToTop() {
       onClick={scrollToTop}
       onMouseMove={handleMouse}
       onMouseLeave={handleLeave}
-      style={{ scale, translateX, translateY, rotate }}
+      style={{
+        scale: shouldReduceMotion ? visible : scaleSpring,
+        translateX: shouldReduceMotion ? 0 : translateX,
+        translateY: shouldReduceMotion ? 0 : translateY,
+        rotate: shouldReduceMotion ? 0 : rotate,
+      }}
       initial={false}
       className="fixed bottom-8 right-8 z-[9999] w-14 h-14 rounded-full glass-panel flex items-center justify-center group cursor-pointer"
-      whileTap={{ scale: 0.9 }}
+      whileTap={shouldReduceMotion ? undefined : { scale: 0.9 }}
     >
       {/* Pulse ring */}
       <motion.div
         className="absolute inset-0 rounded-full"
-        animate={{
+        animate={shouldReduceMotion ? undefined : {
           boxShadow: [
             '0 0 0 0 rgba(0,240,255,0)',
             '0 0 0 6px rgba(0,240,255,0.08)',
             '0 0 0 0 rgba(0,240,255,0)',
           ],
         }}
-        transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
+        transition={shouldReduceMotion ? { duration: 0 } : { duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
       />
 
       {/* Expanding ring */}
       <motion.div
         className="absolute inset-0 rounded-full border border-[#00f0ff]/10"
-        animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0, 0.3] }}
-        transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+        animate={shouldReduceMotion ? undefined : { scale: [1, 1.2, 1], opacity: [0.3, 0, 0.3] }}
+        transition={shouldReduceMotion ? { duration: 0 } : { duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
       />
 
       <BrainSVG />
@@ -206,8 +216,8 @@ export default function BottomToTop() {
       {/* Status dot */}
       <motion.div
         className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-[#00f0ff]"
-        animate={{ opacity: [0.4, 1, 0.4] }}
-        transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+        animate={shouldReduceMotion ? undefined : { opacity: [0.4, 1, 0.4] }}
+        transition={shouldReduceMotion ? { duration: 0 } : { duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
       />
 
       <span className="sr-only">Scroll to top</span>

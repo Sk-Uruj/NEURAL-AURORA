@@ -1,0 +1,349 @@
+{
+  "nav": {
+    "about": "परिचय",
+    "skills": "कौशल",
+    "projects": "प्रोजेक्ट",
+    "services": "सेवाएँ",
+    "resume": "रिज़्यूमे",
+    "contact": "संपर्क",
+    "more": "और देखें",
+    "support": "सहयोग",
+    "login": "लॉगिन और सेटअप",
+    "admin": "एडमिन डैशबोर्ड",
+    "crm": "CRM डैशबोर्ड",
+    "getStarted": "शुरू करें",
+    "menu": "मेन्यू"
+  },
+  "common": {
+    "home": "होम",
+    "menu": "मेन्यू"
+  },
+  "hero": {
+    "available": "उपलब्ध",
+    "collaboration": "सहयोग के लिए",
+    "viewProjects": "प्रोजेक्ट देखें",
+    "resume": "रिज़्यूमे",
+    "title": "डिजिटल अनुभव गढ़ना",
+    "subtitle": "जहाँ न्यूरल नेटवर्क मिलते हैं औरोरा की रोशनी से"
+  },
+  "about": {
+    "eyebrow": "परिचय",
+    "titleArchitect": "वास्तुकार",
+    "titleDigitalExperience": "डिजिटल अनुभव के",
+    "knownAsPrefix": "इंटरनेट पर जाना जाता है",
+    "knownAsSuffix": ", मैं ऐसी प्रणालियाँ बनाता हूँ जहाँ कोड मिलता है दृश्य कविता से। हर प्रोजेक्ट ब्राउज़र की सीमाओं को आगे बढ़ाने का अवसर है।",
+    "digitalFootprint": "डिजिटल पदचिह्न",
+    "avatarAlt": "प्रोफ़ाइल अवतार",
+    "currentFocus": "वर्तमान में NEURAL AURORA बना रहा हूँ और 3D ग्राफ़िक्स तथा वेब तकनीक के संगम की खोज कर रहा हूँ।"
+  },
+  "skills": {
+    "eyebrow": "विशेषज्ञता",
+    "titleTechnical": "तकनीकी",
+    "titleStack": "स्टैक",
+    "offlineNotice": "ऑफ़लाइन मोड — स्थिर तकनीकी स्टैक फ़ॉलबैक दिखाया जा रहा है",
+    "noData": "अभी तक तकनीकी कौशल डेटा उपलब्ध नहीं है।",
+    "noSkillsInCategory": "इस श्रेणी में कोई कौशल सूचीबद्ध नहीं है",
+    "categories": {
+      "frontend": "फ्रंटएंड",
+      "backend": "बैकएंड",
+      "language": "भाषाएँ",
+      "devops": "DevOps",
+      "design": "डिज़ाइन"
+    }
+  },
+  "projects": {
+    "eyebrow": "पोर्टफोलियो",
+    "titleNeural": "न्यूरल",
+    "titleProjects": "प्रोजेक्ट",
+    "subtitle": "हर प्रोजेक्ट एक बढ़ते न्यूरल नेटवर्क में एक नोड है। क्लिक करें और सिनैप्टिक कनेक्शन देखें।",
+    "offlineNotice": "ऑफ़लाइन मोड — कैश्ड प्रोजेक्ट फ़ॉलबैक दिखाया जा रहा है",
+    "noData": "न्यूरल रिपॉज़िटरी में कोई प्रोजेक्ट नहीं मिला।",
+    "source": "सोर्स",
+    "link": "लिंक",
+    "demo": "डेमो"
+  },
+  "resume": {
+    "eyebrow": "बायोडाटा",
+    "titleDownload": "डाउनलोड करें मेरा",
+    "titleResume": "रिज़्यूमे",
+    "subtitle": "मेरे अनुभव, प्रोजेक्ट और तकनीकी विशेषज्ञता का व्यापक अवलोकन। नवीनतम कार्य को दर्शाने के लिए नियमित रूप से अपडेट किया जाता है।",
+    "downloadPdf": "PDF डाउनलोड करें",
+    "pdfFormat": "PDF प्रारूप . 2.4 MB"
+  },
+  "contact": {
+    "eyebrow": "जुड़ें",
+    "titleLetsBuild": "चलो बनाते हैं",
+    "titleTogether": "साथ मिलकर",
+    "subtitle": "कोई प्रोजेक्ट है या बस नमस्ते कहना चाहते हैं? न्यूरल नेटवर्क हमेशा नए कनेक्शन के लिए तैयार है।",
+    "findMeOn": "मुझे यहाँ खोजें",
+    "nameLabel": "नाम",
+    "namePlaceholder": "आपका नाम",
+    "emailLabel": "ईमेल",
+    "emailPlaceholder": "your@email.com",
+    "messageLabel": "संदेश",
+    "messagePlaceholder": "अपने प्रोजेक्ट के बारे में बताएं...",
+    "sendMessage": "संदेश भेजें",
+    "sending": "भेजा जा रहा है...",
+    "sentSuccess": "संदेश भेज दिया गया! मैं जल्द ही आपसे संपर्क करूँगा।",
+    "tagline": "NEURAL AURORA . Synaptic Portfolio",
+    "builtWith": "React, Three.js और अच्छे डिज़ाइन के साथ बनाया गया"
+  },
+  "reviews": {
+    "title": "लोग क्या कहते हैं",
+    "offlineError": "ऑफ़लाइन मोड — समीक्षाएँ लाने में असमर्थ",
+    "offlineRefreshError": "ऑफ़लाइन मोड — लाइव समीक्षाएँ रीफ़्रेश करने में असमर्थ",
+    "noReviews": "अभी तक कोई समीक्षा उपलब्ध नहीं है। जल्द वापस आएँ!",
+    "leaveReview": "समीक्षा दें",
+    "shareThoughts": "मेरे काम के बारे में अपने विचार साझा करें",
+    "nameLabel": "नाम",
+    "namePlaceholder": "आपका नाम",
+    "emailLabel": "ईमेल",
+    "emailPlaceholder": "वैकल्पिक",
+    "ratingLabel": "रेटिंग",
+    "messageLabel": "संदेश",
+    "messagePlaceholder": "अपनी समीक्षा लिखें...",
+    "submitReview": "समीक्षा सबमिट करें",
+    "submitting": "सबमिट हो रहा है...",
+    "thankYou": "धन्यवाद!",
+    "submittedMessage": "आपकी समीक्षा सबमिट हो गई है और स्वीकृति की प्रतीक्षा में है।",
+    "submitAnother": "एक और समीक्षा सबमिट करें"
+  },
+  "footer": {
+    "skills": "कौशल",
+    "projects": "प्रोजेक्ट",
+    "connect": "जुड़ें",
+    "synapticPortfolio": "सिनैप्टिक पोर्टफोलियो",
+    "reactNext": "React / Next.js",
+    "threeWebGL": "Three.js / WebGL",
+    "uiUxDesign": "UI/UX डिज़ाइन",
+    "fullStackDev": "फुल-स्टैक डेव",
+    "neuralAurora": "NEURAL AURORA",
+    "synapticDashboard": "सिनैप्टिक डैशबोर्ड",
+    "auroraEngine": "औरोरा इंजन",
+    "viewAll": "सभी देखें"
+  },
+  "loader": {
+    "verificationRequired": "सत्यापन आवश्यक",
+    "proveIdentity": "सिस्टम तक पहुँचने के लिए अपनी पहचान साबित करें।",
+    "cards": {
+      "sayName": "“{{name}}” कहें",
+      "voiceRecognition": "वॉइस रिकग्निशन",
+      "solvePuzzle": "पहेली हल करें",
+      "oneQuestion": "एक सवाल",
+      "traverseOn": "आगे बढ़ें",
+      "autoTraverse": "ऑटो ट्रैवर्स",
+      "traverseActiveDesc": "ऑटो-डेमो मोड सक्रिय",
+      "traverseTourDesc": "पूरी साइट डेमो टूर",
+      "watchDevAds": "डेव विज्ञापन देखें",
+      "videoAdsToUnlock": "अनलॉक करने के लिए वीडियो विज्ञापन",
+      "moodSwing": "मूड स्विंग",
+      "setVibeMusic": "मूड और म्यूज़िक सेट करें",
+      "neuralCmd": "न्यूरल औरोरा कमांड",
+      "exploreTerminal": "टर्मिनल से खोजें",
+      "takeInterview": "मेरा इंटरव्यू लें",
+      "voiceAiInterview": "वॉइस AI इंटरव्यू",
+      "patternLock": "न्यूरल पैटर्न लॉक",
+      "memoryChallenge": "मेमोरी चैलेंज",
+      "channelStream": "चैनल स्ट्रीम",
+      "browseVideos": "मेरे वीडियो देखें",
+      "skipVibes": "वाइब्स छोड़ें",
+      "directEntry": "सीधा प्रवेश",
+      "openDocs": "डॉक्यूमेंटेशन खोलें"
+    },
+    "interview": {
+      "chatWith": "{{name}} के साथ चैट करें",
+      "askAnything": "मुझसे कुछ भी पूछें",
+      "live": "लाइव",
+      "gettingReady": "तैयार हो रहा है...",
+      "thinking": "{{name}} सोच रहा है...",
+      "you": "आप",
+      "listening": "सुन रहा हूँ... चलिए, मुझसे कुछ भी पूछें",
+      "tapMic": "माइक टैप करें, फिर अपना सवाल पूछें",
+      "typeQuestion": "अपना सवाल लिखें...",
+      "ask": "पूछें",
+      "youAsked": "आपने पूछा",
+      "says": "{{name}} कहते हैं",
+      "askAnother": "एक और सवाल पूछें",
+      "endInterview": "इंटरव्यू समाप्त करें",
+      "allDone": "सब हो गया",
+      "enterPortfolio": "पोर्टफोलियो में प्रवेश करें"
+    },
+    "voice": {
+      "instruction": "अपनी पहचान सत्यापित करने के लिए “{{name}}” कहें",
+      "listening": "सुन रहा हूँ...",
+      "trySaying": "“{{name}}” कहने की कोशिश करें",
+      "verified": "पहचान सत्यापित"
+    },
+    "success": {
+      "verified": "पहचान सत्यापित",
+      "accessGranted": "पहुँच दी गई",
+      "welcome": "NEURAL AURORA में आपका स्वागत है"
+    },
+    "cmd": {
+      "email": "ईमेल",
+      "availableOnRequest": "अनुरोध पर उपलब्ध"
+    }
+  },
+  "blog": {
+    "eyebrow": "ब्लॉग",
+    "titlePrefix": "विचार और",
+    "titleSuffix": "आइडिया",
+    "subtitle": "मैं जो सीखता, बनाता और सोचता हूँ उसे साझा करता हूँ।",
+    "searchPlaceholder": "पोस्ट खोजें...",
+    "noPosts": "कोई पोस्ट नहीं मिली। कोई अलग खोज आज़माएँ।",
+    "postNotFound": "पोस्ट नहीं मिली",
+    "backToBlog": "ब्लॉग पर वापस जाएँ",
+    "blogPostEyebrow": "ब्लॉग पोस्ट",
+    "readMore": "और पोस्ट पढ़ें",
+    "allPosts": "सभी पोस्ट"
+  },
+  "services": {
+    "options": "{{count}} विकल्प",
+    "viewDetails": "विवरण देखें",
+    "step": "चरण {{number}}",
+    "whatIncluded": "क्या शामिल है",
+    "selectType": "प्रोजेक्ट प्रकार चुनें",
+    "backToServices": "सेवाओं पर वापस",
+    "getInTouch": "संपर्क करें",
+    "projectPlaceholder": "अपने {{title}} प्रोजेक्ट के बारे में बताएं...",
+    "mostPopular": "सबसे लोकप्रिय",
+    "getStarted": "शुरू करें",
+    "processing": "प्रोसेस हो रहा है...",
+    "serviceNotFound": "सेवा नहीं मिली",
+    "price": "कीमत",
+    "delivery": "डिलीवरी",
+    "pay": "भुगतान करें",
+    "paymentConfirmed": "भुगतान पुष्ट",
+    "nav": {
+      "services": "सेवाएँ",
+      "process": "प्रक्रिया",
+      "pricing": "मूल्य निर्धारण",
+      "faq": "FAQ",
+      "contact": "संपर्क"
+    }
+  },
+  "support": {
+    "eyebrow": "सहयोग",
+    "heroSubtitle": "ओपन सोर्स और हमेशा मुफ़्त",
+    "heroDescription": "यह प्रोजेक्ट 100% मुफ़्त और ओपन-सोर्स है। आपका योगदान इसे जीवित रखता है, नई सुविधाओं को वित्त देता है, और पेड विकल्पों से मुकाबला करने में मदद करता है — जबकि NEURAL AURORA सभी के लिए मुफ़्त रहता है।",
+    "floatingButton": "सहयोग",
+    "sponsorPlaceholder": "अपने प्रोजेक्ट या स्पॉन्सरशिप विचारों के बारे में बताएं...",
+    "nav": {
+      "contribute": "योगदान करें",
+      "whySupport": "क्यों सहयोग करें",
+      "faq": "FAQ",
+      "contact": "संपर्क"
+    },
+    "presets": {
+      "coffee": "कॉफ़ी ख़रीदें",
+      "feature": "सुविधा का समर्थन करें",
+      "speed": "डेव तेज़ करें",
+      "rocket": "लॉन्च बूस्टर",
+      "crown": "प्रीमियम समर्थक",
+      "legend": "लीजेंड स्तर"
+    }
+  },
+  "more": {
+    "eyebrow": "और",
+    "titlePrefix": "कोड के",
+    "titleSuffix": "पार",
+    "subtitle": "शिक्षा, अनुभव, विचार और अंतर्दृष्टि के माध्यम से मेरी यात्रा।",
+    "education": "शिक्षा",
+    "experience": "कार्य अनुभव",
+    "latestPosts": "नवीनतम ब्लॉग पोस्ट",
+    "viewAll": "सभी देखें",
+    "caseStudies": "केस स्टडीज़",
+    "nav": {
+      "timeline": "टाइमलाइन",
+      "caseStudies": "केस स्टडीज़",
+      "blog": "ब्लॉग"
+    }
+  },
+  "caseStudy": {
+    "notFound": "केस स्टडी नहीं मिली",
+    "backToStudies": "केस स्टडीज़ पर वापस जाएँ",
+    "eyebrow": "केस स्टडी",
+    "outcome": "परिणाम",
+    "fullAnalysis": "पूर्ण विश्लेषण",
+    "viewAll": "सभी केस स्टडीज़ देखें"
+  },
+  "contributors": {
+    "eyebrow": "योगदानकर्ता",
+    "titlePrefix": "पीछे के लोग",
+    "subtitle": "हर योगदानकर्ता — डेवलपर या दानदाता — इस प्रोजेक्ट को मुफ़्त और ओपन-सोर्स बनाए रखने में मदद करता है।",
+    "becomeContributor": "योगदानकर्ता बनें",
+    "becomeContributorSubtitle": "प्रोजेक्ट का समर्थन करें और यहाँ सूचीबद्ध हों"
+  },
+  "mood": {
+    "title": "मूड स्विंग",
+    "subtitle": "प्रवेश से पहले मूड सेट करें",
+    "footnote": "अपना मूड चुनें → म्यूज़िक खोज का वाइब सेट करता है",
+    "moods": {
+      "energetic": {
+        "label": "ऊर्जावान",
+        "description": "पम्प्ड अप और उत्साहित"
+      },
+      "calm": {
+        "label": "शांत",
+        "description": "चिल और रिलैक्स्ड वाइब्स"
+      },
+      "happy": {
+        "label": "खुश",
+        "description": "आनंदमय और उज्ज्वल"
+      },
+      "focused": {
+        "label": "केंद्रित",
+        "description": "गहरी फ्लो अवस्था"
+      },
+      "mysterious": {
+        "label": "रहस्यमय",
+        "description": "डार्क और वातावरणीय"
+      },
+      "euphoric": {
+        "label": "उत्साहित",
+        "description": "ट्रान्सेंडेंट तरंगें"
+      }
+    }
+  },
+  "ads": {
+    "ad": "विज्ञापन",
+    "video": "वीडियो",
+    "short": "शॉर्ट",
+    "sponsored": "प्रायोजित",
+    "videoUnavailable": "वीडियो अनुपलब्ध",
+    "unavailable": "अनुपलब्ध",
+    "adComplete": "विज्ञापन पूर्ण",
+    "enteringIn": "{{count}}s में प्रवेश",
+    "skip": "छोड़ें",
+    "autoAd": "ऑटो विज्ञापन",
+    "googleAd": "Google विज्ञापन",
+    "shortAd": "शॉर्ट विज्ञापन",
+    "videoAd": "वीडियो विज्ञापन"
+  },
+  "youtube": {
+    "watchingToVerify": "सत्यापित करने के लिए देखना",
+    "videos": "वीडियो",
+    "shorts": "शॉर्ट्स",
+    "playlists": "प्लेलिस्ट",
+    "searchPlaceholder": "{{tab}} खोजें...",
+    "noVideos": "कोई वीडियो नहीं मिला",
+    "noShorts": "कोई शॉर्ट्स नहीं मिला",
+    "noPlaylists": "कोई सार्वजनिक प्लेलिस्ट नहीं",
+    "loadMore": "और लोड करें",
+    "tryDifferentSearch": "कोई अलग खोज आज़माएँ या बाद में लौटें",
+    "shortsAppearHere": "शॉर्ट-फ़ॉर्म सामग्री यहाँ दिखाई देगी",
+    "playlistsAppearHere": "चैनल प्लेलिस्ट यहाँ दिखाई देंगी",
+    "backToVerification": "सत्यापन पर वापस",
+    "backToVideos": "वीडियो पर वापस",
+    "browseToVerify": "सत्यापित करने के लिए ब्राउज़ करें",
+    "retry": "पुनः प्रयास करें",
+    "subscribers": "सब्सक्राइबर्स",
+    "videosCount": "{{count}} वीडियो",
+    "noVideosInPlaylist": "इस प्लेलिस्ट में कोई वीडियो नहीं"
+  },
+  "theme": {
+    "switchToDark": "डार्क मोड पर जाएँ",
+    "switchToLight": "लाइट मोड पर जाएँ",
+    "searchPlaceholder": "खोजें..."
+  }
+}
