@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
 import { useProjects } from '../lib/usePortfolioData'
+import { sanitizeHtml } from '../lib/utils'
 
 function ProjectImage({ src, alt, children, shouldReduceMotion }) {
   const [loaded, setLoaded] = useState(false)
@@ -92,7 +93,7 @@ function ProjectCard({ project, index, shouldReduceMotion }) {
           className={`text-sm text-black/50 dark:text-white/40 leading-relaxed ${
             expanded ? '' : 'line-clamp-2'
           }`}
-          dangerouslySetInnerHTML={{ __html: project.description }}
+          dangerouslySetInnerHTML={{ __html: sanitizeHtml(project.description) }}
         />
 
         <AnimatePresence>

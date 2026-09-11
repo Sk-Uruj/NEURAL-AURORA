@@ -4,6 +4,7 @@ import { useParams, Link } from 'react-router-dom'
 import { ArrowLeft, CheckCircle, Wallet, Clock, Send, Sparkles } from 'lucide-react'
 import * as LucideIcons from 'lucide-react'
 import { useServices } from '../lib/usePortfolioData'
+import { sanitizeHtml } from '../lib/utils'
 import { openRazorpayCheckout } from '../lib/razorpay'
 import { submitContactMessage, savePayment } from '../lib/supabase'
 import ServiceNavbar from './ServiceNavbar'
@@ -224,7 +225,7 @@ export default function ServiceDetail() {
         <ScrollSection delay={0.1}>
           <motion.div
             className="text-sm text-black/50 dark:text-white/50 leading-relaxed mb-16 max-w-[65ch] ml-[calc(5rem+1.25rem)]"
-            dangerouslySetInnerHTML={{ __html: service.description }}
+            dangerouslySetInnerHTML={{ __html: sanitizeHtml(service.description) }}
           />
         </ScrollSection>
 
